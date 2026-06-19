@@ -1,0 +1,104 @@
+/* Mobile layout (<900px): hides the floating corner sidebar in favour of a bottom tab bar,
+   stacks the page header, and collapses multi-column grids to a single column. The desktop
+   layout above this breakpoint is already a normal, scrollable document flow. */
+@media (max-width: 900px) {
+  .stage {
+    padding: 0 16px 76px;
+    min-height: 100vh;
+  }
+
+  /* Header: hide the sidebar ribbon, stack name/lang/footer */
+  .sidebar { display: none; }
+
+  .page-header { flex-direction: column; align-items: center; gap: 12px; padding: 28px 0 6px; text-align: center; }
+  .page-header-identity { flex-direction: column; gap: 14px; align-items: center; }
+  .header-avatar { width: 88px; height: 88px; }
+  .page-header-text h1 { font-size: 26px; letter-spacing: 0.5px; }
+  .page-header-role { font-size: 11px; letter-spacing: 3px; }
+
+  .language-switch { margin: 0 auto 20px; }
+
+  .footer-strip { margin-top: 30px; flex-wrap: wrap; row-gap: 8px; }
+  .footer-strip span { font-size: 10px; letter-spacing: 2px; }
+
+  /* Bottom tab bar replaces the corner ribbon nav */
+  .mobile-tab-bar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    gap: 2px;
+    padding: 8px 6px;
+    background: rgba(255,255,255,0.97);
+    border-top: 1px solid rgba(19,39,67,0.08);
+    box-shadow: 0 -8px 24px rgba(19,39,67,0.1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-bottom-layout { flex-direction: column; gap: 14px; }
+  .home-bottom-layout .contact-card, .home-bottom-layout .skills-card, .home-bottom-layout .education-card { flex: none; width: 100%; }
+
+  /* Cards / panels: full width, tighter padding */
+  .card, .evidence-box, .timeline-card, .publication-card, .skill-card, .cv-panel, .contact-page-card,
+  .home-profile-card, .home-path-card, .capability-grid-home, .achievement-card,
+  .bottom-card, .contact-card, .skills-card, .education-card,
+  .projects-page, .project-detail-compact {
+    width: 100%;
+    padding: 18px 16px;
+  }
+  .projects-page { padding-top: 0; padding-right: 0; }
+
+  .home-bottom-layout .bottom-card { height: auto; padding: 14px 16px; }
+  .bottom-card { height: auto; }
+
+  /* Grids collapse to a single column */
+  .home-path-card,
+  .home-projects-grid,
+  .project-hero-row,
+  .project-summary-strip,
+  .project-diagram-carousel,
+  .skills-grid,
+  .skills-chart-grid,
+  .contact-layout,
+  .cv-row,
+  .publication-card,
+  .citations-chart-row,
+  .academic-timeline-axis,
+  .academic-timeline-row,
+  .home-bottom-layout .education-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-tab-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .achievement-grid { flex-direction: column; }
+  .capability-card-home { min-height: auto; }
+  .home-view-projects { margin-left: 0; width: 100%; justify-content: center; margin-top: 4px; }
+  .skill-row, .citations-chart-row, .academic-timeline-axis, .academic-timeline-row { gap: 4px; }
+  .citations-chart-row span { text-align: left; }
+  .cv-row { gap: 6px; }
+  .publication-card { gap: 14px; align-items: start; }
+  .publication-links { flex-wrap: wrap; }
+  .cv-modal-actions { grid-template-columns: 1fr; }
+  .contact-action-row { display: grid; grid-template-columns: 1fr; }
+  .contact-detail-list { grid-template-columns: 1fr; }
+  .contact-cv-picker-panel { grid-template-columns: 44px 1fr; gap: 12px; padding: 14px; }
+  .contact-cv-download-panel { grid-template-columns: 1fr; }
+  .contact-cv-choice { grid-template-columns: 44px 1fr; gap: 12px; padding: 14px; }
+  .contact-cv-icon { width: 42px; height: 42px; }
+  .contact-cv-open-button { grid-column: 1 / -1; justify-self: stretch; width: 100%; }
+  .contact-cv-button-row { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill-card { grid-template-columns: 1fr; min-height: auto; gap: 14px; }
+  .skill-card-diagram { justify-content: flex-start; padding-top: 0; }
+
+  /* Headings: smaller, wrap-friendly */
+  .page-title h1 { font-size: 28px; }
+  .section-title { font-size: 19px; gap: 10px; }
+  .section-title::after { min-width: 30px; }
+  .section-title-compact { font-size: 17px; }
+  .project-detail h2 { font-size: 24px; }
+  .project-detail-compact h2 { font-size: 22px; }
+}

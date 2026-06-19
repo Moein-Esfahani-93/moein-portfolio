@@ -1,0 +1,71 @@
+import {
+  BookOpen,
+  Bot,
+  BriefcaseBusiness,
+  BadgeDollarSign,
+  ChartNoAxesCombined,
+  ChevronDown,
+  CircuitBoard,
+  CodeXml,
+  Cog,
+  Download,
+  FlaskConical,
+  FileText,
+  GraduationCap,
+  Home,
+  Mail,
+  MapPin,
+  Monitor,
+  MonitorCog,
+  Network,
+  Phone,
+  Send,
+  ServerCog,
+  Target,
+  TrendingUp,
+  User,
+  Waypoints,
+  Workflow
+} from "lucide-react";
+
+const icons = {
+  article: BookOpen,
+  bid: BadgeDollarSign,
+  bot: Bot,
+  book: BookOpen,
+  briefcase: BriefcaseBusiness,
+  chart: ChartNoAxesCombined,
+  chevron: ChevronDown,
+  circuit: CircuitBoard,
+  code: CodeXml,
+  cog: Cog,
+  cv: FileText,
+  download: Download,
+  file: FileText,
+  cap: GraduationCap,
+  home: Home,
+  mail: Mail,
+  monitor: Monitor,
+  monitorCog: MonitorCog,
+  network: Network,
+  phone: Phone,
+  pin: MapPin,
+  project: BriefcaseBusiness,
+  projectFlow: Network,
+  send: Send,
+  serverCog: ServerCog,
+  flask: FlaskConical,
+  skills: Cog,
+  target: Target,
+  trendUp: TrendingUp,
+  user: User,
+  waypoints: Waypoints,
+  workflow: Workflow
+};
+
+export default function Icon({ name, className = "" }: { name: string; className?: string }) {
+  const LucideIcon = icons[name as keyof typeof icons];
+  if (!LucideIcon) return null;
+
+  return <LucideIcon className={`icon ${className}`} strokeWidth={2.1} />;
+}

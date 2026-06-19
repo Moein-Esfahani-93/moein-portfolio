@@ -1,0 +1,82 @@
+# ---------- Frontend / Node ----------
+node_modules/
+dist/
+build/
+.next/
+out/
+coverage/
+.vite/
+.parcel-cache/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+coverage.xml
+htmlcov/
+*.egg-info/
+.eggs/
+
+# ---------- C / C++ / CMake / Make ----------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+compile_commands.json
+Makefile
+makedep*
+build*/
+bin/
+lib/
+
+# ---------- Logs / runtime ----------
+*.log
+logs/
+CTRL_log
+RTS_log
+CTRL_io_log.csv
+
+# ---------- Editors / OS ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ---------- Secrets / local env ----------
+.env
+.env.*
+*.local
+
+# ---------- Optional generated files ----------
+# Uncomment if these are generated, not hand-written
+# include/modbus_register_map.h
+# include/modbus_register_map_types.h
+# source/modbus_register_map.c

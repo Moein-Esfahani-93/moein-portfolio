@@ -1,0 +1,25 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { overflow-x: hidden; background: var(--bg-light); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
+a { text-decoration: none; color: inherit; }
+h1, h2, h3, h4, h5, h6 { color: var(--heading); }
+
+.viewport { width: 100%; background: var(--bg-light); }
+.stage {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px 24px 40px 136px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  background: var(--bg-light);
+}
+
+.fade-in { animation: fadeIn 0.4s ease forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.sub-page-container { width: 100%; }
+
+.icon { width: 28px; height: 28px; }
+.icon.small { width: 18px; height: 18px; color: var(--ink); }

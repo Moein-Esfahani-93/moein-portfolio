@@ -1,0 +1,9 @@
+@import "@fontsource-variable/inter";
+@import "./theme.css";
+@import "./base.css";
+@import "./header.css";
+@import "./buttons.css";
+@import "./pages.css";
+@import "./diagrams.css";
+@import "./charts.css";
+@import "./responsive.css";

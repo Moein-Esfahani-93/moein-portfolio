@@ -1,0 +1,16 @@
+button { cursor: pointer; outline: none; border: none; background: none; font-family: inherit; transition: background-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease; }
+button:active { transform: none; }
+
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(7, 16, 29, 0.14); background: var(--card-bg); color: var(--ink); font-family: var(--font-display); font-weight: 780; font-size: 0.86rem; box-shadow: 0 8px 22px rgba(7, 16, 29, 0.07); transition: 160ms ease; }
+.button:hover { transform: translateY(-2px); border-color: rgba(200,155,60,0.46); box-shadow: 0 16px 34px rgba(7, 16, 29, 0.13); }
+.button.primary { background: var(--navy); color: white; border-color: rgba(200,155,60,0.38); }
+.button.large { min-height: 48px; padding: 0 20px; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.button-row.center { justify-content: center; }
+
+.language-switch { flex: none; width: 140px; height: 50px; display: flex; background: rgba(7,16,29,0.1); border: 1px solid rgba(7,16,29,0.08); border-radius: 999px; padding: 4px; z-index: 20; }
+.language-switch button { flex: 1; border-radius: 999px; color: var(--ink); font-family: var(--font-display); font-size: 15px; font-weight: 800; }
+.language-switch button.active { color: white; background: var(--navy); box-shadow: 0 0 0 2px rgba(200,155,60,0.2), 0 7px 14px rgba(7,16,29,0.18); }
+
+.button { font-size: var(--fs-small); }
+.language-switch button { font-size: var(--fs-card-title); }

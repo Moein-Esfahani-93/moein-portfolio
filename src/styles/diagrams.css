@@ -1,0 +1,153 @@
+.project-diagram-carousel { display: grid; grid-template-columns: 1fr 92px; gap: 16px; align-items: stretch; margin-top: 14px; }
+.diagram-panel { position: relative; padding: 18px 18px 16px; border-radius: 6px; background: #ffffff; border: 1px solid rgba(19,39,67,0.18); box-shadow: 0 14px 28px rgba(19,39,67,0.08), inset 0 0 0 1px rgba(255,255,255,0.9); overflow: hidden; }
+.diagram-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal-deep), #f4b440); }
+.diagram-panel-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(19,39,67,0.1); }
+.diagram-panel-heading > span { display: inline-flex; align-items: center; min-height: 24px; padding: 0 9px; border-radius: 3px; color: white; background: var(--navy); font-size: 10px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
+.diagram-panel h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 0; font-family: var(--font-display); font-size: 18px; line-height: 1.2; color: var(--navy); margin: 0; }
+.diagram-title-part { display: inline-flex; align-items: center; }
+.diagram-title-arrow { width: 17px; height: 17px; flex: none; margin: 0 8px; color: var(--ink); }
+.diagram-panel figcaption { margin-top: 12px; padding: 10px 12px; border-radius: 4px; background: #f7fbfb; border: 1px solid rgba(42,136,136,0.18); border-left: 4px solid var(--teal-deep); font-size: 12.5px; line-height: 1.35; color: var(--text); font-weight: 750; }
+
+.flow-diagram { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+
+.diagram-carousel-controls { display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: 14px 10px; border-radius: 16px; background: linear-gradient(180deg, #ffffff, rgba(238,247,246,0.86)); border: 1px solid rgba(42,136,136,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,0.94), 0 10px 22px rgba(19,39,67,0.06); }
+.diagram-step-buttons { display: grid; gap: 10px; }
+.diagram-step-buttons button { display: grid; place-items: center; width: 44px; height: 44px; margin: 0 auto; border-radius: 50%; background: #ffffff; color: var(--navy); border: 1px solid rgba(19,39,67,0.14); box-shadow: 0 7px 0 rgba(19,39,67,0.08), 0 12px 20px rgba(19,39,67,0.08); font: 900 15px/1 var(--font-display); transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease; }
+.diagram-step-buttons button:hover { transform: translateY(3px); box-shadow: 0 4px 0 rgba(19,39,67,0.08), 0 10px 18px rgba(19,39,67,0.1); }
+.diagram-step-buttons button.active { background: #f4b440; color: #101827; border-color: rgba(244,180,64,0.9); box-shadow: 0 0 0 4px rgba(244,180,64,0.24), 0 5px 0 rgba(19,39,67,0.08), 0 12px 20px rgba(19,39,67,0.12); }
+.diagram-next-button { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 38px; border-radius: 999px; background: var(--navy); color: white; font-size: 12px; font-weight: 900; box-shadow: 0 10px 20px rgba(19,39,67,0.15); }
+.diagram-next-button span { font-size: 16px; line-height: 1; }
+
+.flow-group rect { stroke-width: 1.15; stroke-dasharray: 5 4; shape-rendering: crispEdges; }
+.flow-group.cloud rect { fill: none; stroke: rgba(42,136,136,0.72); stroke-dasharray: 7 4; }
+.flow-group.platform rect { fill: none; stroke: rgba(19,39,67,0.62); stroke-dasharray: 2 4; }
+.flow-group.edge rect { fill: rgba(238,248,248,0.35); stroke: rgba(23,95,100,0.62); stroke-dasharray: none; }
+.flow-group.default rect { fill: none; stroke: rgba(19,39,67,0.56); }
+.flow-group.simulator rect { fill: rgba(245,244,239,0.5); stroke: rgba(23,95,100,0.58); stroke-dasharray: none; }
+.flow-group.solver rect { fill: rgba(238,248,248,0.38); stroke: rgba(31,109,114,0.46); stroke-dasharray: none; }
+.flow-group.interface rect { fill: rgba(255,255,255,0.76); stroke: rgba(23,95,100,0.46); stroke-dasharray: none; }
+.flow-group text { font-family: var(--font-display); font-size: 12px; font-weight: 900; fill: var(--navy); }
+.flow-group.cloud text { fill: #000000; }
+.flow-group.platform text { fill: var(--navy); }
+.flow-group.edge text { fill: #000000; }
+.flow-group.simulator text,
+.flow-group.solver text,
+.flow-group.interface text { fill: #000000; }
+
+.flow-node rect { stroke-width: 1.35; shape-rendering: crispEdges; filter: none; }
+.flow-node.primary rect { fill: #000000; stroke: #0b1a2f; }
+.flow-node.accent rect { fill: #eef8f8; stroke: #2a8888; }
+.flow-node.muted rect { fill: #ffffff; stroke: #8fa1ad; }
+.flow-node.highlight rect { fill: #fff7df; stroke: #d49a23; }
+.flow-node.telemetry rect { fill: rgba(238,248,248,0.92); stroke: var(--teal-deep); }
+.flow-node.model rect { fill: rgba(238,248,248,0.65); stroke: var(--teal); }
+.flow-node.adapter rect { fill: var(--gold-pale); stroke: var(--gold); }
+.flow-node.command rect { fill: rgba(255,244,214,0.55); stroke: var(--gold); }
+.flow-node.service rect { fill: rgba(245,244,239,0.92); stroke: var(--teal-soft); }
+.flow-node.solver rect { fill: #ffffff; stroke: var(--teal-deep); }
+
+.flow-node-label { font-family: var(--font-display); font-size: 11px; font-weight: 850; }
+.flow-node-sublabel { font-family: var(--font-body); font-size: 9px; font-weight: 700; }
+.flow-node.primary .flow-node-label { fill: #ffffff; }
+.flow-node.primary .flow-node-sublabel { fill: rgba(255,255,255,0.82); }
+.flow-node.accent .flow-node-label,
+.flow-node.muted .flow-node-label,
+.flow-node.highlight .flow-node-label,
+.flow-node.telemetry .flow-node-label,
+.flow-node.model .flow-node-label,
+.flow-node.adapter .flow-node-label,
+.flow-node.command .flow-node-label,
+.flow-node.service .flow-node-label,
+.flow-node.solver .flow-node-label { fill: var(--navy); }
+.flow-node.accent .flow-node-sublabel,
+.flow-node.muted .flow-node-sublabel,
+.flow-node.highlight .flow-node-sublabel,
+.flow-node.telemetry .flow-node-sublabel,
+.flow-node.model .flow-node-sublabel,
+.flow-node.adapter .flow-node-sublabel,
+.flow-node.command .flow-node-sublabel,
+.flow-node.service .flow-node-sublabel,
+.flow-node.solver .flow-node-sublabel { fill: #000000; }
+.flow-tooltips { pointer-events: none; }
+.flow-node-tooltip { opacity: 1; pointer-events: none; }
+.flow-node-tooltip rect { fill: #ffffff; stroke: rgba(19,39,67,0.32); stroke-width: 1.1; filter: drop-shadow(0 5px 10px rgba(19,39,67,0.12)); }
+.flow-node-tooltip text { font-family: var(--font-body); font-size: 8.5px; font-weight: 800; fill: #000000; }
+.flow-node.primary .flow-node-label,
+.layered-diagram .flow-node.primary .flow-node-label,
+.flow-node.primary .flow-node-sublabel,
+.layered-diagram .flow-node.primary .flow-node-sublabel { fill: #ffffff; }
+
+.flow-edge path { stroke: #516273; stroke-width: 1.6; fill: none; stroke-linecap: square; stroke-linejoin: miter; shape-rendering: geometricPrecision; }
+.layered-diagram .flow-edge path { stroke-width: 1.25; stroke: #48606c; }
+.flow-edge.forward path,
+.layered-diagram .flow-edge.forward path { stroke: var(--teal-deep); stroke-width: 1.45; }
+.flow-edge.return path,
+.layered-diagram .flow-edge.return path { stroke: #9a5b22; stroke-width: 1.45; }
+.flow-edge.rest path,
+.layered-diagram .flow-edge.rest path { stroke: #2456a8; stroke-width: 1.45; }
+.flow-edge.modbus path,
+.layered-diagram .flow-edge.modbus path { stroke: #2f8f4e; stroke-width: 1.45; }
+.flow-edge.goose path,
+.layered-diagram .flow-edge.goose path { stroke: #c23b3b; stroke-width: 1.45; }
+.flow-edge.sync path,
+.layered-diagram .flow-edge.sync path { stroke: #7a4fb5; stroke-width: 1.45; }
+.flow-edge.internal path,
+.layered-diagram .flow-edge.internal path { stroke: #5b6b7a; stroke-width: 1.45; }
+.flow-edge.dashed path { stroke: #77838f; stroke-dasharray: 5 4; }
+.flow-edge.forward.dashed path,
+.layered-diagram .flow-edge.forward.dashed path { stroke: var(--teal-deep); stroke-dasharray: 5 4; }
+.flow-edge.return.dashed path,
+.layered-diagram .flow-edge.return.dashed path { stroke: #9a5b22; stroke-dasharray: 5 4; }
+.flow-edge.rest.dashed path,
+.layered-diagram .flow-edge.rest.dashed path { stroke: #2456a8; stroke-dasharray: 5 4; }
+.flow-edge.modbus.dashed path,
+.layered-diagram .flow-edge.modbus.dashed path { stroke: #2f8f4e; stroke-dasharray: 5 4; }
+.flow-edge.goose.dashed path,
+.layered-diagram .flow-edge.goose.dashed path { stroke: #c23b3b; stroke-dasharray: 5 4; }
+.flow-edge.sync.dashed path,
+.layered-diagram .flow-edge.sync.dashed path { stroke: #7a4fb5; stroke-dasharray: 5 4; }
+.flow-edge.internal.dashed path,
+.layered-diagram .flow-edge.internal.dashed path { stroke: #5b6b7a; stroke-dasharray: 5 4; }
+.flow-arrow-head { fill: #516273; }
+.layered-diagram .flow-arrow-head { fill: #48606c; }
+.flow-arrow-head-muted { fill: #77838f; }
+.flow-arrow-head-forward { fill: var(--teal-deep); }
+.flow-arrow-head-return { fill: #9a5b22; }
+.flow-arrow-head-rest { fill: #2456a8; }
+.flow-arrow-head-modbus { fill: #2f8f4e; }
+.flow-arrow-head-goose { fill: #c23b3b; }
+.flow-arrow-head-sync { fill: #7a4fb5; }
+.flow-arrow-head-internal { fill: #5b6b7a; }
+.flow-edge-label { pointer-events: none; }
+.flow-edge-label rect { fill: #ffffff; fill-opacity: 0.92; stroke: rgba(19,39,67,0.1); stroke-width: 1; }
+.flow-edge-label text { font-family: var(--font-body); font-size: 8.8px; font-weight: 800; fill: #000000; }
+.layered-diagram .flow-edge-label text { font-size: 8px; fill: #000000; }
+
+/* Shared typography alignment */
+.diagram-panel h3,
+.diagram-step-buttons button,
+.flow-group text,
+.flow-node-label { font-family: var(--font-display); }
+.flow-node-sublabel,
+.flow-node-tooltip text,
+.flow-edge-label text { font-family: var(--font-body); }
+.diagram-panel h3 { font-size: var(--fs-section-title); }
+.diagram-panel-heading > span,
+.diagram-next-button { font-size: var(--fs-label); }
+.diagram-panel figcaption { font-size: var(--fs-small); line-height: 1.4; }
+.diagram-step-buttons button { font: 900 var(--fs-card-title)/1 var(--font-display); }
+.diagram-panel h3,
+.flow-group text,
+.flow-node.accent .flow-node-label,
+.flow-node.muted .flow-node-label,
+.flow-node.highlight .flow-node-label,
+.flow-node.telemetry .flow-node-label,
+.flow-node.model .flow-node-label,
+.flow-node.adapter .flow-node-label,
+.flow-node.command .flow-node-label,
+.flow-node.service .flow-node-label,
+.flow-node.solver .flow-node-label,
+.flow-node-tooltip text {
+  color: var(--heading);
+  fill: var(--heading);
+}
