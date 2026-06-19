@@ -17,7 +17,7 @@ const copy: Record<Language, { kicker: string; title: string; body: string; more
   fr: {
     kicker: "Expérience",
     title: "Expérience professionnelle et recherche.",
-    body: "Travaux Huawei en VPP, EMS microgrid, Interfaces contrôleur et validation RTS reliés à la recherche doctorale en coordination VPP sous incertitude.",
+    body: "Travaux Huawei en VPP, EMS microgrid, interfaces contrôleur et validation RTS reliés à la recherche doctorale en coordination VPP sous incertitude.",
     more: "Plus",
     less: "Réduire",
     supervisorLabel: "Directeur de Ph.D. :",

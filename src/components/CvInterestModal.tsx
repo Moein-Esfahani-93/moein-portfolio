@@ -44,7 +44,7 @@ const copy: Record<Language, {
         id: "controls",
         icon: "monitorCog",
         title: "Controls, Automation & Real-Time Simulation",
-        text: "Controller Interfaces, simulator I/O, PLC logic, protocol maps, and timing diagnostics."
+        text: "Controller interfaces, simulator I/O, PLC logic, protocol maps, and timing diagnostics."
       }
     ]
   },

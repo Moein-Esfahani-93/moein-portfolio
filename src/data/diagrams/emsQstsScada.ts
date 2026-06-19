@@ -3,7 +3,7 @@ import type { ProjectDiagram } from "../../components/diagrams/diagramTypes";
 export const emsQstsScada: ProjectDiagram[] = [
   {
     title: "Microgrid EMS, AXC F 3152 & Controller-Interface Architecture",
-    titleFr: "Architecture EMS microgrid, AXC F 3152 et Interface contrôleur",
+    titleFr: "Architecture EMS microgrid, AXC F 3152 et interface contrôleur",
     data: {
       viewBox: "0 0 1020 760",
       detailsOnHover: true,
@@ -90,7 +90,7 @@ export const emsQstsScada: ProjectDiagram[] = [
     data: {
       viewBox: "0 0 640 360",
       nodes: [
-        { id: "devices", label: "BESS PCS, PV Inverter & Meter", labelFr: "PCS BESS, onduleur PV et compteur", sublabel: "controller-test Interfaces", sublabelFr: "Interfaces de test contrôleur", x: 320, y: 35, w: 420, h: 50, variant: "muted" },
+        { id: "devices", label: "BESS PCS, PV Inverter & Meter", labelFr: "PCS BESS, onduleur PV et compteur", sublabel: "controller-test interfaces", sublabelFr: "interfaces de test contrôleur", x: 320, y: 35, w: 420, h: 50, variant: "muted" },
         { id: "protocols", label: "Modbus TCP Point Maps", labelFr: "Cartes de points Modbus TCP", sublabel: "P/Q setpoints, SoC and state commands", sublabelFr: "consignes P/Q, SoC et commandes d'état", x: 320, y: 105, w: 380, h: 50, variant: "accent" },
         { id: "ems", label: "EMS Command and Feedback Loop", labelFr: "Boucle commande-retour EMS", sublabel: "supervisory setpoints and device response", sublabelFr: "consignes de supervision et réponse des équipements", x: 320, y: 178, w: 380, h: 56, variant: "primary" },
         { id: "scada", label: "Watchdog & Latency Diagnostics", labelFr: "Diagnostics watchdog et latence", sublabel: "acknowledgement/readback and comm-health checks", sublabelFr: "vérifications d'acquittement/lecture et état des communications", x: 320, y: 251, w: 380, h: 50, variant: "highlight" },

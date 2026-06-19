@@ -3,7 +3,7 @@ import type { ProjectDiagram } from "../../components/diagrams/diagramTypes";
 export const rtsIoCil: ProjectDiagram[] = [
   {
     title: "Real-Time Simulator, Protocol Interface & AXC F 3152 Interface",
-    titleFr: "Simulateur temps reel, interface protocolaire et Interface AXC F 3152",
+    titleFr: "Simulateur temps reel, interface protocolaire et interface AXC F 3152",
     data: {
       viewBox: "0 0 1040 520",
       detailsOnHover: true,

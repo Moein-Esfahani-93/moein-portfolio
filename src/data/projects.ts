@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "Utilisation des prix, produits de réserve/régulation, capacité du portefeuille et contraintes sensibles au risque dans la logique d'offres et de dispatch",
       "Validation de faisabilité réseau par études temporelles de distribution avec OpenDSS : profils de tension, chargement de départ, réponse DER, limites onduleur et fonctions DER de soutien réseau",
       "Modélisation des effets de communication cloud-edge: délai, perte et télémétrie dégradée pour les cas orientés contrôleur",
-      "Développement d'une couche d'orchestration EMS, d'une Interface de simulation indexée dans le temps et d'une couche données/streaming avec Kafka, MQTT, WebSocket, FastAPI et Redis"
+      "Développement d'une couche d'orchestration EMS, d'une interface de simulation indexée dans le temps et d'une couche données/streaming avec Kafka, MQTT, WebSocket, FastAPI et Redis"
     ],
     visualSlots: [
       "Market, forecast, capability, optimizer, and grid-validation workflow",
@@ -70,7 +70,7 @@ export const projects: Project[] = [
       "PLCnext telemetry, command maps, watchdogs, latency checks, and controller-test readiness"
     ],
     visualSlotsFr: [
-      "Architecture EMS microgrid et Interface contrôleur AXC F 3152",
+      "Architecture EMS microgrid et interface contrôleur AXC F 3152",
       "Carte EMS microgrid, contrôle secondaire, simulation et modules contrôleur",
       "Télémétrie PLCnext, cartes de commandes, watchdogs, latence et préparation aux tests contrôleur"
     ],
@@ -83,12 +83,12 @@ export const projects: Project[] = [
     domainFr: "Interfaces contrôleur RTS",
     title: "Real-Time Simulator I/O & Controller Interface",
     titleFr: "Interface E/S et protocoles pour simulateur temps réel",
-    short: "A simulator-controller Interface for evaluating external controllers in a microgrid validation test system through measurement, command, status, and feedback exchange.",
-    shortFr: "Une Interface simulateur-contrôleur pour évaluer des contrôleurs externes dans un système de test microgrid via échanges de mesures, commandes, statuts et retours.",
+    short: "A simulator-controller interface for evaluating external controllers in a microgrid validation test system through measurement, command, status, and feedback exchange.",
+    shortFr: "Une interface simulateur-contrôleur pour évaluer des contrôleurs externes dans un système de test microgrid via échanges de mesures, commandes, statuts et retours.",
     problem: "Controller-facing validation requires a defined signal contract, protocol mappings, timing diagnostics, and closed-loop coordination between simulator update cycles and returned controller outputs.",
     problemFr: "La validation orientée contrôleur exige un contrat de signaux, des mappings protocole, des diagnostics de timing et une coordination en boucle fermée entre cycles simulateur et sorties contrôleur.",
     contribution: "Designed and upgraded the simulator-controller interface, including C/C++ interface logic, protocol exchange routines, I/O handling, latency diagnostics, and time-domain simulation coordination.",
-    contributionFr: "Conception et amélioration de l'Interface simulateur-contrôleur, avec logique de pont C/C++, routines d'échange protocole, gestion E/S, diagnostics de latence et coordination de simulation temporelle.",
+    contributionFr: "Conception et amélioration de l'interface simulateur-contrôleur, avec logique de pont C/C++, routines d'échange protocole, gestion E/S, diagnostics de latence et coordination de simulation temporelle.",
     methods: [
       "Defined the signal contract including engineering units, scaling, sampling/update rates, telemetry/command direction, status and quality flags, timeout/fallback states, and controller I/O mapping",
       "Built C/C++ interface logic, Modbus TCP server/client and RTU slave/master routines, I/O-handling routines, and IEC 61850-ready point maps for future adapter tests",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
       "Développement de logique de simulation temporelle avec intégration numérique, mises à jour d'état et convergence, puis coordination des cycles simulateur avec l'échange orienté contrôleur"
     ],
     visualSlots: [
-      "Simulator I/O and protocol Interface",
+      "Simulator I/O and protocol interface",
       "Telemetry, command, status, and feedback exchange",
       "Closed-loop timing and controller-response validation"
     ],
@@ -122,14 +122,14 @@ export const projects: Project[] = [
     titleFr: "Projet personnel : passerelle équipements et abstraction multiprotocole",
     short: "A gateway and device-abstraction layer built around a common point model, device profiles, register/point maps, scaling, data-quality flags, command priority, and protocol adapters.",
     shortFr: "Une couche de passerelle et d'abstraction équipement bâtie sur un modèle de points commun, profils d'équipement, cartes registres/points, mise à l'échelle, flags de qualité, priorité des commandes et adaptateurs protocole.",
-    problem: "Heterogeneous controllers and simulators need one consistent Interface instead of bespoke links for every device and protocol.",
-    problemFr: "Des contrôleurs et simulateurs hétérogènes ont besoin d'une Interface cohérente plutôt que de liens spécifiques pour chaque équipement et protocole.",
+    problem: "Heterogeneous controllers and simulators need one consistent interface instead of bespoke links for every device and protocol.",
+    problemFr: "Des contrôleurs et simulateurs hétérogènes ont besoin d'une interface cohérente plutôt que de liens spécifiques pour chaque équipement et protocole.",
     contribution: "Built a common gateway/device-abstraction layer so heterogeneous controllers and simulators integrate through consistent point models and protocol adapters.",
     contributionFr: "Développement d'une couche commune passerelle/abstraction équipement permettant à des contrôleurs et simulateurs hétérogènes de s'intégrer via des modèles de points et adaptateurs protocole cohérents.",
     methods: [
       "Defined a common point model with device profiles, register/point maps, scaling, data-quality flags, and command priority",
       "Implemented Modbus/TCP and TCP/WebSocket exchange layers and designed adapter-ready point models for IEC 61850, OPC UA, CAN/J1939, MQTT, DNP3, and IEC 60870-5-104",
-      "Used embedded and interface software in C/C++, Python, and SQL on Raspberry Pi, embedded Linux, SoC, STM32, and Zynq/PYNQ",
+      "Used embedded software and interfaces in C/C++, Python, and SQL on Raspberry Pi, embedded Linux, SoC, STM32, and Zynq/PYNQ",
       "Supported test automation and logging around the interface layer"
     ],
     methodsFr: [
@@ -141,10 +141,10 @@ export const projects: Project[] = [
     visualSlots: [
       "Gateway protocol interface across industrial interfaces",
       "Common point model, device profiles, maps, scaling, and quality flags",
-      "Embedded Interface, command priority, test automation, and logging"
+      "Embedded interface, command priority, test automation, and logging"
     ],
     visualSlotsFr: [
-      "Pont protocolaire entre Interfaces industrielles",
+      "Pont protocolaire entre interfaces industrielles",
       "Modèle de points commun, profils, cartes, mise à l'échelle et flags qualité",
       "Pont embarqué, priorité de commande, automatisation des tests et journalisation"
     ],

@@ -57,11 +57,11 @@ export const skills: SkillBlock[] = [
   },
   {
     title: "Engineering Software & Data Interfaces",
-    titleFr: "Logiciels d'ingénierie et Interfaces de données",
+    titleFr: "Logiciels d'ingénierie et interfaces de données",
     text: "I build EMS orchestration services, time-indexed simulation interfaces, streaming data pipelines, RESTful APIs, live-updating dashboards, and controller data interfaces with Python, Java, C/C++, FastAPI, MATLAB, Kafka, MQTT, WebSocket, and Redis.",
-    textFr: "Je construis des services d'orchestration EMS et des Interfaces de simulation indexées dans le temps, des pipelines de données streaming, des API REST, des tableaux de bord à mise à jour live et des Interfaces contrôleur avec Python, Java, C/C++, FastAPI, MATLAB, Kafka, MQTT, WebSocket et Redis.",
-    keywords: ["EMS orchestration services", "simulation orchestration Interfaces", "RESTful APIs", "Kafka, MQTT, WebSocket", "Redis"],
-    keywordsFr: ["services d'orchestration EMS", "Interfaces d'orchestration de simulation", "API REST", "Kafka, MQTT, WebSocket", "Redis"],
+    textFr: "Je construis des services d'orchestration EMS et des interfaces de simulation indexées dans le temps, des pipelines de données streaming, des API REST, des tableaux de bord à mise à jour live et des interfaces contrôleur avec Python, Java, C/C++, FastAPI, MATLAB, Kafka, MQTT, WebSocket et Redis.",
+    keywords: ["EMS orchestration services", "simulation orchestration interfaces", "RESTful APIs", "Kafka, MQTT, WebSocket", "Redis"],
+    keywordsFr: ["services d'orchestration EMS", "interfaces d'orchestration de simulation", "API REST", "Kafka, MQTT, WebSocket", "Redis"],
     track: "software"
   },
   {
@@ -85,10 +85,10 @@ export const skills: SkillBlock[] = [
   {
     title: "Real-Time Simulation, I/O & Timing",
     titleFr: "Simulation temps réel, E/S et timing",
-    text: "I design real-time simulator Interfaces and time-domain solver logic with timestamp alignment, simulator/controller update-cycle coordination, sampling and update-rate plans, execution budgets, latency/jitter diagnostics, stale-data detection, timeout handling, and SIL, controller-in-the-loop, and CHIL-ready validation workflows. I also work with real-time and HIL environments such as OPAL-RT and RTDS, PREEMPT_RT Linux, FreeRTOS, and embedded RTOS concepts.",
-    textFr: "Je conçois des Interfaces de simulateur temps réel et de la logique de solveur temporel avec alignement des horodatages, coordination des cycles simulateur/contrôleur, plans d'échantillonnage, budgets d'exécution, diagnostics de latence/jitter, détection de données périmées, gestion des timeouts et workflows de validation prêts pour SIL, controller-in-the-loop et prêts pour CHIL. Je travaille aussi avec des environnements temps réel et HIL comme OPAL-RT et RTDS, PREEMPT_RT Linux, FreeRTOS et des concepts RTOS embarqués.",
-    keywords: ["real-time simulator Interfaces", "time-domain simulation solver", "latency and jitter", "stale-data and timeout", "OPAL-RT"],
-    keywordsFr: ["Interfaces de simulateur temps réel", "solveur temporel", "latence et jitter", "données périmées et timeouts", "OPAL-RT"],
+    text: "I design real-time simulator interfaces and time-domain solver logic with timestamp alignment, simulator/controller update-cycle coordination, sampling and update-rate plans, execution budgets, latency/jitter diagnostics, stale-data detection, timeout handling, and SIL, controller-in-the-loop, and CHIL-ready validation workflows. I also work with real-time and HIL environments such as OPAL-RT and RTDS, PREEMPT_RT Linux, FreeRTOS, and embedded RTOS concepts.",
+    textFr: "Je conçois des interfaces de simulateur temps réel et de la logique de solveur temporel avec alignement des horodatages, coordination des cycles simulateur/contrôleur, plans d'échantillonnage, budgets d'exécution, diagnostics de latence/jitter, détection de données périmées, gestion des timeouts et workflows de validation prêts pour SIL, controller-in-the-loop et prêts pour CHIL. Je travaille aussi avec des environnements temps réel et HIL comme OPAL-RT et RTDS, PREEMPT_RT Linux, FreeRTOS et des concepts RTOS embarqués.",
+    keywords: ["real-time simulator interfaces", "time-domain simulation solver", "latency and jitter", "stale-data and timeout", "OPAL-RT"],
+    keywordsFr: ["interfaces de simulateur temps réel", "solveur temporel", "latence et jitter", "données périmées et timeouts", "OPAL-RT"],
     track: "automation"
   }
 ];

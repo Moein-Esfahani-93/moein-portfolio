@@ -69,7 +69,7 @@ const capabilityGroups: CapabilityGroup[] = [
   },
   {
     title: "Control Automation, RTS & Interfaces",
-    titleFr: "Automatisation, RTS et Interfaces",
+    titleFr: "Automatisation, RTS et interfaces",
     icon: "workflow",
     variant: "automation",
     emphasis: 3,

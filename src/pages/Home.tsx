@@ -9,7 +9,7 @@ const copy = {
   en: {
     profileTitle: "PERSONAL PROFILE",
     profile:
-      "Power systems engineer with a completed Ph.D. in DER coordination and VPP optimization, working across market, grid, and controller-validation layers. On the VPP side, I build market-participation workflows that translate ISO/RTO rules, forecasts, DER portfolio capability, and grid-security constraints into bid/offer and dispatch decisions. In parallel, I develop microgrid EMS workflows for operating-mode logic, supervisory setpoints, secondary-control interaction, and controller-facing validation. On the controls side, I build IEC 61131-3 logic, real-time simulator I/O, and industrial protocol Interfaces that make those decisions executable and testable with PLCs, RTACs, and vendor microgrid controllers.",
+      "Power systems engineer with a completed Ph.D. in DER coordination and VPP optimization, working across market, grid, and controller-validation layers. On the VPP side, I build market-participation workflows that translate ISO/RTO rules, forecasts, DER portfolio capability, and grid-security constraints into bid/offer and dispatch decisions. In parallel, I develop microgrid EMS workflows for operating-mode logic, supervisory setpoints, secondary-control interaction, and controller-facing validation. On the controls side, I build IEC 61131-3 logic, real-time simulator I/O, and industrial protocol interfaces that make those decisions executable and testable with PLCs, RTACs, and vendor microgrid controllers.",
     selectedProjectsTitle: "PROJECTS & IMPLEMENTATIONS",
     capabilityTitle: "CAPABILITY BACKBONE",
     contactTitle: "CONTACT",
@@ -28,7 +28,7 @@ const copy = {
   fr: {
     profileTitle: "PROFIL",
     profile:
-      "Ingénieur en réseaux électriques avec un Ph.D. complété en coordination DER et optimisation VPP, travaillant entre les couches marché, réseau et validation contrôleur. Côté VPP, je développe des workflows de participation marché qui traduisent règles ISO/RTO, prévisions, capacité de portefeuille DER et contraintes réseau en décisions d'offre et de dispatch. En parallèle, je développe des workflows EMS microgrid pour les modes d'exploitation, consignes de supervision, interaction avec le contrôle secondaire et validation orientée contrôleur. Côté contrôle, je développe la logique IEC 61131-3, les E/S de simulateur temps réel et les Interfaces protocolaires qui rendent ces décisions exécutables et testables avec des PLC, RTAC et contrôleurs microgrid fournisseurs.",
+      "Ingénieur en réseaux électriques avec un Ph.D. complété en coordination DER et optimisation VPP, travaillant entre les couches marché, réseau et validation contrôleur. Côté VPP, je développe des workflows de participation marché qui traduisent règles ISO/RTO, prévisions, capacité de portefeuille DER et contraintes réseau en décisions d'offre et de dispatch. En parallèle, je développe des workflows EMS microgrid pour les modes d'exploitation, consignes de supervision, interaction avec le contrôle secondaire et validation orientée contrôleur. Côté contrôle, je développe la logique IEC 61131-3, les E/S de simulateur temps réel et les interfaces protocolaires qui rendent ces décisions exécutables et testables avec des PLC, RTAC et contrôleurs microgrid fournisseurs.",
     selectedProjectsTitle: "RÉSUMÉ DES PROJETS 1-3",
     capabilityTitle: "AXES TECHNIQUES",
     contactTitle: "CONTACT",
@@ -75,7 +75,7 @@ const capabilityCards = [
       "Live-updating dashboards, telemetry, and dispatch data flows"
     ],
     bulletsFr: [
-      "Couche d'orchestration EMS et Interface de simulation indexée dans le temps",
+      "Couche d'orchestration EMS et interface de simulation indexée dans le temps",
       "Services FastAPI, Kafka, MQTT, WebSocket, Redis",
       "Prévision prix, charge et PV avec LSTM, GRU, CNN, random forest, XGBoost",
       "Tableaux de bord live, télémétrie et flux de données de dispatch"

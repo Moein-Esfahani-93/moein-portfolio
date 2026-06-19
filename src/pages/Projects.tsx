@@ -13,7 +13,7 @@ const tabLabels: Record<string, Record<Language, string>> = {
   "cloud-edge-vpp": { en: "VPP Market-to-Grid", fr: "VPP marché-réseau" },
   "ems-qsts-scada": { en: "Microgrid EMS", fr: "Microgrid EMS" },
   "rts-io-cil": { en: "RTS Interfaces", fr: "Interfaces RTS" },
-  "gateway-microgrid-control": { en: "Porotocol Gateway", fr: "Passerelle personnelle" }
+  "gateway-microgrid-control": { en: "Protocol Gateway", fr: "Passerelle protocolaire" }
 };
 
 const tabIcons: Record<string, string> = {
@@ -41,7 +41,7 @@ const copy: Record<Language, {
   en: {
     kicker: "Projects",
     title: "Projects & Implementations",
-    body: "Summary of projects and implementations can be selected below for mre details.",
+    body: "Summary of projects and implementations can be selected below for more details.",
     nav: "Project areas",
     diagrams: "Architecture & data-flow diagrams",
     selector: "Diagram selector",
@@ -56,7 +56,7 @@ const copy: Record<Language, {
   fr: {
     kicker: "Projets",
     title: "Projets et Implémentations",
-    body: "Les projets 1-3 résument les travaux principaux en dispatch VPP, validation EMS microgrid et Interfaces RTS/contrôleur. Le projet 4 est un projet personnel de passerelle équipements.",
+    body: "Les projets 1-3 résument les travaux principaux en dispatch VPP, validation EMS microgrid et interfaces RTS/contrôleur. Le projet 4 est un projet personnel de passerelle équipements.",
     nav: "Domaines de projet",
     diagrams: "Schémas d'architecture et de flux de données",
     selector: "Sélecteur de schéma",

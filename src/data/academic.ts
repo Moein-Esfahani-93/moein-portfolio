@@ -3,7 +3,7 @@ import type { AcademicItem } from "../types";
 export const academicExperience: AcademicItem[] = [
   {
     title: "Researcher - Microgrid EMS Design and Controller-Interface Validation",
-    titleFr: "Chercheur - Conception EMS microgrid et validation des Interfaces contrôleur",
+    titleFr: "Chercheur - Conception EMS microgrid et validation des interfaces contrôleur",
     institution: "Huawei Technologies",
     period: "Dec 2024 - Present",
     periodFr: "Déc. 2024 - aujourd'hui",
@@ -28,14 +28,14 @@ export const academicExperience: AcademicItem[] = [
   },
   {
     title: "Research Intern - VPP Platform, Microgrid EMS Software & Controller Interfaces",
-    titleFr: "Stagiaire de recherche - Plateforme VPP, logiciel EMS microgrid et Interfaces contrôleur",
+    titleFr: "Stagiaire de recherche - Plateforme VPP, logiciel EMS microgrid et interfaces contrôleur",
     institution: "Huawei Technologies",
     period: "Oct 2023 - Dec 2024",
     periodFr: "Oct. 2023 - déc. 2024",
     startYear: 2023,
     endYear: 2024,
     summary: "Promoted from intern into full-time employee after graduation. Built early VPP platform foundations, forecasting data, optimizer outputs, controller-interface assumptions, and validation workflows.",
-    summaryFr: "Promu de stagiaire à employé temps plein après graduation. A construit les bases de la plateforme VPP, les données de prévision, sorties d'optimiseur, hypothèses d'Interface contrôleur et workflows de validation.",
+    summaryFr: "Promu de stagiaire à employé temps plein après graduation. A construit les bases de la plateforme VPP, les données de prévision, sorties d'optimiseur, hypothèses d'interface contrôleur et workflows de validation.",
     highlights: [
       "Built the early VPP platform foundation through ISO/RTO market-rule analysis, DER portfolio aggregation requirements, and market-facing dispatch architecture",
       "Created a 50+ GB historical price, weather, load, and PV data foundation for forecasting, scenario generation, and repeatable validation",

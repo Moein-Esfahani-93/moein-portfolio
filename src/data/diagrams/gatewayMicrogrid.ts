@@ -9,7 +9,7 @@ export const gatewayMicrogrid: ProjectDiagram[] = [
       nodes: [
         { id: "hub", label: "Multi-Protocol Gateway", labelFr: "Passerelle multiprotocole", sublabel: "common point model for controllers and simulators", sublabelFr: "modèle de points commun pour contrôleurs et simulateurs", x: 320, y: 180, w: 200, h: 80, variant: "primary" },
         { id: "p1", label: "IEC 61850 / DNP3 / IEC 60870-5-104", labelFr: "IEC 61850 / DNP3 / IEC 60870-5-104", sublabel: "telemetry, commands and status exchange", sublabelFr: "échange télémétrie, commandes et statuts", x: 210, y: 50, w: 220, h: 64, variant: "accent" },
-        { id: "p2", label: "OPC UA / MQTT / WebSocket", labelFr: "OPC UA / MQTT / WebSocket", sublabel: "software and data-Interface exchange", sublabelFr: "échange logiciel et Interfaces de données", x: 430, y: 50, w: 220, h: 64, variant: "accent" },
+        { id: "p2", label: "OPC UA / MQTT / WebSocket", labelFr: "OPC UA / MQTT / WebSocket", sublabel: "software and data-interface exchange", sublabelFr: "échange logiciel et interfaces de données", x: 430, y: 50, w: 220, h: 64, variant: "accent" },
         { id: "p3", label: "Modbus TCP / RTU", labelFr: "Modbus TCP / RTU", sublabel: "device-level register I/O exchange", sublabelFr: "échange E/S registre au niveau équipement", x: 210, y: 310, w: 220, h: 64, variant: "accent" },
         { id: "p4", label: "CAN / J1939", labelFr: "CAN / J1939", sublabel: "device telemetry and command exchange", sublabelFr: "échange télémétrie et commandes équipement", x: 430, y: 310, w: 220, h: 64, variant: "accent" }
       ],
@@ -47,7 +47,7 @@ export const gatewayMicrogrid: ProjectDiagram[] = [
       nodes: [
         { id: "primary", label: "Device Profiles & Register Maps", labelFr: "Profils d'équipement et cartes registres", sublabel: "point model, scaling and data-quality flags", sublabelFr: "modèle de points, mise à l'échelle et flags qualité", x: 320, y: 45, w: 420, h: 54, variant: "primary" },
         { id: "Interface", label: "Command Priority Logic", labelFr: "Logique de priorité des commandes", sublabel: "multi-source control arbitration", sublabelFr: "arbitrage de contrôle multi-source", x: 320, y: 130, w: 440, h: 58, variant: "accent" },
-        { id: "secondary", label: "Embedded Interface(C/C++ / Python / SQL)", labelFr: "Pont embarqué (C/C++ / Python / SQL)", sublabel: "Raspberry Pi, embedded Linux, SoC, STM32, Zynq/PYNQ", sublabelFr: "Raspberry Pi, Linux embarqué, SoC, STM32, Zynq/PYNQ", x: 320, y: 215, w: 440, h: 58, variant: "accent" },
+        { id: "secondary", label: "Embedded Interface (C/C++ / Python / SQL)", labelFr: "Pont embarqué (C/C++ / Python / SQL)", sublabel: "Raspberry Pi, embedded Linux, SoC, STM32, Zynq/PYNQ", sublabelFr: "Raspberry Pi, Linux embarqué, SoC, STM32, Zynq/PYNQ", x: 320, y: 215, w: 440, h: 58, variant: "accent" },
         { id: "microgrid", label: "Test Automation & Logging", labelFr: "Automatisation des tests et journalisation", sublabel: "repeatable interface validation", sublabelFr: "validation reproductible du pont", x: 320, y: 300, w: 420, h: 54, variant: "muted" }
       ],
       edges: [
