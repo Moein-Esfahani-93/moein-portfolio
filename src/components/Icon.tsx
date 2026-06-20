@@ -2,6 +2,7 @@ import {
   BookOpen,
   Bot,
   BriefcaseBusiness,
+  ArrowRight,
   BadgeDollarSign,
   ChartNoAxesCombined,
   ChevronDown,
@@ -30,6 +31,7 @@ import {
 
 const icons = {
   article: BookOpen,
+  arrowRight: ArrowRight,
   bid: BadgeDollarSign,
   bot: Bot,
   book: BookOpen,

@@ -23,6 +23,15 @@
 .project-tab-grid button:active { transform: translateY(8px); box-shadow: inset 0 2px 8px rgba(7,16,29,0.12), 0 3px 0 rgba(7,16,29,0.08), 0 10px 20px rgba(7,16,29,0.08); }
 .project-tab-grid button.active { background: linear-gradient(180deg, #ffffff 0%, #fffdf7 58%, #f7efd8 100%); border-color: rgba(200,155,60,0.95); box-shadow: inset 0 1px 0 rgba(255,255,255,1), inset 0 -6px 12px rgba(200,155,60,0.1), 0 0 0 4px rgba(200,155,60,0.28), 0 10px 0 rgba(7,16,29,0.08), 0 22px 36px rgba(7,16,29,0.14); }
 .project-tab-grid button.active::before { opacity: 1; height: 7px; }
+.project-tab-grid button.active::after {
+  inset: 0 auto 0 -42%;
+  width: 30%;
+  height: auto;
+  border-radius: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.82), transparent);
+  opacity: 0;
+  transform: skewX(-18deg);
+}
 .project-tab-number { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; margin-right: 8px; color: white; background: var(--navy); font-family: var(--font-display); font-weight: 900; font-size: 12px; }
 .project-tab-grid button.active .project-tab-number { background: var(--gold); color: var(--navy); box-shadow: 0 0 0 3px rgba(200,155,60,0.24); }
 .project-tab-icon { position: absolute; right: 14px; top: 18px; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; color: #ffffff; background: var(--navy); }
@@ -32,6 +41,24 @@
 .project-tab-grid small { display: block; margin-top: 9px; color: var(--ink); font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
 .project-tab-grid button.active strong { color: var(--navy); }
 .project-tab-grid button.active small { color: var(--ink); }
+@keyframes project-tab-selected-hint {
+  0%, 100% { transform: translateY(0); }
+  35% { transform: translateY(-5px); }
+  65% { transform: translateY(2px); }
+}
+@keyframes project-tab-shine {
+  0%, 72%, 100% { left: -42%; opacity: 0; }
+  76% { opacity: 0.72; }
+  92% { left: 118%; opacity: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .project-tab-grid button.active {
+    animation: project-tab-selected-hint 1.8s ease-in-out infinite;
+  }
+  .project-tab-grid button.active::after {
+    animation: project-tab-shine 3.8s ease-in-out infinite;
+  }
+}
 .project-detail-compact { padding: 22px; }
 .project-hero-row { display: block; padding-bottom: 18px; border-bottom: 1px solid rgba(19,39,67,0.08); }
 .project-detail-compact .project-meta { margin-bottom: 10px; }

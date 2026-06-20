@@ -145,8 +145,8 @@ export default function Projects({ activeProject, setActiveProjectId, language }
                 ))}
               </div>
               <button type="button" className="diagram-next-button" onClick={goToNextDiagram} aria-label={c.nextDiagram}>
-                {c.next}
-                <span aria-hidden="true">&gt;</span>
+                <span>{c.next}</span>
+                <Icon name="arrowRight" />
               </button>
             </aside>
           </div>

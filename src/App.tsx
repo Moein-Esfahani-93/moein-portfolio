@@ -23,7 +23,7 @@ function getInitialPage(): PageId {
 
 export default function App() {
   const [activePage, setActivePage] = useState<PageId>(getInitialPage());
-  const [activeProjectId, setActiveProjectId] = useState(projects[1].id);
+  const [activeProjectId, setActiveProjectId] = useState(projects[0].id);
   const [language, setLanguage] = useState<Language>("en");
 
   const activeProject = useMemo(
