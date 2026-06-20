@@ -56,15 +56,16 @@ const capabilityGroups: CapabilityGroup[] = [
       { label: "Data streaming", labelFr: "Flux données", level: 3 }
     ],
     tools: [
+      { name: "PSCAD" },
+      { name: "PSS/E" },
+      { name: "DIgSILENT" },
       { name: "Python" },
       { name: "FastAPI" },
       { name: "Kafka" },
-      { name: "MQTT" },
       { name: "OpenDSS" },
-      { name: "PSS/E" },
-      { name: "PSCAD" },
       { name: "MATLAB" },
-      { name: "XGBoost" }
+      { name: "XGBoost" },
+      { name: "LSTM" }
     ]
   },
   {
@@ -121,9 +122,6 @@ export default function SkillsChart({ language }: { language: Language }) {
       </h3>
       <div className="skills-chart-grid">
         {capabilityGroups.map((group) => {
-          const visibleTools = group.tools.slice(0, 6);
-          const hiddenToolCount = group.tools.length - visibleTools.length;
-
           return (
             <article className={`skills-chart-track ${group.variant}`} key={group.title}>
               <div className="capability-track-head">
@@ -147,12 +145,9 @@ export default function SkillsChart({ language }: { language: Language }) {
               </div>
 
               <div className="capability-chip-strip">
-                {visibleTools.map((tool) => (
+                {group.tools.map((tool) => (
                   <span key={tool.name}>{localized(language, tool.name, tool.nameFr)}</span>
                 ))}
-                {hiddenToolCount > 0 && (
-                  <span className="tool-more">+{hiddenToolCount} {language === "fr" ? "autres" : "more"}</span>
-                )}
               </div>
             </article>
           );
