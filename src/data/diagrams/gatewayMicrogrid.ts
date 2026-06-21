@@ -33,8 +33,8 @@ export const gatewayMicrogrid: ProjectDiagram[] = [
         { id: "down", label: "Device Control Interfaces", labelFr: "Interfaces de contrôle équipement", sublabel: "BESS PCS, PV inverter, meter, and controller points", sublabelFr: "points PCS BESS, onduleur PV, compteur et contrôleur", x: 460, y: 300, w: 260, h: 70, variant: "muted" }
       ],
       edges: [
-        { from: "proto", to: "canon", label: "normalized data", labelFr: "données normalisées" },
-        { from: "canon", to: "up", label: "setpoints & limits", labelFr: "consignes et limites" },
+        { from: "proto", to: "canon", label: "telemetry / commands", labelFr: "télémétrie / commandes", bidirectional: true },
+        { from: "up", to: "canon", label: "setpoints & limits", labelFr: "consignes et limites" },
         { from: "canon", to: "down", label: "device commands", labelFr: "commandes équipement" }
       ]
     }
@@ -51,9 +51,9 @@ export const gatewayMicrogrid: ProjectDiagram[] = [
         { id: "microgrid", label: "Test Automation & Logging", labelFr: "Automatisation des tests et journalisation", sublabel: "repeatable interface validation", sublabelFr: "validation reproductible du pont", x: 320, y: 300, w: 420, h: 54, variant: "muted" }
       ],
       edges: [
-        { from: "primary", to: "Interface", label: "profiles / flags", labelFr: "profils / flags", bidirectional: true },
-        { from: "Interface", to: "secondary", label: "prioritized commands", labelFr: "commandes priorisées", bidirectional: true },
-        { from: "secondary", to: "microgrid", label: "test runs / logs", labelFr: "tests / journaux", bidirectional: true }
+        { from: "primary", to: "Interface", label: "profiles / limits", labelFr: "profils / limites" },
+        { from: "Interface", to: "secondary", label: "arbitrated commands", labelFr: "commandes arbitrées" },
+        { from: "secondary", to: "microgrid", label: "test results / logs", labelFr: "résultats de test / journaux" }
       ]
     }
   }

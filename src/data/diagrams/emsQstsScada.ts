@@ -18,15 +18,15 @@ export const emsQstsScada: ProjectDiagram[] = [
 
         { id: "webui", label: "Web UI Backend", labelFr: "Backend interface web", sublabel: "Serves the dashboard and forwards laptop requests to the dispatch engine", sublabelFr: "Sert le tableau de bord et relaie les requetes du portable vers le moteur de dispatch", x: 395, y: 95, w: 110, h: 55, variant: "muted" },
         { id: "restapi", label: "REST API Gateway", labelFr: "Passerelle API REST", sublabel: "Routes control-API requests into the dispatch engine", sublabelFr: "Route les requetes de l'API de controle vers le moteur de dispatch", x: 520, y: 95, w: 110, h: 55, variant: "muted" },
-        { id: "dispatch", label: "Dispatch Engine & OPC UA Core Server (OPC UA)", labelFr: "Moteur de dispatch et serveur coeur OPC UA", sublabel: "Issues tertiary setpoints to the controller and receives telemetry and states back", sublabelFr: "Envoie des consignes tertiaires au controleur et recoit en retour la telemetrie et les etats", x: 700, y: 95, w: 200, h: 55, variant: "accent" },
+        { id: "dispatch", label: "Dispatch Engine & OPC UA Server", labelFr: "Moteur de dispatch et serveur OPC UA", sublabel: "Issues tertiary setpoints to the controller and receives telemetry and states back", sublabelFr: "Envoie des consignes tertiaires au controleur et recoit en retour la telemetrie et les etats", x: 700, y: 95, w: 200, h: 55, variant: "accent" },
         { id: "historian", label: "Historian DB", labelFr: "BD Historian", sublabel: "Time-series historian storing telemetry and event history", sublabelFr: "Historian temporel stockant telemetrie et historique d'evenements", x: 940, y: 70, w: 130, h: 44, variant: "muted" },
         { id: "sqlconfig", label: "SQL Config", labelFr: "Config SQL", sublabel: "SQL store for controller and point-map configuration", sublabelFr: "Base SQL pour la configuration du controleur et des cartes de points", x: 940, y: 125, w: 130, h: 44, variant: "muted" },
 
-        { id: "axcentry", label: "Controller Interface (OPC UA)", labelFr: "Interface controleur (OPC UA)", sublabel: "Generic OPC UA boundary between the enterprise EMS and the controller; no specific inner box", sublabelFr: "Frontiere OPC UA generique entre l'EMS d'entreprise et le controleur; aucune boite interne specifique", x: 605, y: 230, w: 560, h: 14, variant: "highlight" },
+        { id: "axcentry", label: "Controller Interface (OPC UA)", labelFr: "Interface controleur (OPC UA)", sublabel: "OPC UA boundary carrying telemetry and tertiary setpoints between the enterprise EMS and controller core", sublabelFr: "Frontiere OPC UA transportant telemetrie et consignes tertiaires entre l'EMS d'entreprise et le noyau de controle", x: 605, y: 230, w: 560, h: 14, variant: "highlight" },
 
-        { id: "clientpv", label: "Client PV", labelFr: "Client PV", sublabel: "Receives Modbus telemetry relayed directly from Server PV", sublabelFr: "Recoit la telemetrie Modbus relayee directement depuis le serveur PV", x: 380, y: 270, w: 110, h: 55, variant: "muted" },
-        { id: "clientbess", label: "Client BESS", labelFr: "Client BESS", sublabel: "Receives Modbus telemetry relayed directly from Server BESS", sublabelFr: "Recoit la telemetrie Modbus relayee directement depuis le serveur BESS", x: 510, y: 270, w: 110, h: 55, variant: "muted" },
-        { id: "clientdg", label: "Client DG", labelFr: "Client DG", sublabel: "Receives Modbus telemetry relayed directly from Server DG", sublabelFr: "Recoit la telemetrie Modbus relayee directement depuis le serveur DG", x: 640, y: 270, w: 110, h: 55, variant: "muted" },
+        { id: "clientpv", label: "Client PV", labelFr: "Client PV", sublabel: "Polls PV telemetry and writes setpoints through the Modbus server", sublabelFr: "Lit la telemetrie PV et ecrit les consignes via le serveur Modbus", x: 380, y: 270, w: 110, h: 55, variant: "muted" },
+        { id: "clientbess", label: "Client BESS", labelFr: "Client BESS", sublabel: "Polls BESS telemetry and writes setpoints through the Modbus server", sublabelFr: "Lit la telemetrie BESS et ecrit les consignes via le serveur Modbus", x: 510, y: 270, w: 110, h: 55, variant: "muted" },
+        { id: "clientdg", label: "Client DG", labelFr: "Client DG", sublabel: "Polls DG telemetry and writes setpoints through the Modbus server", sublabelFr: "Lit la telemetrie DG et ecrit les consignes via le serveur Modbus", x: 640, y: 270, w: 110, h: 55, variant: "muted" },
         { id: "goose", label: "GOOSE Subscriber/Publisher", labelFr: "Abonne/Editeur GOOSE", sublabel: "IEC 61850 GOOSE broadcast endpoint paired with the circuit breaker", sublabelFr: "Point GOOSE IEC 61850 en diffusion, associe au disjoncteur", x: 770, y: 270, w: 110, h: 55, variant: "highlight" },
 
         { id: "controlcore", label: "Layer 2: Control Core (per-unit)", labelFr: "Couche 2 : noyau de controle (par unite)", sublabel: "Microgrid State Machine, Alarm & Event Monitor, Transition Fn, Protection Stub, Dispatch (Q,V,P), EMS Supervisor", sublabelFr: "Machine d'etat microreseau, moniteur d'alarmes/evenements, fonction de transition, stub de protection, dispatch (Q,V,P), supervision EMS", x: 590, y: 360, w: 400, h: 55, variant: "accent" },
@@ -40,23 +40,27 @@ export const emsQstsScada: ProjectDiagram[] = [
       edges: [
         { from: "laptop", to: "webui", label: "HTTPS / Web API", labelFr: "HTTPS / API Web", tone: "rest", bidirectional: true, labelPos: { x: 230, y: 70 } },
         { from: "laptop", to: "restapi", label: "REST / Control API", labelFr: "REST / API de controle", tone: "rest", bidirectional: true, labelPos: { x: 230, y: 150 } },
-        { from: "webui", to: "dispatch", label: " ", labelFr: "Requetes web", tone: "rest", bidirectional: true, labelPos: { x: 450, y: 168 } },
+        { from: "webui", to: "dispatch", label: "Web requests", labelFr: "Requetes web", tone: "rest", bidirectional: true, labelPos: { x: 450, y: 168 } },
         { from: "restapi", to: "dispatch", label: "Dispatch requests", labelFr: "Requetes de dispatch", tone: "rest", bidirectional: true, labelPos: { x: 605, y: 168 } },
         { from: "dispatch", to: "historian", label: "Telemetry & history", labelFr: "Telemetrie et historique", tone: "rest", bidirectional: true, labelPos: { x: 870, y: 30 } },
-        { from: "dispatch", to: "sqlconfig", label: " ", labelFr: "Config controleur", tone: "rest", bidirectional: true, labelPos: { x: 870, y: 168 } },
-        { from: "dispatch", to: "axcentry", label: "Tertiary setpoints / telemetry & states", labelFr: "Consignes tertiaires / telemetrie et etats", tone: "rest", bidirectional: true, labelPos: { x: 680, y: 200 } },
+        { from: "dispatch", to: "sqlconfig", label: "Controller config", labelFr: "Config controleur", tone: "rest", bidirectional: true, labelPos: { x: 870, y: 168 } },
+        { from: "dispatch", to: "axcentry", label: "OPC UA: telemetry / tertiary setpoints", labelFr: "OPC UA : telemetrie / consignes tertiaires", tone: "internal", bidirectional: true, labelPos: { x: 680, y: 200 } },
+        { from: "axcentry", to: "controlcore", label: "OPC UA", labelFr: "OPC UA", tone: "internal", bidirectional: true, labelPos: { x: 445, y: 316 }, points: [{ x: 445, y: 237 }, { x: 445, y: 332.5 }] },
 
-        { from: "clientbess", to: "controlcore", label: "Polled telemetry", labelFr: "Telemetrie scrutee", tone: "internal", labelPos: { x: 470, y: 315 } },
+        { from: "clientpv", to: "controlcore", label: "PV telemetry / setpoints", labelFr: "Telemetrie PV / consignes", tone: "internal", bidirectional: true, labelPos: { x: 405, y: 315 }, points: [{ x: 380, y: 297.5 }, { x: 380, y: 315 }, { x: 430, y: 315 }, { x: 430, y: 332.5 }] },
+        { from: "clientbess", to: "controlcore", label: "BESS telemetry / setpoints", labelFr: "Telemetrie BESS / consignes", tone: "internal", bidirectional: true, labelPos: { x: 535, y: 315 } },
+        { from: "clientdg", to: "controlcore", label: "DG telemetry / setpoints", labelFr: "Telemetrie DG / consignes", tone: "internal", bidirectional: true, labelPos: { x: 665, y: 315 } },
+        { from: "goose", to: "controlcore", label: "CB status / trip-close", labelFr: "Statut CB / declenchement-fermeture", tone: "goose", bidirectional: true, labelPos: { x: 770, y: 315 } },
         { from: "controlcore", to: "detexec", label: "Computed setpoints", labelFr: "Consignes calculees", tone: "internal", labelPos: { x: 470, y: 405 }, points: [{ x: 590, y: 387.5 }, { x: 590, y: 422.5 }] },
 
         { from: "timesource", to: "goose", label: "IEEE 1588 sync", labelFr: "Synchro IEEE 1588", tone: "sync", labelPos: { x: 260, y: 410 }, points: [{ x: 300, y: 450 }, { x: 300, y: 240 }, { x: 770, y: 240 }, { x: 770, y: 242.5 }] },
-        { from: "timesource", to: "detexec", label: " ", labelFr: " ", tone: "sync", labelPos: { x: 345, y: 405 } },
+        { from: "timesource", to: "detexec", label: "IEEE 1588 sync", labelFr: "Synchro IEEE 1588", tone: "sync", labelPos: { x: 345, y: 405 } },
 
         { from: "goose", to: "cb", label: "GOOSE multicast: status/trip", labelFr: "Multicast GOOSE : statut/declenchement", tone: "goose", bidirectional: true, labelPos: { x: 850, y: 440 }, points: [{ x: 780, y: 582.5 }, { x: 780, y: 525 }, { x: 805, y: 525 }, { x: 805, y: 300 }] },
 
-        { from: "serverpv", to: "clientpv", label: " ", labelFr: "Telemetrie Modbus", tone: "modbus", bidirectional: true, labelPos: { x: 230, y: 380 }, points: [{ x: 380, y: 582.5 }, { x: 380, y: 525 }, { x: 310, y: 525 }, { x: 310, y: 240 }, { x: 380, y: 240 }, { x: 380, y: 242.5 }] },
-        { from: "serverbess", to: "clientbess", label: "Modbus telemetry", labelFr: "Telemetrie Modbus", tone: "modbus",bidirectional: true, labelPos: { x: 280, y: 525 }, points: [{ x: 510, y: 582.5 }, { x: 510, y: 525 }, { x: 322, y: 525 }, { x: 322, y: 240 }, { x: 510, y: 240 }, { x: 510, y: 242.5 }] },
-        { from: "serverdg", to: "clientdg", label: " ", labelFr: "Telemetrie Modbus", tone: "modbus", labelPos: { x: 235, y: 610 }, points: [{ x: 640, y: 582.5 }, { x: 640, y: 525 }, { x: 334, y: 525 }, { x: 334, y: 240 }, { x: 640, y: 240 }, { x: 640, y: 242.5 }] }
+        { from: "serverpv", to: "clientpv", label: "Modbus telemetry / setpoints", labelFr: "Telemetrie Modbus / consignes", tone: "modbus", bidirectional: true, labelPos: { x: 230, y: 380 }, points: [{ x: 380, y: 582.5 }, { x: 380, y: 525 }, { x: 310, y: 525 }, { x: 310, y: 240 }, { x: 380, y: 240 }, { x: 380, y: 242.5 }] },
+        { from: "serverbess", to: "clientbess", label: "Modbus telemetry / setpoints", labelFr: "Telemetrie Modbus / consignes", tone: "modbus",bidirectional: true, labelPos: { x: 280, y: 525 }, points: [{ x: 510, y: 582.5 }, { x: 510, y: 525 }, { x: 322, y: 525 }, { x: 322, y: 240 }, { x: 510, y: 240 }, { x: 510, y: 242.5 }] },
+        { from: "serverdg", to: "clientdg", label: "Modbus telemetry / setpoints", labelFr: "Telemetrie Modbus / consignes", tone: "modbus", bidirectional: true, labelPos: { x: 235, y: 610 }, points: [{ x: 640, y: 582.5 }, { x: 640, y: 525 }, { x: 334, y: 525 }, { x: 334, y: 240 }, { x: 640, y: 240 }, { x: 640, y: 242.5 }] }
       ]
     }
   },

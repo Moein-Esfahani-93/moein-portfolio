@@ -29,8 +29,8 @@ export const cloudEdgeVpp: ProjectDiagram[] = [
         { from: "digital", to: "autotrader", label: "capacity / flexibility", labelFr: "capacité / flexibilité", labelPos: { x: 315, y: 134 }, points: [{ x: 283, y: 150 }, { x: 347, y: 150 }] },
         { from: "autotrader", to: "optipagator", label: "strategy / market targets", labelFr: "stratégie / cibles marché", labelPos: { x: 510, y: 134 }, points: [{ x: 473, y: 150 }, { x: 547, y: 150 }] },
         { from: "digital", to: "optipagator", label: "SoC / PV / load limits", labelFr: "SoC / PV / limites charge", labelPos: { x: 415, y: 204 }, points: [{ x: 220, y: 168 }, { x: 220, y: 204 }, { x: 610, y: 204 }, { x: 610, y: 168 }] },
-        { from: "digital", to: "data", label: "state / telemetry", labelFr: "état / télémétrie", labelPos: { x: 275, y: 232 }, points: [{ x: 252, y: 168 }, { x: 252, y: 232 }, { x: 330, y: 232 }, { x: 330, y: 267 }] },
-        { from: "data", to: "monitor", label: "KPI models / telemetry", labelFr: "modèles KPI / télémétrie", bidirectional: true, labelPos: { x: 448, y: 266 }, points: [{ x: 409, y: 285 }, { x: 499, y: 285 }] },
+        { from: "data", to: "digital", label: "asset state / telemetry", labelFr: "état des actifs / télémétrie", labelPos: { x: 275, y: 232 }, points: [{ x: 330, y: 267 }, { x: 330, y: 232 }, { x: 252, y: 232 }, { x: 252, y: 168 }] },
+        { from: "data", to: "monitor", label: "telemetry / KPIs", labelFr: "télémétrie / KPI", labelPos: { x: 448, y: 266 }, points: [{ x: 409, y: 285 }, { x: 499, y: 285 }] },
         { from: "gateway", to: "data", label: "telemetry / status", labelFr: "télémétrie / état", labelPos: { x: 314, y: 326 }, points: [{ x: 386, y: 349 }, { x: 386, y: 336 }, { x: 300, y: 336 }, { x: 300, y: 303 }] },
         { from: "data", to: "gateway", label: "control / dispatch", labelFr: "contrôle / dispatch", labelPos: { x: 482, y: 326 }, points: [{ x: 360, y: 303 }, { x: 360, y: 326 }, { x: 474, y: 326 }, { x: 474, y: 349 }] },
         { from: "derfleet", to: "gateway", label: "telemetry", labelFr: "télémétrie", labelPos: { x: 344, y: 398 }, points: [{ x: 398, y: 415 }, { x: 398, y: 381 }] },
@@ -48,7 +48,7 @@ export const cloudEdgeVpp: ProjectDiagram[] = [
         { id: "forecast", label: "Forecasting Modules", labelFr: "Modules de prévision", sublabel: "renewable generation, load, prices, capacity and flexibility", sublabelFr: "production renouvelable, charge, prix, capacité et flexibilité", x: 300, y: 105, w: 380, h: 50, variant: "accent" },
         { id: "optimizer", label: "Capability-Based Strategy Evaluation", labelFr: "Évaluation stratégie basée capacité", sublabel: "market participation tested before dispatch", sublabelFr: "participation marché testée avant dispatch", x: 300, y: 178, w: 420, h: 56, variant: "primary" },
         { id: "bid", label: "Auto-Trader + Optimizer", labelFr: "Auto-trader + optimiseur", sublabel: "active and reserve dispatch allocation", sublabelFr: "allocation dispatch active et réserve", x: 300, y: 251, w: 380, h: 50, variant: "accent" },
-        { id: "settle", label: "Grid Studies + KPI Models", labelFr: "Études réseau + modèles KPI", sublabel: "market algorithms, forecasts and dispatch strategies", sublabelFr: "algorithmes marché, prévisions et stratégies dispatch", x: 300, y: 321, w: 380, h: 50, variant: "muted" }
+        { id: "settle", label: "Grid Studies + KPI Models", labelFr: "Études réseau + modèles KPI", sublabel: "distribution time-series feasibility checks and KPI evaluation", sublabelFr: "vérifications de faisabilité en séries temporelles et évaluation des KPI", x: 300, y: 321, w: 380, h: 50, variant: "muted" }
       ],
       edges: [
         { from: "weather", to: "forecast", label: "training + live inputs", labelFr: "entrées entraînement + direct" },
@@ -71,8 +71,8 @@ export const cloudEdgeVpp: ProjectDiagram[] = [
         { id: "dash", label: "Integrated VPP Test Bench", labelFr: "Banc de test VPP intégré", sublabel: "forecasting, market optimization and dispatch validation", sublabelFr: "prévision, optimisation marché et validation dispatch", x: 300, y: 300, w: 320, h: 80, variant: "primary" }
       ],
       edges: [
-        { from: "market", to: "dash", label: "Scenario data", labelFr: "Données de scénario" },
-        { from: "grid", to: "dash", label: "Grid telemetry", labelFr: "Télémétrie réseau" },
+        { from: "market", to: "dash", label: "market scenarios", labelFr: "scénarios de marché" },
+        { from: "grid", to: "dash", label: "capability forecasts", labelFr: "prévisions de capacité" },
         { from: "optkpi", to: "dash", label: "validation metrics", labelFr: "mesures de validation" }
       ]
     }

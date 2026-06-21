@@ -24,7 +24,7 @@ export const rtsIoCil: ProjectDiagram[] = [
 
         { id: "diagnostics", label: "Diagnostics & Service Layer", labelFr: "Diagnostics et services", sublabel: "Tracks health, alarms, link status, counters and last command", sublabelFr: "Suit la sante, les alarmes, l'etat des liaisons, compteurs et derniere commande", x: 310, y: 248, w: 136, h: 112, variant: "service" },
         { id: "canonical", label: "Canonical Internal Model", labelFr: "Modele interne canonique", sublabel: "Single canonical representation of CB, DG, BESS and PV points", sublabelFr: "Representation canonique unique des points CB, DG, BESS et PV", x: 502, y: 248, w: 136, h: 112, variant: "model" },
-        { id: "protocol", label: "Protocol Surfaces (Adapters)", labelFr: "Surfaces protocolaires (adaptateurs)", sublabel: "Modbus TCP, GOOSE, IEC 61850 MMS, OPC UA and MQTT adapter surfaces", sublabelFr: "Surfaces adaptateurs Modbus TCP, GOOSE, IEC 61850 MMS, OPC UA et MQTT", x: 694, y: 248, w: 136, h: 112, variant: "adapter" },
+        { id: "protocol", label: "Protocol Surfaces (Adapters)", labelFr: "Surfaces protocolaires (adaptateurs)", sublabel: "Modbus TCP, IEC 61850 GOOSE/MMS, OPC UA and MQTT adapter surfaces", sublabelFr: "Surfaces adaptateurs Modbus TCP, IEC 61850 GOOSE/MMS, OPC UA et MQTT", x: 694, y: 248, w: 136, h: 112, variant: "adapter" },
 
         { id: "cmdout", label: "Solver Command Output", labelFr: "Sortie commande solveur", sublabel: "Packs and writes accepted commands back to the solver interface", sublabelFr: "Empaquette et ecrit les commandes acceptees vers l'interface solveur", x: 298, y: 360, w: 102, h: 56, variant: "command" },
         { id: "staging", label: "Command Staging", labelFr: "Mise en file commande", sublabel: "Queues validated commands for deterministic solver writes", sublabelFr: "Met en file les commandes validees pour ecriture deterministe vers le solveur", x: 430, y: 360, w: 102, h: 56, variant: "command" },
@@ -39,14 +39,15 @@ export const rtsIoCil: ProjectDiagram[] = [
         { from: "ingest", to: "validate", label: "Raw frames", labelFr: "Trames brutes", tone: "forward", labelPos: { x: 364, y: 160 } },
         { from: "validate", to: "normalize", label: "Validated frames", labelFr: "Trames validees", tone: "forward", labelPos: { x: 496, y: 160 } },
         { from: "normalize", to: "sync", label: "Mapped points", labelFr: "Points mappes", tone: "forward", labelPos: { x: 628, y: 160 } },
-        { from: "sync", to: "protocol", label: "Qualified values", labelFr: "Valeurs qualifiees", tone: "forward", points: [{ x: 694, y: 153 }, { x: 694, y: 192 }], labelPos: { x: 646, y: 182 } },
+        { from: "sync", to: "canonical", label: "Qualified values", labelFr: "Valeurs qualifiees", tone: "forward", points: [{ x: 694, y: 153 }, { x: 694, y: 205 }, { x: 570, y: 205 }, { x: 570, y: 192 }], labelPos: { x: 632, y: 186 } },
 
         { from: "diagnostics", to: "canonical", label: "Health/state", labelFr: "Sante/etat", bidirectional: true, labelPos: { x: 406, y: 232 } },
         { from: "canonical", to: "protocol", label: "Canonical points", labelFr: "Points canoniques", tone: "forward", points: [{ x: 570, y: 224 }, { x: 626, y: 224 }], labelPos: { x: 598, y: 208 } },
         { from: "protocol", to: "canonical", label: "Readback state", labelFr: "Etat de retour", tone: "return", points: [{ x: 626, y: 272 }, { x: 570, y: 272 }], labelPos: { x: 598, y: 291 } },
 
-        { from: "protocol", to: "axcendpoints", label: "To controller", labelFr: "Vers controleur", tone: "forward", labelPos: { x: 814, y: 264 }, points: [{ x: 762, y: 276 }, { x: 865, y: 276 }] },
-        { from: "axcendpoints", to: "protocol", label: "From controller", labelFr: "Depuis controleur", tone: "return", labelPos: { x: 814, y: 310 }, points: [{ x: 865, y: 294 }, { x: 762, y: 294 }] },
+        { from: "protocol", to: "axcendpoints", label: "Modbus TCP telemetry", labelFr: "Telemetrie Modbus TCP", tone: "forward", labelPos: { x: 814, y: 264 }, points: [{ x: 762, y: 276 }, { x: 865, y: 276 }] },
+        { from: "axcendpoints", to: "protocol", label: "Modbus TCP setpoints", labelFr: "Consignes Modbus TCP", tone: "return", labelPos: { x: 814, y: 310 }, points: [{ x: 865, y: 294 }, { x: 762, y: 294 }] },
+        { from: "axclogic", to: "axcendpoints", label: "Controller I/O", labelFr: "E/S controleur", tone: "internal", bidirectional: true, labelPos: { x: 970, y: 236 }, points: [{ x: 930, y: 172 }, { x: 930, y: 263 }] },
 
         { from: "protocol", to: "decoder", label: "Command frames", labelFr: "Trames commande", tone: "return", labelPos: { x: 736, y: 318 }, points: [{ x: 694, y: 304 }, { x: 694, y: 332 }] },
         { from: "decoder", to: "validator", label: "Decoded command", labelFr: "Commande decodee", tone: "return", labelPos: { x: 628, y: 335 } },
@@ -83,7 +84,7 @@ export const rtsIoCil: ProjectDiagram[] = [
       ],
       edges: [
         { from: "step", to: "exch", label: "I/O exchange", labelFr: "Echange E/S", tone: "forward" },
-        { from: "exch", to: "resp", label: "Protocol latency", labelFr: "Latence protocolaire", tone: "forward" },
+        { from: "exch", to: "resp", label: "Telemetry / command exchange", labelFr: "Echange telemetrie / commandes", tone: "forward" },
         { from: "resp", to: "step", label: "Feedback", labelFr: "Retour", dashed: true, tone: "return", labelPos: { x: 600, y: 150 }, points: [{ x: 610, y: 240 }, { x: 625, y: 240 }, { x: 625, y: 60 }, { x: 510, y: 60 }] }
       ]
     }

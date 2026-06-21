@@ -67,8 +67,8 @@ export const skills: SkillBlock[] = [
   {
     title: "Controllers & IEC 61131-3 Programming",
     titleFr: "Contrôleurs et programmation IEC 61131-3",
-    text: "I program IEC 61131-3 Structured Text, Ladder Diagram, and Function Block logic with scan-cycle scheduling, FSM sequencing, interlocks, watchdogs, command/readback validation, CODESYS, TwinCAT, PLCnext AXC F 3152/2152, SEL RTAC, Schneider Modicon M262/M580, DEIF AGC/ASC 150, ELUM Es+, and ComAp InteliNeo 6000.",
-    textFr: "Je programme en IEC 61131-3 Structured Text, Ladder Diagram et Function Block avec cycles de scan, séquencement FSM, interlocks, watchdogs, validation commande/lecture, CODESYS, TwinCAT, PLCnext AXC F 3152/2152, SEL RTAC, Schneider Modicon M262/M580, DEIF AGC/ASC 150, ELUM Es+ et ComAp InteliNeo 6000.",
+    text: "I program IEC 61131-3 Structured Text, Ladder Diagram, and Function Block logic with scan-cycle scheduling, FSM sequencing, interlocks, watchdogs, command/readback validation, CODESYS, TwinCAT, PLCnext AXC F 3152/2152, SEL RTAC, Schneider Modicon M262/M580, DEIF AGC/ASC 150, Elum ePowerControl ES+, and ComAp InteliNeo 6000.",
+    textFr: "Je programme en IEC 61131-3 Structured Text, Ladder Diagram et Function Block avec cycles de scan, séquencement FSM, interlocks, watchdogs, validation commande/lecture, CODESYS, TwinCAT, PLCnext AXC F 3152/2152, SEL RTAC, Schneider Modicon M262/M580, DEIF AGC/ASC 150, Elum ePowerControl ES+ et ComAp InteliNeo 6000.",
     keywords: ["Structured Text", "Ladder", "Function Block", "watchdogs", "PLCnext AXC F 3152/2152"],
     keywordsFr: ["Structured Text", "Ladder", "Function Block", "watchdogs", "PLCnext AXC F 3152/2152"],
     track: "automation"
@@ -85,8 +85,8 @@ export const skills: SkillBlock[] = [
   {
     title: "Real-Time Simulation, I/O & Timing",
     titleFr: "Simulation temps réel, E/S et timing",
-    text: "I design real-time simulator interfaces and time-domain solver logic with timestamp alignment, simulator/controller update-cycle coordination, sampling and update-rate plans, execution budgets, latency/jitter diagnostics, stale-data detection, timeout handling, and SIL, controller-in-the-loop, and CHIL-ready validation workflows. I also work with real-time and HIL environments such as OPAL-RT and RTDS, PREEMPT_RT Linux, FreeRTOS, and embedded RTOS concepts.",
-    textFr: "Je conçois des interfaces de simulateur temps réel et de la logique de solveur temporel avec alignement des horodatages, coordination des cycles simulateur/contrôleur, plans d'échantillonnage, budgets d'exécution, diagnostics de latence/jitter, détection de données périmées, gestion des timeouts et workflows de validation prêts pour SIL, controller-in-the-loop et prêts pour CHIL. Je travaille aussi avec des environnements temps réel et HIL comme OPAL-RT et RTDS, PREEMPT_RT Linux, FreeRTOS et des concepts RTOS embarqués.",
+    text: "I design real-time simulator interfaces and time-domain solver logic with timestamp alignment, simulator/controller update-cycle coordination, sampling and update-rate plans, execution budgets, latency/jitter diagnostics, stale-data detection, timeout handling, and offline SIL plus real-time CIL/CHIL preparation workflows. I also work with real-time and HIL environments such as OPAL-RT and RTDS, PREEMPT_RT Linux, FreeRTOS, and embedded RTOS concepts.",
+    textFr: "Je conçois des interfaces de simulateur temps réel et de la logique de solveur temporel avec alignement des horodatages, coordination des cycles simulateur/contrôleur, plans d'échantillonnage, budgets d'exécution, diagnostics de latence/jitter, détection de données périmées, gestion des timeouts, études SIL hors ligne et préparation CIL/CHIL en temps réel. Je travaille aussi avec des environnements temps réel et HIL comme OPAL-RT et RTDS, PREEMPT_RT Linux, FreeRTOS et des concepts RTOS embarqués.",
     keywords: ["real-time simulator interfaces", "time-domain simulation solver", "latency and jitter", "stale-data and timeout", "OPAL-RT"],
     keywordsFr: ["interfaces de simulateur temps réel", "solveur temporel", "latence et jitter", "données périmées et timeouts", "OPAL-RT"],
     track: "automation"

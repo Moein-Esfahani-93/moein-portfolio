@@ -69,16 +69,16 @@ const capabilityCards = [
     titleFr: "Logiciels et solveurs",
     icon: "code",
     bullets: [
-      "EMS orchestration layer and time-indexed simulation interface",
+      "PSS/E, OpenDSS, PSCAD, MATLAB",
       "FastAPI services, Kafka, MQTT, WebSocket, Redis",
       "Price, load, and PV forecasting with LSTM, GRU, CNN, random forest, XGBoost",
-      "Live-updating dashboards, telemetry, and dispatch data flows"
+      "Python, C/C++, SQL, Java, TypeScript; live dashboards, telemetry, and dispatch data streams"
     ],
     bulletsFr: [
-      "Couche d'orchestration EMS et interface de simulation indexée dans le temps",
+      "PSS/E, OpenDSS, PSCAD, MATLAB",
       "Services FastAPI, Kafka, MQTT, WebSocket, Redis",
       "Prévision prix, charge et PV avec LSTM, GRU, CNN, random forest, XGBoost",
-      "Tableaux de bord live, télémétrie et flux de données de dispatch"
+      "Python, C/C++, SQL, Java, TypeScript;Tableaux de bord live, télémétrie et flux de données de dispatch"
     ]
   },
   {
@@ -147,8 +147,10 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
                 }
               }}
             >
-              <div className="home-project-icon"><Icon name={projectIcons[project.id]} /></div>
-              <b>{translate(language, project.title, project.titleFr)}</b>
+              <div className="home-card-ribbon">
+                <span className="home-card-ribbon-icon"><Icon name={projectIcons[project.id]} /></span>
+                <b>{translate(language, project.title, project.titleFr)}</b>
+              </div>
               <p>{translate(language, project.short, project.shortFr)}</p>
               <div className="home-project-footer">
                 <div className="home-project-tags"><span>{project.tags[0]}</span><span>{project.tags[1]}</span></div>
@@ -173,8 +175,10 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
         <div className="achievement-grid capability-grid-home">
           {capabilityCards.map((card) => (
             <div className="card achievement-card capability-card-home" key={card.title}>
-              <div className="capability-icon"><Icon name={card.icon} /></div>
-              <b>{translate(language, card.title, card.titleFr)}</b>
+              <div className="home-card-ribbon">
+                <span className="home-card-ribbon-icon"><Icon name={card.icon} /></span>
+                <b>{translate(language, card.title, card.titleFr)}</b>
+              </div>
               <ul>
                 {(language === "fr" ? card.bulletsFr : card.bullets).map((bullet) => (
                   <li key={bullet}>{bullet}</li>

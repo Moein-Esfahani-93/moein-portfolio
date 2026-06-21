@@ -48,21 +48,21 @@ export const projects: Project[] = [
     titleFr: "Plateforme de validation EMS microgrid et contrôle secondaire",
     short: "A microgrid EMS validation environment connecting distribution time-series simulation, PLCnext controller logic, industrial telemetry maps, and Python orchestration.",
     shortFr: "Un environnement de validation EMS microgrid reliant simulation temporelle de distribution, logique PLCnext, cartes de télémétrie industrielle et orchestration Python.",
-    problem: "EMS supervisory decisions and secondary-control setpoints need to be tested against simulated grid response before SIL studies, controller-in-the-loop tests, and CHIL-ready testing.",
-    problemFr: "Les décisions de supervision EMS et les consignes de contrôle secondaire doivent être testées face à la réponse réseau simulée avant les études SIL, les tests controller-in-the-loop et les essais prêts pour CHIL.",
+    problem: "EMS supervisory decisions and secondary-control setpoints need to be tested against simulated grid response before offline SIL studies and subsequent real-time CIL/CHIL preparation.",
+    problemFr: "Les décisions de supervision EMS et les consignes de contrôle secondaire doivent être testées face à la réponse réseau simulée avant les études SIL hors ligne et la préparation aux essais CIL/CHIL en temps réel.",
     contribution: "Built the controller-facing EMS validation layer and programmed IEC 61131-3 Structured Text logic for BESS PCS, PV inverter, meter, and hybrid PV-BESS operating modes.",
     contributionFr: "Développement de la couche de validation EMS orientée contrôleur et programmation IEC 61131-3 Structured Text pour BESS PCS, onduleur PV, compteur et modes hybrides PV-BESS.",
     methods: [
       "Connected distribution time-series simulation, PLCnext controller logic, telemetry/command maps, and Python orchestration",
       "Programmed FSM-based sequencing, charge/discharge enable, P/Q setpoint handling, SoC supervision, operating-limit supervision, alarms, watchdogs, acknowledgement/readback logic, and communication-health monitoring",
       "Defined BESS PCS, PV inverter, and meter telemetry/control mappings, state commands, measurements, acknowledgement/readback, and latency checks",
-      "Structured the path from offline distribution time-series studies toward SIL studies, controller-in-the-loop tests, and CHIL-ready validation"
+      "Structured the path from offline distribution time-series studies toward SIL studies and real-time CIL/CHIL preparation"
     ],
     methodsFr: [
       "Connexion de la simulation temporelle de distribution, de la logique PLCnext, des cartes télémétrie/commandes et de l'orchestration Python",
       "Programmation du séquencement FSM, activation charge/décharge, consignes P/Q, supervision SoC et limites, alarmes, watchdogs, logique d'acquittement/lecture et suivi de santé communication",
       "Définition des mappings télémétrie/contrôle du PCS BESS, de l'onduleur PV et du compteur, commandes d'état, mesures, acquittement/lecture et vérifications de latence",
-      "Structuration du passage des études temporelles de distribution hors ligne vers la préparation SIL, controller-in-the-loop et essais prêts pour CHIL"
+      "Structuration du passage des études temporelles de distribution hors ligne vers les études SIL et la préparation aux essais CIL/CHIL en temps réel"
     ],
     visualSlots: [
       "Microgrid EMS and AXC F 3152 controller-interface architecture",
@@ -91,13 +91,13 @@ export const projects: Project[] = [
     contributionFr: "Conception et amélioration de l'interface simulateur-contrôleur, avec logique de pont C/C++, routines d'échange protocole, gestion E/S, diagnostics de latence et coordination de simulation temporelle.",
     methods: [
       "Defined the signal contract including engineering units, scaling, sampling/update rates, telemetry/command direction, status and quality flags, timeout/fallback states, and controller I/O mapping",
-      "Built C/C++ interface logic, Modbus TCP server/client and RTU slave/master routines, I/O-handling routines, and IEC 61850-ready point maps for future adapter tests",
+      "Built C/C++ interface logic, Modbus TCP and RTU client/server routines, I/O-handling routines, and IEC 61850-ready point maps for future adapter tests",
       "Added diagnostics for round-trip latency, jitter, stale-data detection, read/write acknowledgement, and controller-response validation",
       "Developed time-domain simulation logic with numerical integration, state updates, and convergence handling, then coordinated simulator cycles with controller-facing data exchange"
     ],
     methodsFr: [
       "Définition du contrat de signaux: unités, mise à l'échelle, fréquences d'échantillonnage/mise à jour, direction télémétrie/commande, flags statut/qualité, états timeout/fallback et mapping E/S contrôleur",
-      "Développement de logique de pont C/C++, routines Modbus TCP serveur/client et RTU esclave/maître, routines de gestion E/S et mappings de points prêts pour de futurs tests d'adaptateurs IEC 61850",
+      "Développement de logique de pont C/C++, routines Modbus TCP et RTU client/serveur, routines de gestion E/S et mappings de points prêts pour de futurs tests d'adaptateurs IEC 61850",
       "Ajout de diagnostics de latence aller-retour, jitter, détection de données périmées, acquittement lecture/écriture et validation de réponse contrôleur",
       "Développement de logique de simulation temporelle avec intégration numérique, mises à jour d'état et convergence, puis coordination des cycles simulateur avec l'échange orienté contrôleur"
     ],
