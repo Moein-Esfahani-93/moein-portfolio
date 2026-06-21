@@ -27,11 +27,15 @@ export default function Sidebar({
     en: {
       button: "CV",
       aria: "Choose CV download",
+      linkedin: "LinkedIn",
+      linkedinAria: "Open LinkedIn profile",
       email: "Email"
     },
     fr: {
       button: "CV",
       aria: "Choisir le CV a telecharger",
+      linkedin: "LinkedIn",
+      linkedinAria: "Ouvrir le profil LinkedIn",
       email: "Courriel"
     }
   }[language];
@@ -66,6 +70,16 @@ export default function Sidebar({
             <span className="sidebar-circle"><Icon name="download" /></span>
             <span className="sidebar-label">{utilityCopy.button}</span>
           </button>
+          <a
+            className="sidebar-btn sidebar-utility-btn"
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={utilityCopy.linkedinAria}
+          >
+            <span className="sidebar-circle"><span className="sidebar-linkedin-mark" aria-hidden="true">in</span></span>
+            <span className="sidebar-label">{utilityCopy.linkedin}</span>
+          </a>
           <a className="sidebar-btn sidebar-utility-btn" href={`mailto:${profile.email}`} aria-label={`${copy.header.goTo} email`}>
             <span className="sidebar-circle"><Icon name="send" /></span>
             <span className="sidebar-label">{utilityCopy.email}</span>

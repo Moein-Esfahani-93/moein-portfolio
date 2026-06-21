@@ -40,6 +40,7 @@
 .sidebar-utility-btn { min-height: 54px; }
 .sidebar-utility-btn .sidebar-circle { width: 34px; height: 34px; border-radius: 12px; background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.72); }
 .sidebar-utility-btn .sidebar-circle .icon { width: 18px; height: 18px; }
+.sidebar-linkedin-mark { font: 800 16px/1 Arial, sans-serif; }
 .sidebar-utility-btn:hover .sidebar-circle { background: #050505; color: #ffffff; box-shadow: 0 0 0 3px rgba(200,155,60,0.16); }
 .sidebar-utility-btn .sidebar-label { font-size: 9.5px; }
 
