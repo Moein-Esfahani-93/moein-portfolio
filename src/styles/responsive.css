@@ -85,6 +85,8 @@
   .cv-modal-actions { grid-template-columns: 1fr; }
   .contact-action-row { display: grid; grid-template-columns: 1fr; }
   .contact-detail-list { grid-template-columns: 1fr; }
+  .contact-layout { grid-template-areas: "intro" "cv" "style"; }
+  .contact-trait-grid { grid-template-columns: 1fr; }
   .contact-cv-picker-panel { grid-template-columns: 44px 1fr; gap: 12px; padding: 14px; }
   .contact-cv-download-panel { grid-template-columns: 1fr; }
   .contact-cv-choice { grid-template-columns: 44px 1fr; gap: 12px; padding: 14px; }

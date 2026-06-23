@@ -15,6 +15,7 @@ const copy: Record<Language, {
   email: string;
   alternateEmail: string;
   linkedin: string;
+  orcid: string;
   scholar: string;
   cvLabel: string;
   cvTitle: string;
@@ -34,6 +35,7 @@ const copy: Record<Language, {
     email: "Email me",
     alternateEmail: "Alternative email",
     linkedin: "LinkedIn",
+    orcid: "ORCID",
     scholar: "Google Scholar",
     cvLabel: "CV",
     cvTitle: "Download CV",
@@ -44,7 +46,10 @@ const copy: Record<Language, {
     traits: [
       { icon: "trendUp", title: "Fast ramp-up", text: "I learn new technical contexts quickly and convert them into practical implementation." },
       { icon: "workflow", title: "Team momentum", text: "I work well in active engineering teams where priorities evolve and delivery matters." },
-      { icon: "target", title: "Problem ownership", text: "I prefer clear objectives, rigorous reasoning, and solutions that can be validated." }
+      { icon: "target", title: "Problem ownership", text: "I prefer clear objectives, rigorous reasoning, and solutions that can be validated." },
+      { icon: "waypoints", title: "Proven perseverance", text: "I do not give up when the work gets difficult; I persist, test, and improve until there is a workable answer." },
+      { icon: "flask", title: "Creative problem solving", text: "I explore unconventional angles and connect ideas across disciplines to find practical solutions." },
+      { icon: "send", title: "Clear communication", text: "I communicate early, listen carefully, and help create a constructive, respectful team environment." }
     ]
   },
   fr: {
@@ -57,6 +62,7 @@ const copy: Record<Language, {
     email: "M'ecrire",
     alternateEmail: "Autre courriel",
     linkedin: "LinkedIn",
+    orcid: "ORCID",
     scholar: "Google Scholar",
     cvLabel: "CV",
     cvTitle: "Telecharger le CV",
@@ -67,7 +73,10 @@ const copy: Record<Language, {
     traits: [
       { icon: "trendUp", title: "Montee en competence rapide", text: "J'assimile vite les nouveaux contextes techniques et les transforme en implementations concretes." },
       { icon: "workflow", title: "Dynamique d'equipe", text: "Je travaille bien dans les equipes actives ou les priorites evoluent et ou la livraison compte." },
-      { icon: "target", title: "Responsabilite technique", text: "Je privilegie des objectifs clairs, un raisonnement rigoureux et des solutions verifiables." }
+      { icon: "target", title: "Responsabilite technique", text: "Je privilegie des objectifs clairs, un raisonnement rigoureux et des solutions verifiables." },
+      { icon: "waypoints", title: "Perseverance demontree", text: "Je ne renonce pas lorsque le travail devient difficile; je teste, j'ameliore et je poursuis jusqu'a obtenir une solution praticable." },
+      { icon: "flask", title: "Resolution creative", text: "J'explore des angles inhabituels et relie des idees de disciplines differentes pour trouver des solutions pratiques." },
+      { icon: "send", title: "Communication claire", text: "Je communique tot, j'ecoute attentivement et je contribue a creer un environnement d'equipe constructif et respectueux." }
     ]
   }
 };
@@ -81,61 +90,51 @@ export default function Contact({ language }: { language: Language }) {
       <PageTitle kicker={c.kicker} title={c.title} body={c.body} />
 
       <div className="contact-layout">
-        <div className="contact-left-column">
-          <section className="contact-page-card contact-intro-card">
-            <div className="contact-card-heading">
-              <span>{c.contactLabel}</span>
-              <h2>{c.contactTitle}</h2>
-              <p>{c.contactText}</p>
-            </div>
+        <section className="contact-page-card contact-intro-card">
+          <div className="contact-card-heading">
+            <span>{c.contactLabel}</span>
+            <h2>{c.contactTitle}</h2>
+            <p>{c.contactText}</p>
+          </div>
 
-            <div className="contact-detail-list">
+          <div className="contact-detail-list">
+            <div className="contact-detail-row">
+              <span className="contact-email-icon"><Icon name="mail" /></span>
+              <a href={`mailto:${profile.email}`}>
+                <b>{c.email}</b>
+                {profile.email}
+              </a>
+            </div>
+            {profile.alternateEmail && (
               <div className="contact-detail-row">
-                <Icon name="mail" />
-                <a href={`mailto:${profile.email}`}>
-                  <b>{c.email}</b>
-                  {profile.email}
+                <span className="contact-email-icon"><Icon name="mail" /></span>
+                <a href={`mailto:${profile.alternateEmail}`}>
+                  <b>{c.alternateEmail}</b>
+                  {profile.alternateEmail}
                 </a>
               </div>
-              {profile.alternateEmail && (
-                <div className="contact-detail-row">
-                  <Icon name="mail" />
-                  <a href={`mailto:${profile.alternateEmail}`}>
-                    <b>{c.alternateEmail}</b>
-                    {profile.alternateEmail}
-                  </a>
-                </div>
-              )}
-            </div>
+            )}
+          </div>
 
-            <div className="contact-action-row">
-              <a className="button primary large" href={`mailto:${profile.email}`}>{c.email}</a>
-              <a className="button large" href={profile.linkedin} target="_blank" rel="noreferrer">{c.linkedin}</a>
-              {profile.googleScholar && (
-                <a className="button large" href={profile.googleScholar} target="_blank" rel="noreferrer">{c.scholar}</a>
-              )}
-            </div>
-          </section>
-
-          <section className="contact-page-card contact-spirit-card">
-            <div className="contact-card-heading contact-card-heading-compact">
-              <span>{c.spiritLabel}</span>
-              <h2>{c.spiritTitle}</h2>
-            </div>
-
-            <div className="contact-trait-grid">
-              {c.traits.map((trait) => (
-                <article className="contact-trait" key={trait.title}>
-                  <span className="contact-small-icon"><Icon name={trait.icon} /></span>
-                  <div>
-                    <h3>{trait.title}</h3>
-                    <p>{trait.text}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-        </div>
+          <div className="contact-action-row">
+            <a className="button large contact-social-button" href={profile.linkedin} target="_blank" rel="noreferrer">
+              <span className="contact-social-mark contact-linkedin-mark" aria-hidden="true">in</span>
+              {c.linkedin}
+            </a>
+            {profile.orcid && (
+              <a className="button large contact-social-button" href={profile.orcid} target="_blank" rel="noreferrer">
+                <span className="contact-social-mark contact-orcid-mark" aria-hidden="true">iD</span>
+                {c.orcid}
+              </a>
+            )}
+            {profile.googleScholar && (
+              <a className="button large contact-social-button" href={profile.googleScholar} target="_blank" rel="noreferrer">
+                <span className="contact-social-mark contact-scholar-mark" aria-hidden="true"><Icon name="cap" /></span>
+                {c.scholar}
+              </a>
+            )}
+          </div>
+        </section>
 
         <section className="contact-page-card contact-cv-card">
           <div className="contact-card-heading">
@@ -154,6 +153,25 @@ export default function Contact({ language }: { language: Language }) {
             >
               {c.downloadCv}
             </button>
+          </div>
+        </section>
+
+        <section className="contact-page-card contact-spirit-card">
+          <div className="contact-card-heading contact-card-heading-compact">
+            <span>{c.spiritLabel}</span>
+            <h2>{c.spiritTitle}</h2>
+          </div>
+
+          <div className="contact-trait-grid">
+            {c.traits.map((trait) => (
+              <article className="contact-trait" key={trait.title}>
+                <span className="contact-small-icon"><Icon name={trait.icon} /></span>
+                <div>
+                  <h3>{trait.title}</h3>
+                  <p>{trait.text}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
       </div>

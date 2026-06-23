@@ -33,8 +33,14 @@ export default function Header({
         </div>
 
         <div className="language-switch" aria-label={copy.header.languageAria}>
-          <button type="button" className={language === "en" ? "active" : ""} aria-pressed={language === "en"} onClick={() => setLanguage("en")}>{languageLabels.en}</button>
-          <button type="button" className={language === "fr" ? "active" : ""} aria-pressed={language === "fr"} onClick={() => setLanguage("fr")}>{languageLabels.fr}</button>
+          <button type="button" className={language === "en" ? "active" : ""} aria-pressed={language === "en"} onClick={() => setLanguage("en")}>
+            <img className="language-flag" src="/flags/gb.svg" alt="" aria-hidden="true" />
+            {languageLabels.en}
+          </button>
+          <button type="button" className={language === "fr" ? "active" : ""} aria-pressed={language === "fr"} onClick={() => setLanguage("fr")}>
+            <img className="language-flag" src="/flags/fr.svg" alt="" aria-hidden="true" />
+            {languageLabels.fr}
+          </button>
         </div>
       </header>
 
