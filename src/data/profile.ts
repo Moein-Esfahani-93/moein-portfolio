@@ -6,7 +6,7 @@ export const profile: Profile = {
   email: "moien.esfahani1993@gmail.com",
   alternateEmail: "SMESR@ulaval.ca",
   linkedin: "https://www.linkedin.com/in/moeinesfahani1993",
-  googleScholar: "https://scholar.google.com/scholar?q=%22Moein%20Esfahani%22%20%22virtual%20power%20plant%22",
+  googleScholar: "https://scholar.google.com/citations?user=wDZlKRsAAAAJ&hl=en&oi=sra",
   researchGate: "",
   orcid: "",
   cvVppEms: "/cv/Moein_Esfahani_CV_PowerSystems_VPP_EMS.docx",
