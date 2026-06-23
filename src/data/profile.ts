@@ -8,7 +8,7 @@ export const profile: Profile = {
   linkedin: "https://www.linkedin.com/in/moeinesfahani1993",
   googleScholar: "https://scholar.google.com/citations?user=wDZlKRsAAAAJ&hl=en&oi=sra",
   researchGate: "",
-  orcid: "",
+  orcid: "https://orcid.org/0000-0002-1574-4358",
   cvVppEms: "/cv/Moein_Esfahani_CV_PowerSystems_VPP_EMS.docx",
   cvVppEmsFr: "/cv/Moein_Esfahani_CV_PowerSystems_VPP_EMS_FR.docx",
   cvControlAutomation: "/cv/Moein_Esfahani_CV_Control_Automation_RTS.docx",
