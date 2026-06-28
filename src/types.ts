@@ -6,6 +6,7 @@ export type Profile = {
   name: string;
   role: string;
   email: string;
+  phone?: string;
   alternateEmail?: string;
   linkedin: string;
   googleScholar?: string;

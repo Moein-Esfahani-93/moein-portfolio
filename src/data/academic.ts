@@ -2,93 +2,95 @@ import type { AcademicItem } from "../types";
 
 export const academicExperience: AcademicItem[] = [
   {
-    title: "Researcher - Microgrid EMS Design and Controller-Interface Validation",
-    titleFr: "Chercheur - Conception EMS microgrid et validation des interfaces contrôleur",
-    institution: "Huawei Technologies",
+    title: "Researcher - Microgrid Controller Design & CHIL Implementation",
+    titleFr: "Chercheur - conception controleur microgrid et implementation CHIL",
+    institution: "Huawei Technologies Canada - Montreal, QC",
     period: "Dec 2024 - Present",
-    periodFr: "Déc. 2024 - aujourd'hui",
+    periodFr: "Dec. 2024 - aujourd'hui",
     startYear: 2024,
     endYear: "present",
-    summary: "Promoted to Researcher level 16. Leads VPP market analytics, grid-aware optimization, microgrid EMS validation, controller-facing workflows, and RTS/AXC F 3152 closed-loop analysis.",
-    summaryFr: "Promu Researcher level 16. Mène l'analytique marché VPP, l'optimisation orientée réseau, la validation EMS microgrid, les workflows orientés contrôleur et l'analyse en boucle fermée RTS/AXC F 3152.",
+    summary: "Develops controller-facing validation workflows translating EMS setpoints and VPP dispatch targets into executable controller logic, test scenarios, metrics, and evidence for BESS, PV, PCS, and meter interfaces.",
+    summaryFr: "Developpe des workflows de validation orientee controleur qui traduisent consignes EMS et cibles de dispatch VPP en logique controleur executable, scenarios, metriques et preuves pour interfaces BESS, PV, PCS et compteurs.",
     highlights: [
-      "Lead VPP market-analytics and grid-aware optimization, translating energy, reserve, and frequency-regulation rules into forecast-driven bid/offer logic, dispatch schedules, KPI models, and grid-feasibility validation requirements",
-      "Advanced the VPP platform from separate analytical modules toward an integrated workflow linking auto-trader, forecasting, capability estimation, optimization, dispatch propagation, and grid-validation",
-      "Built a parallel microgrid EMS validation workflow on PLCnext AXC F 3152/2152 with IEC 61131-3 Structured Text and Python orchestration",
-      "Designed and developed a controller-facing validation platform based on RTS and AXC F 3152 to evaluate secondary-control logic, real-time solver performance, and closed-loop controller behavior",
-      "Defined BESS PCS, PV inverter, and meter telemetry/control mappings, P/Q setpoints, state commands, SoC, measurements, acknowledgement/readback, and latency checks"
+      "Develop controller-facing validation workflows that translate supervisory EMS setpoints and VPP dispatch targets into executable controller logic for BESS, PV, PCS, and meter interfaces",
+      "Implement IEC 61131-3 Structured Text, FSM sequencing, interlocks, watchdogs, diagnostic states, command/readback validation, and safe-state behavior for microgrid controller testing",
+      "Build simulation-to-controller interface layers using C/C++ and Python bridge logic, Modbus TCP point maps, telemetry/command scaling, acknowledgement/status/fault bits, watchdog timers, latency logging, and JSON/SQL test artifacts",
+      "Define validation scenarios, expected behavior, objective metrics, and acceptance checks for voltage limits, feeder loading, BESS SoC, P/Q setpoint tracking, stale data, communication loss, timeout, and safe fallback",
+      "Troubleshoot simulator/controller integration issues using timing logs, communication-health flags, command/readback mismatches, protocol traces, and repeatable test evidence",
+      "Work hands-on across PLCnext AXC F 3152/2152, SEL RTAC 3350, Schneider Modicon M262/M580, DEIF AGC/ASC 150, ELUM Es+, and ComAp InteliNeo 6000 controllers"
     ],
     highlightsFr: [
-      "Pilotage de l'analytique marché VPP et de l'optimisation orientée réseau, traduisant règles énergie, réserve et régulation de fréquence en logique d'offres basée prévisions, calendriers de dispatch, modèles KPI et exigences de validation réseau",
-      "Évolution de la plateforme VPP depuis des modules analytiques séparés vers un workflow intégré reliant auto-trader, prévision, estimation de capacité, optimisation, propagation du dispatch et validation réseau",
-      "Développement d'un workflow parallèle de validation EMS microgrid sur PLCnext AXC F 3152/2152 avec IEC 61131-3 Structured Text et orchestration Python",
-      "Conception et développement d'une plateforme de validation orientée contrôleur basée sur RTS et AXC F 3152 pour évaluer la logique de contrôle secondaire, performance de solveur temps réel et comportement contrôleur en boucle fermée",
-      "Définition des mappings télémétrie/contrôle du PCS BESS, de l'onduleur PV et du compteur, consignes P/Q, commandes d'état, SoC, mesures, acquittement/lecture et vérifications de latence"
+      "Developpement de workflows de validation orientee controleur traduisant consignes EMS et cibles de dispatch VPP en logique controleur executable pour interfaces BESS, PV, PCS et compteurs",
+      "Implementation IEC 61131-3 Structured Text, sequences FSM, interlocks, watchdogs, etats diagnostics, validation commande/lecture et comportement safe-state pour tests controleur microgrid",
+      "Construction de couches simulateur-vers-controleur avec ponts C/C++ et Python, cartes Modbus TCP, mise a l'echelle telemetrie/commande, bits acknowledgement/status/fault, timers watchdog, logs latence et artefacts JSON/SQL",
+      "Definition de scenarios de validation, comportement attendu, metriques objectives et checks d'acceptation pour tension, chargement, SoC BESS, suivi P/Q, donnees perimees, perte communication, timeout et repli sur",
+      "Depannage d'integration simulateur/controleur avec logs timing, flags sante communication, mismatches commande/lecture, traces protocolaires et preuves repetables",
+      "Travail pratique avec PLCnext AXC F 3152/2152, SEL RTAC 3350, Schneider Modicon M262/M580, DEIF AGC/ASC 150, ELUM Es+ et ComAp InteliNeo 6000"
     ]
   },
   {
-    title: "Research Intern - VPP Platform, Microgrid EMS Software & Controller Interfaces",
-    titleFr: "Stagiaire de recherche - Plateforme VPP, logiciel EMS microgrid et interfaces contrôleur",
-    institution: "Huawei Technologies",
+    title: "Research Intern - VPP & Microgrid Controller Interfaces",
+    titleFr: "Stagiaire de recherche - VPP et interfaces controleur microgrid",
+    institution: "Huawei Technologies Canada - Montreal, QC",
     period: "Oct 2023 - Dec 2024",
-    periodFr: "Oct. 2023 - déc. 2024",
+    periodFr: "Oct. 2023 - dec. 2024",
     startYear: 2023,
     endYear: 2024,
-    summary: "Promoted from intern into full-time employee after graduation. Built early VPP platform foundations, forecasting data, optimizer outputs, controller-interface assumptions, and validation workflows.",
-    summaryFr: "Promu de stagiaire à employé temps plein après graduation. A construit les bases de la plateforme VPP, les données de prévision, sorties d'optimiseur, hypothèses d'interface contrôleur et workflows de validation.",
+    summary: "Built early VPP software foundations and the first software-to-controller transition layer for later EMS/controller validation workflows.",
+    summaryFr: "A construit les bases logicielles VPP et la premiere couche logiciel-vers-controleur pour les workflows ulterieurs de validation EMS/controleur.",
     highlights: [
-      "Built the early VPP platform foundation through ISO/RTO market-rule analysis, DER portfolio aggregation requirements, and market-facing dispatch architecture",
-      "Created a 50+ GB historical price, weather, load, and PV data foundation for forecasting, scenario generation, and repeatable validation",
-      "Developed and validated the optimizer, dispatch propagator, capability extractor, forecasting engine, and capability/state-estimation models as standalone components and as part of end-to-end VPP orchestration",
-      "Defined the first software-to-controller transition layer: measurement/command contracts, device profiles, register maps, scheduler timing assumptions, diagnostic logs, and PLC/RTAC test scenarios"
+      "Built early VPP software foundations including DER aggregation, forecasting inputs, optimizer outputs, capability limits, dispatch propagation, and grid-feasibility checks for later EMS/controller validation workflows",
+      "Defined the first software-to-controller transition layer: measurement/command contracts, device profiles, register maps, scheduler timing assumptions, diagnostic logs, and PLC/RTAC test cases",
+      "Validated market, weather, simulation, and diagnostic datasets exceeding 50 GB for forecasting, scenario generation, and repeatable validation",
+      "Connected VPP optimizer outputs to DER flexibility envelopes, BESS SoC limits, PV availability, network voltage/loading constraints, and abnormal operating conditions"
     ],
     highlightsFr: [
-      "Construction des bases de la plateforme VPP par analyse des règles marché ISO/RTO, exigences d'agrégation DER et architecture de dispatch orientée marché",
-      "Création d'une base historique de plus de 50 Go de prix, météo, charge et PV pour prévision, génération de scénarios et validation reproductible",
-      "Développement et validation de l'optimiseur, propagateur de dispatch, extracteur de capacité, moteur de prévision et modèles d'estimation de capacité/état comme composants autonomes et dans l'orchestration VPP bout en bout",
-      "Définition de la première couche logiciel-vers-contrôleur: contrats mesure/commande, profils d'équipement, cartes registres, hypothèses de timing scheduler, logs diagnostics et scénarios PLC/RTAC"
+      "Construction des bases logicielles VPP: aggregation DER, entrees de prevision, sorties optimiseur, limites de capacite, propagation dispatch et checks de faisabilite reseau pour validation EMS/controleur",
+      "Definition de la premiere couche logiciel-vers-controleur: contrats mesure/commande, profils equipement, cartes registres, hypotheses timing scheduler, logs diagnostic et cas de test PLC/RTAC",
+      "Validation de plus de 50 Go de donnees marche, meteo, simulation et diagnostic pour prevision, generation de scenarios et validation repetable",
+      "Connexion des sorties optimiseur VPP aux enveloppes de flexibilite DER, limites SoC BESS, disponibilite PV, contraintes tension/chargement et conditions anormales"
     ]
   },
   {
-    title: "Doctoral Researcher - Optimization & Uncertainty Modelling for VPP Coordination",
-    titleFr: "Doctorant chercheur - Optimisation et modélisation de l'incertitude pour coordination VPP",
-    institution: "Université Laval",
+    title: "Doctoral Researcher - Power Systems Modelling & Control",
+    titleFr: "Doctorant chercheur - modelisation et controle des reseaux electriques",
+    institution: "Universite Laval - Quebec City, QC",
     period: "Dec 2020 - Dec 2024",
-    periodFr: "Déc. 2020 - déc. 2024",
+    periodFr: "Dec. 2020 - dec. 2024",
     startYear: 2020,
     endYear: 2024,
-    summary: "Completed Ph.D. research in DER coordination and VPP optimization under renewable, load, and market uncertainty.",
-    summaryFr: "Recherche de Ph.D. complétée en coordination DER et optimisation VPP sous incertitude renouvelable, charge et marché.",
+    summary: "Completed Ph.D. research in DER coordination, VPP optimization, voltage/frequency support, and uncertainty-aware power-system operation.",
+    summaryFr: "Ph.D. complete en coordination DER, optimisation VPP, soutien tension/frequence et operation de reseaux sous incertitude.",
     highlights: [
-      "Developed stochastic, robust, and Wasserstein-DRO models for VPP coordination under renewable, load, and market uncertainty",
-      "Covered energy scheduling, frequency regulation, voltage support, and grid-feasibility requirements",
-      "Developed ADMM-distributed, Stackelberg, and Nash coordination schemes for DSO-VPP interaction",
-      "Published 4 first-author papers from the doctoral research"
+      "Developed stochastic, robust, and distributionally robust optimization for VPP coordination under renewable, load, and market uncertainty",
+      "Translated optimization outcomes into control-oriented DER operating limits, flexibility envelopes, BESS SoC constraints, and network limits",
+      "Built time-series validation workflows for DER portfolios supporting EMS dispatch, grid-feasibility evaluation, controller-test-case design, voltage/frequency support assessment, and resilience-oriented operating scenarios",
+      "Published first-author work on VPP coordination, DRO co-optimization, frequency regulation, voltage support, and resilience-oriented distribution-network operation"
     ],
     highlightsFr: [
-      "Développement de modèles stochastiques, robustes et Wasserstein-DRO pour la coordination VPP sous incertitude renouvelable, charge et marché",
-      "Couverture de la planification énergie, régulation de fréquence, soutien de tension et exigences de faisabilité réseau",
-      "Développement de schémas de coordination ADMM distribuée, Stackelberg et Nash pour interaction DSO-VPP",
-      "Publication de 4 articles en premier auteur issus de la recherche doctorale"
+      "Developpement d'optimisation stochastique, robuste et distributionally robust pour coordination VPP sous incertitude renouvelable, charge et marche",
+      "Traduction des sorties d'optimisation en limites DER orientees controle, enveloppes de flexibilite, contraintes SoC BESS et limites reseau",
+      "Construction de workflows de validation temporelle pour portefeuilles DER supportant dispatch EMS, faisabilite reseau, conception de cas de test controleur, soutien tension/frequence et scenarios resilience",
+      "Publications premier auteur sur coordination VPP, co-optimisation DRO, regulation de frequence, soutien de tension et operation de distribution orientee resilience"
     ]
   },
   {
     title: "Research Collaborator - DER Resilience & Grid Integration",
-    titleFr: "Collaborateur de recherche - Résilience DER et intégration réseau",
-    institution: "Université Laval - EVLO collaboration",
+    titleFr: "Collaborateur de recherche - resilience DER et integration reseau",
+    institution: "Universite Laval - EVLO collaboration",
     period: "Jan 2021 - Sep 2022",
-    periodFr: "Janv. 2021 - sept. 2022",
+    periodFr: "Jan. 2021 - sept. 2022",
     startYear: 2021,
     endYear: 2022,
     summary: "Supported robust scenario analysis and storage-based DER coordination for active distribution networks under severe-event, resilience, and operating-constraint conditions.",
-    summaryFr: "A soutenu l'analyse robuste de scénarios et la coordination DER avec stockage pour réseaux de distribution actifs sous conditions d'événements sévères, de résilience et de contraintes d'exploitation.",
+    summaryFr: "A soutenu l'analyse robuste de scenarios et la coordination DER avec stockage pour reseaux de distribution actifs sous evenements severes, resilience et contraintes d'exploitation.",
     highlights: [
       "Supported robust scenario analysis for active distribution networks under severe-event and resilience conditions",
       "Supported storage-based DER coordination under operating-constraint conditions"
     ],
     highlightsFr: [
-      "Soutien à l'analyse robuste de scénarios pour réseaux de distribution actifs sous événements sévères et conditions de résilience",
-      "Soutien à la coordination DER avec stockage sous contraintes d'exploitation"
+      "Soutien a l'analyse robuste de scenarios pour reseaux de distribution actifs sous evenements severes et conditions de resilience",
+      "Soutien a la coordination DER avec stockage sous contraintes d'exploitation"
     ]
   }
 ];

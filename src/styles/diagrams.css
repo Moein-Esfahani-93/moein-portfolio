@@ -1,22 +1,22 @@
 .project-diagram-carousel { display: grid; grid-template-columns: 1fr 92px; gap: 16px; align-items: stretch; margin-top: 14px; }
 .diagram-panel { position: relative; padding: 18px 18px 16px; border-radius: 6px; background: #ffffff; border: 1px solid rgba(19,39,67,0.18); box-shadow: 0 14px 28px rgba(19,39,67,0.08), inset 0 0 0 1px rgba(255,255,255,0.9); overflow: hidden; }
-.diagram-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal-deep), #f4b440); }
+.diagram-panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal-deep), var(--gold)); }
 .diagram-panel-heading { display: flex; align-items: center; gap: 11px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(19,39,67,0.1); }
 .diagram-panel-heading > span { display: inline-flex; align-items: center; min-height: 24px; padding: 0 9px; border-radius: 3px; color: white; background: var(--navy); font-size: 10px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
 .diagram-panel h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 0; font-family: var(--font-display); font-size: 18px; line-height: 1.2; color: var(--navy); margin: 0; }
 .diagram-title-part { display: inline-flex; align-items: center; }
 .diagram-title-arrow { width: 17px; height: 17px; flex: none; margin: 0 8px; color: var(--ink); }
-.diagram-panel figcaption { margin-top: 12px; padding: 10px 12px; border-radius: 4px; background: #f7fbfb; border: 1px solid rgba(42,136,136,0.18); border-left: 4px solid var(--teal-deep); font-size: 12.5px; line-height: 1.35; color: var(--text); font-weight: 750; }
+.diagram-panel figcaption { margin-top: 12px; padding: 10px 12px; border-radius: 4px; background: #f8faff; border: 1px solid rgba(var(--cyan-rgb), 0.18); border-left: 4px solid var(--teal-deep); font-size: 12.5px; line-height: 1.35; color: var(--text); font-weight: 750; }
 
 .flow-diagram { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
 
-.diagram-carousel-controls { display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: 14px 10px; border-radius: 16px; background: linear-gradient(180deg, #ffffff, rgba(238,247,246,0.86)); border: 1px solid rgba(42,136,136,0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,0.94), 0 10px 22px rgba(19,39,67,0.06); }
+.diagram-carousel-controls { display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: 14px 10px; border-radius: 16px; background: linear-gradient(180deg, #ffffff, rgba(238,242,255,0.86)); border: 1px solid rgba(var(--cyan-rgb), 0.18); box-shadow: inset 0 1px 0 rgba(255,255,255,0.94), 0 10px 22px rgba(19,39,67,0.06); }
 .diagram-step-buttons { display: grid; gap: 10px; }
 .diagram-step-buttons button { position: relative; display: grid; place-items: center; width: 44px; height: 44px; margin: 0 auto; overflow: hidden; border-radius: 50%; cursor: pointer; background: #ffffff; color: var(--navy); border: 1px solid rgba(19,39,67,0.14); box-shadow: 0 7px 0 rgba(19,39,67,0.08), 0 12px 20px rgba(19,39,67,0.08); font: 900 15px/1 var(--font-display); transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease, border-color 0.16s ease; }
 .diagram-step-buttons button::after { content: ""; position: absolute; inset: 0 auto 0 -48%; width: 32%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.92), transparent); transform: skewX(-18deg); pointer-events: none; }
-.diagram-step-buttons button:hover { transform: translateY(-2px); background: #fffdf7; border-color: rgba(200,155,60,0.66); box-shadow: 0 9px 0 rgba(19,39,67,0.08), 0 15px 24px rgba(19,39,67,0.12); }
-.diagram-step-buttons button:focus-visible { outline: 3px solid rgba(42,136,136,0.5); outline-offset: 3px; }
-.diagram-step-buttons button.active { background: #f4b440; color: #101827; border-color: rgba(244,180,64,0.9); box-shadow: 0 0 0 4px rgba(244,180,64,0.24), 0 5px 0 rgba(19,39,67,0.08), 0 12px 20px rgba(19,39,67,0.12); }
+.diagram-step-buttons button:hover { transform: translateY(-2px); background: #f8fbff; border-color: rgba(var(--blue-rgb), 0.66); box-shadow: 0 9px 0 rgba(19,39,67,0.08), 0 15px 24px rgba(19,39,67,0.12); }
+.diagram-step-buttons button:focus-visible { outline: 3px solid rgba(var(--cyan-rgb), 0.5); outline-offset: 3px; }
+.diagram-step-buttons button.active { background: var(--gold); color: #ffffff; border-color: rgba(var(--blue-rgb), 0.9); box-shadow: 0 0 0 4px rgba(var(--blue-rgb), 0.24), 0 5px 0 rgba(19,39,67,0.08), 0 12px 20px rgba(19,39,67,0.12); }
 @keyframes diagram-step-shine {
   0%, 72%, 100% { left: -48%; opacity: 0; }
   76% { opacity: 0.85; }
@@ -32,7 +32,7 @@
 .diagram-next-button > span, .diagram-next-button > .icon { position: relative; z-index: 1; }
 .diagram-next-button .icon { width: 16px; height: 16px; }
 .diagram-next-button:hover { transform: translateY(-2px); background: var(--teal-deep); box-shadow: 0 13px 24px rgba(19,39,67,0.2); }
-.diagram-next-button:focus-visible { outline: 3px solid rgba(244,180,64,0.7); outline-offset: 3px; }
+.diagram-next-button:focus-visible { outline: 3px solid rgba(var(--blue-rgb), 0.7); outline-offset: 3px; }
 @keyframes diagram-next-shine {
   0%, 70%, 100% { left: -48%; opacity: 0; }
   74% { opacity: 0.82; }
@@ -43,13 +43,13 @@
 }
 
 .flow-group rect { stroke-width: 1.15; stroke-dasharray: 5 4; shape-rendering: crispEdges; }
-.flow-group.cloud rect { fill: none; stroke: rgba(42,136,136,0.72); stroke-dasharray: 7 4; }
+.flow-group.cloud rect { fill: none; stroke: rgba(var(--cyan-rgb), 0.72); stroke-dasharray: 7 4; }
 .flow-group.platform rect { fill: none; stroke: rgba(19,39,67,0.62); stroke-dasharray: 2 4; }
-.flow-group.edge rect { fill: rgba(238,248,248,0.35); stroke: rgba(23,95,100,0.62); stroke-dasharray: none; }
+.flow-group.edge rect { fill: rgba(234,88,12,0.08); stroke: rgba(234,88,12,0.55); stroke-dasharray: none; }
 .flow-group.default rect { fill: none; stroke: rgba(19,39,67,0.56); }
-.flow-group.simulator rect { fill: rgba(245,244,239,0.5); stroke: rgba(23,95,100,0.58); stroke-dasharray: none; }
-.flow-group.solver rect { fill: rgba(238,248,248,0.38); stroke: rgba(31,109,114,0.46); stroke-dasharray: none; }
-.flow-group.interface rect { fill: rgba(255,255,255,0.76); stroke: rgba(23,95,100,0.46); stroke-dasharray: none; }
+.flow-group.simulator rect { fill: rgba(22,163,74,0.08); stroke: rgba(22,163,74,0.5); stroke-dasharray: none; }
+.flow-group.solver rect { fill: rgba(var(--cyan-deep-rgb), 0.07); stroke: rgba(var(--cyan-deep-rgb), 0.48); stroke-dasharray: none; }
+.flow-group.interface rect { fill: rgba(124,58,237,0.07); stroke: rgba(124,58,237,0.42); stroke-dasharray: none; }
 .flow-group text { font-family: var(--font-display); font-size: 12px; font-weight: 900; fill: var(--navy); }
 .flow-group.cloud text { fill: #000000; }
 .flow-group.platform text { fill: var(--navy); }
@@ -60,15 +60,15 @@
 
 .flow-node rect { stroke-width: 1.35; shape-rendering: crispEdges; filter: none; }
 .flow-node.primary rect { fill: #000000; stroke: #0b1a2f; }
-.flow-node.accent rect { fill: #eef8f8; stroke: #2a8888; }
+.flow-node.accent rect { fill: #dbeafe; stroke: #2563eb; }
 .flow-node.muted rect { fill: #ffffff; stroke: #8fa1ad; }
-.flow-node.highlight rect { fill: #fff7df; stroke: #d49a23; }
-.flow-node.telemetry rect { fill: rgba(238,248,248,0.92); stroke: var(--teal-deep); }
-.flow-node.model rect { fill: rgba(238,248,248,0.65); stroke: var(--teal); }
-.flow-node.adapter rect { fill: var(--gold-pale); stroke: var(--gold); }
-.flow-node.command rect { fill: rgba(255,244,214,0.55); stroke: var(--gold); }
-.flow-node.service rect { fill: rgba(245,244,239,0.92); stroke: var(--teal-soft); }
-.flow-node.solver rect { fill: #ffffff; stroke: var(--teal-deep); }
+.flow-node.highlight rect { fill: #fef3c7; stroke: #d97706; }
+.flow-node.telemetry rect { fill: #ccfbf1; stroke: #0d9488; }
+.flow-node.model rect { fill: #ede9fe; stroke: #7c3aed; }
+.flow-node.adapter rect { fill: #ffedd5; stroke: #ea580c; }
+.flow-node.command rect { fill: #ffe4e6; stroke: #e11d48; }
+.flow-node.service rect { fill: #cffafe; stroke: #0891b2; }
+.flow-node.solver rect { fill: #dcfce7; stroke: #16a34a; }
 
 .flow-node-label { font-family: var(--font-display); font-size: 11px; font-weight: 850; }
 .flow-node-sublabel { font-family: var(--font-body); font-size: 9px; font-weight: 700; }
@@ -104,43 +104,43 @@
 .flow-edge path { stroke: #516273; stroke-width: 1.6; fill: none; stroke-linecap: square; stroke-linejoin: miter; shape-rendering: geometricPrecision; }
 .layered-diagram .flow-edge path { stroke-width: 1.25; stroke: #48606c; }
 .flow-edge.forward path,
-.layered-diagram .flow-edge.forward path { stroke: var(--teal-deep); stroke-width: 1.45; }
+.layered-diagram .flow-edge.forward path { stroke: #0d9488; stroke-width: 1.45; }
 .flow-edge.return path,
-.layered-diagram .flow-edge.return path { stroke: #9a5b22; stroke-width: 1.45; }
+.layered-diagram .flow-edge.return path { stroke: #d97706; stroke-width: 1.45; }
 .flow-edge.rest path,
-.layered-diagram .flow-edge.rest path { stroke: #2456a8; stroke-width: 1.45; }
+.layered-diagram .flow-edge.rest path { stroke: #2563eb; stroke-width: 1.45; }
 .flow-edge.modbus path,
-.layered-diagram .flow-edge.modbus path { stroke: #2f8f4e; stroke-width: 1.45; }
+.layered-diagram .flow-edge.modbus path { stroke: #7c3aed; stroke-width: 1.45; }
 .flow-edge.goose path,
-.layered-diagram .flow-edge.goose path { stroke: #c23b3b; stroke-width: 1.45; }
+.layered-diagram .flow-edge.goose path { stroke: #dc2626; stroke-width: 1.45; }
 .flow-edge.sync path,
-.layered-diagram .flow-edge.sync path { stroke: #7a4fb5; stroke-width: 1.45; }
+.layered-diagram .flow-edge.sync path { stroke: #db2777; stroke-width: 1.45; }
 .flow-edge.internal path,
 .layered-diagram .flow-edge.internal path { stroke: #5b6b7a; stroke-width: 1.45; }
 .flow-edge.dashed path { stroke: #77838f; stroke-dasharray: 5 4; }
 .flow-edge.forward.dashed path,
-.layered-diagram .flow-edge.forward.dashed path { stroke: var(--teal-deep); stroke-dasharray: 5 4; }
+.layered-diagram .flow-edge.forward.dashed path { stroke: #0d9488; stroke-dasharray: 5 4; }
 .flow-edge.return.dashed path,
-.layered-diagram .flow-edge.return.dashed path { stroke: #9a5b22; stroke-dasharray: 5 4; }
+.layered-diagram .flow-edge.return.dashed path { stroke: #d97706; stroke-dasharray: 5 4; }
 .flow-edge.rest.dashed path,
-.layered-diagram .flow-edge.rest.dashed path { stroke: #2456a8; stroke-dasharray: 5 4; }
+.layered-diagram .flow-edge.rest.dashed path { stroke: #2563eb; stroke-dasharray: 5 4; }
 .flow-edge.modbus.dashed path,
-.layered-diagram .flow-edge.modbus.dashed path { stroke: #2f8f4e; stroke-dasharray: 5 4; }
+.layered-diagram .flow-edge.modbus.dashed path { stroke: #7c3aed; stroke-dasharray: 5 4; }
 .flow-edge.goose.dashed path,
-.layered-diagram .flow-edge.goose.dashed path { stroke: #c23b3b; stroke-dasharray: 5 4; }
+.layered-diagram .flow-edge.goose.dashed path { stroke: #dc2626; stroke-dasharray: 5 4; }
 .flow-edge.sync.dashed path,
-.layered-diagram .flow-edge.sync.dashed path { stroke: #7a4fb5; stroke-dasharray: 5 4; }
+.layered-diagram .flow-edge.sync.dashed path { stroke: #db2777; stroke-dasharray: 5 4; }
 .flow-edge.internal.dashed path,
 .layered-diagram .flow-edge.internal.dashed path { stroke: #5b6b7a; stroke-dasharray: 5 4; }
 .flow-arrow-head { fill: #516273; }
 .layered-diagram .flow-arrow-head { fill: #48606c; }
 .flow-arrow-head-muted { fill: #77838f; }
-.flow-arrow-head-forward { fill: var(--teal-deep); }
-.flow-arrow-head-return { fill: #9a5b22; }
-.flow-arrow-head-rest { fill: #2456a8; }
-.flow-arrow-head-modbus { fill: #2f8f4e; }
-.flow-arrow-head-goose { fill: #c23b3b; }
-.flow-arrow-head-sync { fill: #7a4fb5; }
+.flow-arrow-head-forward { fill: #0d9488; }
+.flow-arrow-head-return { fill: #d97706; }
+.flow-arrow-head-rest { fill: #2563eb; }
+.flow-arrow-head-modbus { fill: #7c3aed; }
+.flow-arrow-head-goose { fill: #dc2626; }
+.flow-arrow-head-sync { fill: #db2777; }
 .flow-arrow-head-internal { fill: #5b6b7a; }
 .flow-edge-label { pointer-events: none; }
 .flow-edge-label rect { fill: #ffffff; fill-opacity: 0.92; stroke: rgba(19,39,67,0.1); stroke-width: 1; }

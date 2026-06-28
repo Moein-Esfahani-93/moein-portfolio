@@ -26,14 +26,14 @@ export default function Sidebar({
   const utilityCopy = {
     en: {
       button: "CV",
-      aria: "Choose CV download",
+      aria: "Download CV options",
       linkedin: "LinkedIn",
       linkedinAria: "Open LinkedIn profile",
       email: "Email"
     },
     fr: {
       button: "CV",
-      aria: "Choisir le CV a telecharger",
+      aria: "Telecharger les options de CV",
       linkedin: "LinkedIn",
       linkedinAria: "Ouvrir le profil LinkedIn",
       email: "Courriel"

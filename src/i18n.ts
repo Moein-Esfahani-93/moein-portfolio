@@ -19,7 +19,7 @@ export const siteCopy: Record<Language, { header: { languageAria: string; navAri
     header: {
       languageAria: "Language selection",
       navAria: "Page navigation",
-      role: "POWER SYSTEMS ENGINEER - DER COORDINATION & VPP DISPATCH\nMICROGRID EMS · CONTROL AUTOMATION · RTS INTERFACES",
+      role: "MICROGRID CONTROLS VALIDATION ENGINEER - CHIL/HIL & RTS INTERFACES\nVPP/DER DISPATCH, EMS VALIDATION & POWER-SYSTEM OPTIMIZATION CONTEXT",
       goTo: "Go to"
     },
     footer: {
@@ -28,13 +28,13 @@ export const siteCopy: Record<Language, { header: { languageAria: string; navAri
   },
   fr: {
     header: {
-      languageAria: "Sélection de la langue",
+      languageAria: "Selection de la langue",
       navAria: "Navigation du site",
-      role: "INGÉNIEUR RÉSEAUX ÉLECTRIQUES - COORDINATION DER ET DISPATCH VPP\nEMS MICROGRID · AUTOMATISATION · INTERFACES RTS",
-      goTo: "Aller à"
+      role: "INGENIEUR VALIDATION CONTROLE MICROGRID - CHIL/HIL ET INTERFACES RTS\nCONTEXTE DISPATCH VPP/DER, VALIDATION EMS ET OPTIMISATION RESEAU",
+      goTo: "Aller a"
     },
     footer: {
-      portfolio: "PORTFOLIO D'INGÉNIERIE"
+      portfolio: "PORTFOLIO D'INGENIERIE"
     }
   }
 };

@@ -1,6 +1,6 @@
 # Moein Esfahani Portfolio
 
-React + TypeScript + Vite portfolio for power systems software, VPP platforms, microgrid EMS workflows, simulation validation, controller-in-the-loop communication, and research publications.
+React + TypeScript + Vite portfolio for microgrid controls validation, CHIL/HIL preparation, RTS interfaces, EMS workflows, test automation, VPP/DER dispatch context, and research publications.
 
 ## Run locally
 
@@ -18,23 +18,24 @@ npm run preview
 
 ## Structure
 
-- `src/pages/Home.tsx` — first screen and interactive implementation map
-- `src/pages/Projects.tsx` — selected implementation work
-- `src/pages/Skills.tsx` — technical capabilities
-- `src/pages/Research.tsx` — academic experience and selected publications
-- `src/pages/CV.tsx` — concise CV summary and contact action
-- `src/pages/Contact.tsx` — contact information and technical areas
-- `src/data/` — editable profile, project, skill, academic, and publication data
-- `src/styles/` — theme and layout styles
+- `src/pages/Home.tsx` - first screen and implementation overview
+- `src/pages/Projects.tsx` - selected implementation work
+- `src/pages/Skills.tsx` - technical capabilities
+- `src/pages/Academic.tsx` - academic experience
+- `src/pages/Publications.tsx` - selected publications and citations
+- `src/pages/Contact.tsx` - contact information and CV download questionnaire
+- `src/data/` - editable profile, project, skill, academic, and publication data
+- `src/styles/` - theme and layout styles
 
 ## Content areas for visuals
 
 The site has structured areas for project visuals:
 
+- RTS controller-interface architecture
+- EMS/CIL preparation workflow
 - VPP architecture
 - forecast / dispatch plot
 - platform dashboard view
-- RTS controller-Interface architecture
 - timing / latency plot
 - register-map view
 - distribution time-series workflow diagram

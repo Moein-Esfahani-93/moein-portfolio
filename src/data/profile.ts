@@ -2,8 +2,9 @@ import type { Profile } from "../types";
 
 export const profile: Profile = {
   name: "Moein Esfahani",
-  role: "Power Systems Engineer - DER Coordination, VPP Dispatch, Microgrid EMS, Control Automation & RTS Interfaces",
+  role: "Microgrid Controls Validation Engineer - CHIL/HIL Preparation, Test Automation, Controller Interfaces & DER/VPP Dispatch Context",
   email: "moien.esfahani1993@gmail.com",
+  phone: "+1-581-578-720",
   alternateEmail: "SMESR@ulaval.ca",
   linkedin: "https://www.linkedin.com/in/moeinesfahani1993",
   googleScholar: "https://scholar.google.com/citations?user=wDZlKRsAAAAJ&hl=en&oi=sra",

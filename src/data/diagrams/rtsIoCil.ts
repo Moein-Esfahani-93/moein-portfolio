@@ -2,7 +2,7 @@ import type { ProjectDiagram } from "../../components/diagrams/diagramTypes";
 
 export const rtsIoCil: ProjectDiagram[] = [
   {
-    title: "Real-Time Simulator, Protocol Interface & AXC F 3152 Interface",
+    title: "Real-Time Simulator, Protocol Interface & AXC F 3152/RTAC Interface",
     titleFr: "Simulateur temps reel, interface protocolaire et interface AXC F 3152",
     data: {
       viewBox: "0 0 1040 520",
@@ -11,7 +11,7 @@ export const rtsIoCil: ProjectDiagram[] = [
         { label: "Real-Time Simulator", labelFr: "Simulateur temps reel", x: 22, y: 28, w: 805, h: 430, variant: "simulator" },
         { label: "Real-Time Solver", labelFr: "Solveur temps reel", x: 42, y: 70, w: 178, h: 348, variant: "solver" },
         { label: "Protocol-Adapter Interface Core", labelFr: "Coeur de l'interface protocolaire", x: 232, y: 58, w: 562, h: 382, variant: "interface" },
-        { label: "AXC F 3152", labelFr: "AXC F 3152", x: 850, y: 28, w: 158, h: 430, variant: "edge" }
+        { label: "AXC F 3152/RTAC", labelFr: "AXC F 3152/RTAC", x: 850, y: 28, w: 158, h: 430, variant: "edge" }
       ],
       nodes: [
         { id: "rts", label: "Real-Time Solver", labelFr: "Solveur temps reel", sublabel: "Time-domain solver producing live telemetry and accepting controller command inputs", sublabelFr: "Solveur temporel produisant la telemetrie et acceptant les entrees de commande controleur", x: 131, y: 143, w: 138, h: 62, variant: "solver" },

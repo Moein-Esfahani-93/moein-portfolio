@@ -2,8 +2,8 @@ button { cursor: pointer; outline: none; border: none; background: none; font-fa
 button:active { transform: none; }
 
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(7, 16, 29, 0.14); background: var(--card-bg); color: var(--ink); font-family: var(--font-display); font-weight: 780; font-size: 0.86rem; box-shadow: 0 8px 22px rgba(7, 16, 29, 0.07); transition: 160ms ease; }
-.button:hover { transform: translateY(-2px); border-color: rgba(200,155,60,0.46); box-shadow: 0 16px 34px rgba(7, 16, 29, 0.13); }
-.button.primary { background: var(--navy); color: white; border-color: rgba(200,155,60,0.38); }
+.button:hover { transform: translateY(-2px); border-color: rgba(var(--blue-rgb), 0.46); box-shadow: 0 16px 34px rgba(7, 16, 29, 0.13); }
+.button.primary { background: var(--navy); color: white; border-color: rgba(var(--blue-rgb), 0.38); }
 .button.large { min-height: 48px; padding: 0 20px; }
 .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .button-row.center { justify-content: center; }
@@ -12,7 +12,7 @@ button:active { transform: none; }
 .language-switch::before { content: ""; position: absolute; inset: 1px 8px auto; height: 15px; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,0.2), transparent); pointer-events: none; }
 .language-switch button { position: relative; z-index: 1; display: inline-flex; align-items: center; justify-content: center; gap: 5px; flex: 1; border-radius: 999px; color: rgba(255,255,255,0.78); font-family: var(--font-display); font-size: 15px; font-weight: 800; }
 .language-flag { width: 19px; height: 14px; object-fit: cover; border: 1px solid rgba(7,16,29,0.16); border-radius: 2px; }
-.language-switch button.active { color: #ffffff; background: linear-gradient(180deg, #315d91, #17375e); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 0 0 1px rgba(200,155,60,0.44), 0 5px 11px rgba(0,0,0,0.22); }
+.language-switch button.active { color: #ffffff; background: linear-gradient(180deg, #315d91, #17375e); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 0 0 1px rgba(var(--blue-rgb), 0.44), 0 5px 11px rgba(0,0,0,0.22); }
 
 .button { font-size: var(--fs-small); }
 .language-switch button { font-size: var(--fs-card-title); }

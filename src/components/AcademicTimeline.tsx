@@ -11,7 +11,7 @@ export default function AcademicTimeline({ language }: { language: Language }) {
 
   return (
     <div className="academic-timeline">
-      <h3 className="section-title-small">{language === "fr" ? "Chronologie de carrière" : "Career timeline"}</h3>
+      <h3 className="section-title-small">{language === "fr" ? "Chronologie de carriere" : "Career timeline"}</h3>
       {academicExperience.map((item) => {
         const end = item.endYear === "present" ? currentYear : item.endYear;
         const left = ((item.startYear - minYear) / span) * 100;

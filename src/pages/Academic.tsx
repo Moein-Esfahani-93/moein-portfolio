@@ -8,21 +8,25 @@ const copy: Record<Language, { kicker: string; title: string; body: string; more
   en: {
     kicker: "Experience",
     title: "Professional and research experience.",
-    body: "Huawei VPP, microgrid EMS, controller-interface, and RTS validation work connected to doctoral research in VPP coordination under uncertainty.",
+    body: "Huawei microgrid controller validation, CHIL/HIL preparation, EMS interfaces, and VPP dispatch-to-test workflows connected to doctoral research in DER coordination under uncertainty.",
     more: "More",
     less: "Show less",
     supervisorLabel: "Ph.D. Supervisor:",
     advisorLabel: "Advisor:"
   },
   fr: {
-    kicker: "Expérience",
-    title: "Expérience professionnelle et recherche.",
-    body: "Travaux Huawei en VPP, EMS microgrid, interfaces contrôleur et validation RTS reliés à la recherche doctorale en coordination VPP sous incertitude.",
+    kicker: "Experience",
+    title: "Experience professionnelle et recherche.",
+    body: "Travaux Huawei en validation controleur microgrid, preparation CHIL/HIL, interfaces EMS et workflows dispatch VPP vers tests, relies a la recherche doctorale en coordination DER sous incertitude.",
     more: "Plus",
-    less: "Réduire",
+    less: "Reduire",
     supervisorLabel: "Directeur de Ph.D. :",
     advisorLabel: "Conseiller :"
   }
+};
+const phdPeople = {
+  supervisor: "https://innocent-kamwa.fsg.ulaval.ca/en",
+  advisor: "https://www.federation.edu.au/research/find-an-expert/Nima-Amjady"
 };
 
 export default function Academic({ language }: { language: Language }) {
@@ -51,7 +55,7 @@ export default function Academic({ language }: { language: Language }) {
               <p className="one-line-summary">{t(language, item.summary, item.summaryFr)}</p>
               {isDoctoralResearch && (
                 <p className="academic-person-links">
-                  {c.supervisorLabel} Prof. I. Kamwa; {c.advisorLabel} Prof. Nima Amjady.
+                   {c.supervisorLabel} <a className="person-link" href={phdPeople.supervisor} target="_blank" rel="noreferrer">Prof. Innocent Kamwa</a>; {c.advisorLabel} <a className="person-link" href={phdPeople.advisor} target="_blank" rel="noreferrer">Prof. Nima Amjady</a>.
                 </p>
               )}
               {expanded && (

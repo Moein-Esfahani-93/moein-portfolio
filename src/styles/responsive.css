@@ -82,16 +82,14 @@
   .cv-row { gap: 6px; }
   .publication-card { gap: 14px; align-items: start; }
   .publication-links { flex-wrap: wrap; }
-  .cv-modal-actions { grid-template-columns: 1fr; }
   .contact-action-row { display: grid; grid-template-columns: 1fr; }
   .contact-detail-list { grid-template-columns: 1fr; }
-  .contact-layout { grid-template-areas: "intro" "cv" "style"; }
+  .contact-layout { grid-template-areas: "intro" "style"; }
   .contact-trait-grid { grid-template-columns: 1fr; }
-  .contact-cv-picker-panel { grid-template-columns: 44px 1fr; gap: 12px; padding: 14px; }
-  .contact-cv-download-panel { grid-template-columns: 1fr; }
+  .contact-page-header { flex-direction: column; align-items: stretch; }
+  .contact-page-header .contact-cv-open-button { width: 100%; }
   .contact-cv-choice { grid-template-columns: 44px 1fr; gap: 12px; padding: 14px; }
   .contact-cv-icon { width: 42px; height: 42px; }
-  .contact-cv-open-button { grid-column: 1 / -1; justify-self: stretch; width: 100%; }
   .contact-cv-button-row { grid-column: 1 / -1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skill-card { grid-template-columns: 1fr; min-height: auto; gap: 14px; }
   .skill-card-diagram { justify-content: flex-start; padding-top: 0; }

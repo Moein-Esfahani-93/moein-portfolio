@@ -3,14 +3,14 @@
 .academic-timeline-row b { display: block; font-size: 12.5px; color: var(--navy); font-weight: 800; line-height: 1.25; }
 .academic-timeline-row small { display: block; margin-top: 3px; font-size: 10.5px; color: var(--muted); font-weight: 700; }
 .academic-timeline-track-row { position: relative; height: 9px; background: #e6ebec; border-radius: 999px; overflow: hidden; }
-.academic-timeline-bar { position: absolute; top: 0; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--teal-deep), #f4b440); }
+.academic-timeline-bar { position: absolute; top: 0; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--teal-deep), var(--gold)); }
 .academic-timeline-period { font-size: 11px; font-weight: 800; color: var(--ink); text-align: right; line-height: 1.2; }
 
 .citations-chart { margin-bottom: 30px; }
 .citations-chart-row { display: grid; grid-template-columns: 260px 1fr 36px; gap: 14px; align-items: center; margin-top: 11px; }
 .citations-chart-row b { font-size: 12.5px; color: var(--navy); font-weight: 800; line-height: 1.25; }
 .citations-track { height: 9px; background: #e6ebec; border-radius: 999px; overflow: hidden; }
-.citations-track i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--teal-deep), #f4b440); }
+.citations-track i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--teal-deep), var(--gold)); }
 .citations-chart-row span { font-size: 12px; font-weight: 800; color: var(--ink); text-align: right; }
 
 /* Shared typography alignment */

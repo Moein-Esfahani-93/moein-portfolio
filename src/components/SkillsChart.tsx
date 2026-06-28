@@ -12,6 +12,8 @@ type CapabilityAxis = {
 type CapabilityGroup = {
   title: string;
   titleFr: string;
+  caption: string;
+  captionFr: string;
   icon: string;
   variant: "market" | "software" | "automation";
   emphasis: FuzzyLevel;
@@ -21,81 +23,85 @@ type CapabilityGroup = {
 
 const capabilityGroups: CapabilityGroup[] = [
   {
-    title: "VPP, Markets & Optimization",
-    titleFr: "VPP, marchés et optimisation",
-    icon: "trendUp",
-    variant: "market",
+    title: "Controls Validation & RTS Interfaces",
+    titleFr: "Validation controle et interfaces RTS",
+    caption: "Primary portfolio direction",
+    captionFr: "Direction principale",
+    icon: "workflow",
+    variant: "automation",
     emphasis: 4,
     axes: [
-      { label: "Market rules", labelFr: "Règles marché", level: 4 },
+      { label: "Signal contracts", labelFr: "Contrats signaux", level: 4 },
+      { label: "Failure modes", labelFr: "Modes defaillance", level: 4 },
+      { label: "PLC/RTAC logic", labelFr: "Logique PLC/RTAC", level: 3 },
+      { label: "Acceptance checks", labelFr: "Criteres acceptation", level: 4 }
+    ],
+    tools: [
+      { name: "PLCnext" },
+      { name: "SEL RTAC" },
+      { name: "IEC 61131-3" },
+      { name: "Modbus" },
+      { name: "IEC 61850" },
+      { name: "OPC UA" },
+      { name: "DNP3" },
+      { name: "CHIL/HIL" }
+    ]
+  },
+  {
+    title: "Grid Simulation, Forecasting & EMS",
+    titleFr: "Simulation reseau, prevision et EMS",
+    caption: "Bridge from analysis to validation",
+    captionFr: "Pont analyse-validation",
+    icon: "monitor",
+    variant: "software",
+    emphasis: 4,
+    axes: [
+      { label: "Grid feasibility", labelFr: "Faisabilite reseau", level: 4 },
+      { label: "Forecasting", labelFr: "Prevision", level: 3 },
+      { label: "Scenario data", labelFr: "Donnees scenarios", level: 4 },
+      { label: "EMS workflows", labelFr: "Workflows EMS", level: 4 }
+    ],
+    tools: [
+      { name: "OpenDSS" },
+      { name: "PSS/E" },
+      { name: "PSCAD" },
+      { name: "MATLAB" },
+      { name: "Python" },
+      { name: "FastAPI" },
+      { name: "Kafka" },
+      { name: "MQTT" }
+    ]
+  },
+  {
+    title: "VPP/DER Dispatch & Optimization",
+    titleFr: "Dispatch VPP/DER et optimisation",
+    caption: "Supporting power-systems depth",
+    captionFr: "Base reseaux en support",
+    icon: "cloud",
+    variant: "market",
+    emphasis: 3,
+    axes: [
+      { label: "DER coordination", labelFr: "Coordination DER", level: 4 },
+      { label: "Dispatch logic", labelFr: "Logique dispatch", level: 4 },
       { label: "Optimization", labelFr: "Optimisation", level: 4 },
-      { label: "DER/grid limits", labelFr: "Limites DER/réseau", level: 3 },
-      { label: "Dispatch logic", labelFr: "Logique dispatch", level: 4 }
+      { label: "Market rules", labelFr: "Regles marche", level: 3 }
     ],
     tools: [
       { name: "Pyomo" },
       { name: "Gurobi" },
       { name: "CPLEX" },
-      { name: "IPOPT" },
+      { name: "DRO/MILP" },
       { name: "ERCOT" },
       { name: "MISO" },
       { name: "NYISO" },
       { name: "ISO-NE" }
     ]
-  },
-  {
-    title: "Software, Forecasting & Grid Validation",
-    titleFr: "Logiciel, prévision et validation réseau",
-    icon: "monitor",
-    variant: "software",
-    emphasis: 4,
-    axes: [
-      { label: "Forecasting", labelFr: "Prévision", level: 3 },
-      { label: "Orchestration", labelFr: "Orchestration", level: 4 },
-      { label: "Grid validation", labelFr: "Validation réseau", level: 4 },
-      { label: "Data streaming", labelFr: "Flux données", level: 3 }
-    ],
-    tools: [
-      { name: "PSCAD" },
-      { name: "PSS/E" },
-      { name: "DIgSILENT" },
-      { name: "Python" },
-      { name: "FastAPI" },
-      { name: "Kafka" },
-      { name: "OpenDSS" },
-      { name: "MATLAB" },
-      { name: "XGBoost" },
-      { name: "LSTM" }
-    ]
-  },
-  {
-    title: "Control Automation, RTS & Interfaces",
-    titleFr: "Automatisation, RTS et interfaces",
-    icon: "workflow",
-    variant: "automation",
-    emphasis: 3,
-    axes: [
-      { label: "Signal contracts", labelFr: "Contrats signaux", level: 4 },
-      { label: "PLC logic", labelFr: "Logique PLC", level: 3 },
-      { label: "Protocol I/O", labelFr: "E/S protocole", level: 4 },
-      { label: "Timing diagnostics", labelFr: "Diagnostics timing", level: 3 }
-    ],
-    tools: [
-      { name: "PLCnext" },
-      { name: "SEL RTAC" },
-      { name: "Modbus" },
-      { name: "IEC 61850" },
-      { name: "OPC UA" },
-      { name: "DNP3" },
-      { name: "OPAL-RT" },
-      { name: "RTDS" }
-    ]
   }
 ];
 
 const fuzzyLabels = {
-  en: ["light", "working", "solid", "strong", "primary"],
-  fr: ["léger", "opérationnel", "solide", "fort", "principal"]
+  en: ["exposure", "working", "solid", "strong", "primary"],
+  fr: ["exposition", "operationnel", "solide", "fort", "principal"]
 };
 
 function localized(language: Language, en: string, fr?: string) {
@@ -106,10 +112,13 @@ function FuzzyPills({ level, label, language }: { level: FuzzyLevel; label: stri
   const descriptor = fuzzyLabels[language][level - 1];
 
   return (
-    <div className="fuzzy-pill-meter" aria-label={`${label}: ${descriptor}`}>
-      {Array.from({ length: 5 }).map((_, index) => (
-        <i key={index} className={index < level ? "filled" : ""} aria-hidden="true" />
-      ))}
+    <div className="fuzzy-score-wrap">
+      <div className="fuzzy-pill-meter" aria-label={`${label}: ${descriptor}`}>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <i key={index} className={index < level ? "filled" : ""} aria-hidden="true" />
+        ))}
+      </div>
+      <small>{descriptor}</small>
     </div>
   );
 }
@@ -118,7 +127,7 @@ export default function SkillsChart({ language }: { language: Language }) {
   return (
     <section className="skills-chart-section" aria-labelledby="capability-map-title">
       <h3 className="section-title-small" id="capability-map-title">
-        {language === "fr" ? "Carte compacte des capacités" : "Compact Capability Map"}
+        {language === "fr" ? "Carte compacte des capacites" : "Skills Demographic"}
       </h3>
       <div className="skills-chart-grid">
         {capabilityGroups.map((group) => {
@@ -128,14 +137,15 @@ export default function SkillsChart({ language }: { language: Language }) {
                 <span className="capability-track-icon"><Icon name={group.icon} /></span>
                 <div>
                   <h4>{localized(language, group.title, group.titleFr)}</h4>
+                  <p>{localized(language, group.caption, group.captionFr)}</p>
                 </div>
                 <div className="capability-fuzzy-summary">
-                  <span>{language === "fr" ? "Accent" : "Focus"}</span>
+                  <span>{language === "fr" ? "Profondeur" : "Depth"}</span>
                   <FuzzyPills level={group.emphasis} label={localized(language, group.title, group.titleFr)} language={language} />
                 </div>
               </div>
 
-              <div className="capability-axis-chart" aria-label={language === "fr" ? "Indicateurs qualitatifs de capacité" : "Qualitative capability indicators"}>
+              <div className="capability-axis-chart" aria-label={language === "fr" ? "Indicateurs qualitatifs de capacite" : "Qualitative capability indicators"}>
                 {group.axes.map((axis) => (
                   <div className="capability-axis-row" key={axis.label}>
                     <span>{localized(language, axis.label, axis.labelFr)}</span>

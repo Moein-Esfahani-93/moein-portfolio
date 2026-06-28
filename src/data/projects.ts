@@ -2,104 +2,29 @@ import type { Project } from "../types";
 
 export const projects: Project[] = [
   {
-    id: "cloud-edge-vpp",
-    number: "01",
-    domain: "VPP Market Platform",
-    domainFr: "Plateforme marché VPP",
-    title: "Integrated VPP Market-to-Grid Platform (Cloud-to-Fog-to-Edge)",
-    titleFr: "Plateforme VPP marché-réseau intégrée (cloud-fog-edge)",
-    short: "An integrated VPP workflow connecting auto-trader logic, forecasting, capability extraction, optimization, dispatch propagation, monitoring, and distribution time-series grid-feasibility studies.",
-    shortFr: "Un workflow VPP intégré reliant auto-trader, prévision, extraction de capacité, optimisation, propagation du dispatch, monitoring et études temporelles de faisabilité réseau.",
-    problem: "A VPP must convert DER portfolio capability into market offers without violating grid limits, so market signals, DER operating limits, forecasts, portfolio capability, and grid-security constraints need to be handled in one workflow.",
-    problemFr: "Un VPP doit convertir la capacité du portefeuille DER en offres de marché sans violer les limites réseau; les signaux de marché, limites DER, prévisions, capacité du portefeuille et contraintes de sécurité réseau doivent donc être traités dans un même workflow.",
-    contribution: "Integrated auto-trader, forecaster, capability extractor, optimizer, dispatch propagator, and monitoring into a market-to-dispatch workflow, with dispatch decisions validated through grid-feasibility checks before controller-facing execution.",
-    contributionFr: "Intégration de l'auto-trader, du prévisionniste, de l'extracteur de capacité, de l'optimiseur, du propagateur de dispatch et du monitoring dans un workflow marché-vers-dispatch, avec validation de faisabilité réseau avant l'exécution orientée contrôleur.",
-    methods: [
-      "Implemented market-participation logic for DER assets including BESS, PV, and controllable loads across ERCOT, MISO, and ISO-NE-style structures",
-      "Used prices, reserve/regulation products, portfolio capability, and risk-aware constraints in bid/offer and dispatch logic",
-      "Enforced grid feasibility with distribution time-series studies using OpenDSS checking voltage profiles, feeder loading, DER response, inverter limits, and DER grid-support functions",
-      "Modeled cloud-to-edge communication effects including delay, loss, and degraded telemetry for controller-facing cases",
-      "Built an EMS orchestration layer, a time-indexed simulation interface, and a streaming/data layer using Kafka, MQTT, WebSocket, FastAPI services, and Redis"
-    ],
-    methodsFr: [
-      "Implémentation de la logique de participation marché pour actifs DER incluant BESS, PV et charges contrôlables dans des structures de type ERCOT, MISO et ISO-NE",
-      "Utilisation des prix, produits de réserve/régulation, capacité du portefeuille et contraintes sensibles au risque dans la logique d'offres et de dispatch",
-      "Validation de faisabilité réseau par études temporelles de distribution avec OpenDSS : profils de tension, chargement de départ, réponse DER, limites onduleur et fonctions DER de soutien réseau",
-      "Modélisation des effets de communication cloud-edge: délai, perte et télémétrie dégradée pour les cas orientés contrôleur",
-      "Développement d'une couche d'orchestration EMS, d'une interface de simulation indexée dans le temps et d'une couche données/streaming avec Kafka, MQTT, WebSocket, FastAPI et Redis"
-    ],
-    visualSlots: [
-      "Market, forecast, capability, optimizer, and grid-validation workflow",
-      "Data to forecasts to VPP strategy evaluation to dispatch",
-      "Integrated VPP test environment for forecasting, optimization, grid studies, and dispatch validation"
-    ],
-    visualSlotsFr: [
-      "Workflow marché, prévision, capacité, optimisation et validation réseau",
-      "Données vers prévisions, évaluation stratégique VPP et dispatch",
-      "Environnement de test VPP unifié pour EMS, prévision, optimisation et validation du dispatch"
-    ],
-    tags: ["VPP", "DER", "ISO/RTO", "ERCOT", "MISO", "ISO-NE", "Distribution Time-Series Studies", "LP/MILP/DRO", "Kafka", "MQTT", "FastAPI", "Redis"]
-  },
-  {
-    id: "ems-qsts-scada",
-    number: "02",
-    domain: "Microgrid EMS",
-    title: "Microgrid EMS & Secondary-Control Validation Platform",
-    titleFr: "Plateforme de validation EMS microgrid et contrôle secondaire",
-    short: "A microgrid EMS validation environment connecting distribution time-series simulation, PLCnext controller logic, industrial telemetry maps, and Python orchestration.",
-    shortFr: "Un environnement de validation EMS microgrid reliant simulation temporelle de distribution, logique PLCnext, cartes de télémétrie industrielle et orchestration Python.",
-    problem: "EMS supervisory decisions and secondary-control setpoints need to be tested against simulated grid response before offline SIL studies and subsequent real-time CIL/CHIL preparation.",
-    problemFr: "Les décisions de supervision EMS et les consignes de contrôle secondaire doivent être testées face à la réponse réseau simulée avant les études SIL hors ligne et la préparation aux essais CIL/CHIL en temps réel.",
-    contribution: "Built the controller-facing EMS validation layer and programmed IEC 61131-3 Structured Text logic for BESS PCS, PV inverter, meter, and hybrid PV-BESS operating modes.",
-    contributionFr: "Développement de la couche de validation EMS orientée contrôleur et programmation IEC 61131-3 Structured Text pour BESS PCS, onduleur PV, compteur et modes hybrides PV-BESS.",
-    methods: [
-      "Connected distribution time-series simulation, PLCnext controller logic, telemetry/command maps, and Python orchestration",
-      "Programmed FSM-based sequencing, charge/discharge enable, P/Q setpoint handling, SoC supervision, operating-limit supervision, alarms, watchdogs, acknowledgement/readback logic, and communication-health monitoring",
-      "Defined BESS PCS, PV inverter, and meter telemetry/control mappings, state commands, measurements, acknowledgement/readback, and latency checks",
-      "Structured the path from offline distribution time-series studies toward SIL studies and real-time CIL/CHIL preparation"
-    ],
-    methodsFr: [
-      "Connexion de la simulation temporelle de distribution, de la logique PLCnext, des cartes télémétrie/commandes et de l'orchestration Python",
-      "Programmation du séquencement FSM, activation charge/décharge, consignes P/Q, supervision SoC et limites, alarmes, watchdogs, logique d'acquittement/lecture et suivi de santé communication",
-      "Définition des mappings télémétrie/contrôle du PCS BESS, de l'onduleur PV et du compteur, commandes d'état, mesures, acquittement/lecture et vérifications de latence",
-      "Structuration du passage des études temporelles de distribution hors ligne vers les études SIL et la préparation aux essais CIL/CHIL en temps réel"
-    ],
-    visualSlots: [
-      "Microgrid EMS and AXC F 3152 controller-interface architecture",
-      "Microgrid EMS, secondary-control, simulation, and controller module map",
-      "PLCnext telemetry, command maps, watchdogs, latency checks, and controller-test readiness"
-    ],
-    visualSlotsFr: [
-      "Architecture EMS microgrid et interface contrôleur AXC F 3152",
-      "Carte EMS microgrid, contrôle secondaire, simulation et modules contrôleur",
-      "Télémétrie PLCnext, cartes de commandes, watchdogs, latence et préparation aux tests contrôleur"
-    ],
-    tags: ["Microgrid EMS", "PLCnext", "IEC 61131-3 ST", "distribution time-series studies", "Modbus TCP", "BESS PCS", "PV inverter", "SIL/CIL readiness"]
-  },
-  {
     id: "rts-io-cil",
-    number: "03",
-    domain: "RTS Controller Interfaces",
-    domainFr: "Interfaces contrôleur RTS",
-    title: "Real-Time Simulator I/O & Controller Interface",
-    titleFr: "Interface E/S et protocoles pour simulateur temps réel",
-    short: "A simulator-controller interface for evaluating external controllers in a microgrid validation test system through measurement, command, status, and feedback exchange.",
-    shortFr: "Une interface simulateur-contrôleur pour évaluer des contrôleurs externes dans un système de test microgrid via échanges de mesures, commandes, statuts et retours.",
-    problem: "Controller-facing validation requires a defined signal contract, protocol mappings, timing diagnostics, and closed-loop coordination between simulator update cycles and returned controller outputs.",
-    problemFr: "La validation orientée contrôleur exige un contrat de signaux, des mappings protocole, des diagnostics de timing et une coordination en boucle fermée entre cycles simulateur et sorties contrôleur.",
-    contribution: "Designed and upgraded the simulator-controller interface, including C/C++ interface logic, protocol exchange routines, I/O handling, latency diagnostics, and time-domain simulation coordination.",
-    contributionFr: "Conception et amélioration de l'interface simulateur-contrôleur, avec logique de pont C/C++, routines d'échange protocole, gestion E/S, diagnostics de latence et coordination de simulation temporelle.",
+    number: "1",
+    domain: "Controls Validation / RTS Interfaces",
+    domainFr: "Validation controle / interfaces RTS",
+    title: "Microgrid Controller Validation Framework & Simulator Interface",
+    titleFr: "Framework de validation controleur microgrid et interface simulateur",
+    short: "A simulator-to-controller validation framework for measurement exchange, command execution, status feedback, timing diagnostics, failure-mode testing, and closed-loop controller-response validation.",
+    shortFr: "Un framework simulateur-vers-controleur pour echange de mesures, execution de commandes, retour d'etat, diagnostics timing, tests de defaillance et validation de reponse controleur en boucle fermee.",
+    problem: "Controller-facing validation needs a precise signal contract, reusable protocol mappings, objective timing diagnostics, and repeatable evidence before a controller can be trusted in SIL, CHIL, or HIL-style workflows.",
+    problemFr: "La validation orientee controleur exige un contrat de signaux precis, des mappings protocolaires reutilisables, des diagnostics timing objectifs et des preuves repetables avant de faire confiance au controleur en workflows SIL, CHIL ou HIL.",
+    contribution: "Designed and upgraded the simulator-to-controller interface, including C/C++ and Python bridge logic, Modbus TCP/RTU exchange routines, IEC 61850 GOOSE-ready mappings, latency diagnostics, stale-data detection, readback checks, and validation artifacts.",
+    contributionFr: "Conception et amelioration de l'interface simulateur-vers-controleur avec ponts C/C++ et Python, routines Modbus TCP/RTU, mappings prets IEC 61850 GOOSE, diagnostics de latence, detection de donnees perimees, verification de lecture et actifs de validation.",
     methods: [
-      "Defined the signal contract including engineering units, scaling, sampling/update rates, telemetry/command direction, status and quality flags, timeout/fallback states, and controller I/O mapping",
-      "Built C/C++ interface logic, Modbus TCP and RTU client/server routines, I/O-handling routines, and IEC 61850-ready point maps for future adapter tests",
-      "Added diagnostics for round-trip latency, jitter, stale-data detection, read/write acknowledgement, and controller-response validation",
-      "Developed time-domain simulation logic with numerical integration, state updates, and convergence handling, then coordinated simulator cycles with controller-facing data exchange"
+      "Defined reusable signal contracts covering engineering units, scaling, sampling/update rates, telemetry/command direction, status and quality flags, timeout/fallback states, and mapping of simulated grid variables to controller I/O points",
+      "Built C/C++ and Python bridge logic, Modbus TCP server/client and RTU slave/master functions, IEC 61850 GOOSE publisher/subscriber mappings, timing diagnostics, and I/O routines",
+      "Implemented validation scenarios for communication delay, data loss, controller-response mismatch, BESS/PV/PCS operating limits, voltage-limit violations, and safe-fallback behavior",
+      "Maintained validation artifacts including point maps, device profiles, expected controller behavior, test evidence logs, issue notes, and traceable links between scenarios, signals, results, and acceptance criteria"
     ],
     methodsFr: [
-      "Définition du contrat de signaux: unités, mise à l'échelle, fréquences d'échantillonnage/mise à jour, direction télémétrie/commande, flags statut/qualité, états timeout/fallback et mapping E/S contrôleur",
-      "Développement de logique de pont C/C++, routines Modbus TCP et RTU client/serveur, routines de gestion E/S et mappings de points prêts pour de futurs tests d'adaptateurs IEC 61850",
-      "Ajout de diagnostics de latence aller-retour, jitter, détection de données périmées, acquittement lecture/écriture et validation de réponse contrôleur",
-      "Développement de logique de simulation temporelle avec intégration numérique, mises à jour d'état et convergence, puis coordination des cycles simulateur avec l'échange orienté contrôleur"
+      "Definition de contrats de signaux reutilisables: unites, mise a l'echelle, frequences d'echantillonnage/mise a jour, direction telemetrie/commande, flags statut/qualite, etats timeout/repli et mapping des variables reseau vers E/S controleur",
+      "Developpement de ponts C/C++ et Python, fonctions Modbus TCP serveur/client et RTU esclave/maitre, mappings IEC 61850 GOOSE publisher/subscriber, diagnostics timing et routines E/S",
+      "Implementation de scenarios pour delai communication, perte de donnees, mismatch de reponse controleur, limites BESS/PV/PCS, violations de tension et comportement de repli sur",
+      "Maintenance des actifs de validation: cartes de points, profils equipement, comportement attendu, journaux de preuve, notes d'anomalie et liens tracables entre scenarios, signaux, resultats et criteres d'acceptation"
     ],
     visualSlots: [
       "Simulator I/O and protocol interface",
@@ -108,35 +33,111 @@ export const projects: Project[] = [
     ],
     visualSlotsFr: [
       "Interface E/S et protocole du simulateur",
-      "Échange télémétrie, commandes, statuts et retours",
-      "Timing en boucle fermée et validation de réponse contrôleur"
+      "Echange telemetrie, commandes, statuts et retours",
+      "Timing en boucle fermee et validation de reponse controleur"
     ],
-    tags: ["RTS", "I/O", "C/C++", "Modbus TCP", "Modbus RTU", "IEC 61850-ready", "Latency", "Jitter", "CIL"]
+    tags: ["Controls Validation", "RTS", "SIL/CHIL/HIL", "C/C++", "Python", "Modbus TCP/RTU", "IEC 61850 GOOSE", "Latency", "Jitter", "Readback", "Failure Modes"]
+  },
+  {
+    id: "ems-qsts-scada",
+    number: "2",
+    domain: "Microgrid EMS / CIL Preparation",
+    domainFr: "EMS microgrid / preparation CIL",
+    title: "Microgrid EMS & Controller-in-the-Loop Preparation",
+    titleFr: "EMS microgrid et preparation controller-in-the-loop",
+    short: "A controller-facing EMS validation platform connecting distribution time-series simulation, PLCnext/RTAC logic, telemetry/command maps, and Python orchestration.",
+    shortFr: "Une plateforme de validation EMS orientee controleur reliant simulation temporelle de distribution, logique PLCnext/RTAC, cartes telemetrie/commandes et orchestration Python.",
+    problem: "EMS supervisory setpoints and secondary-control actions must be verified against simulated grid behavior before deployment-oriented controller-in-the-loop execution.",
+    problemFr: "Les consignes de supervision EMS et actions de controle secondaire doivent etre verifiees face au comportement reseau simule avant execution controller-in-the-loop orientee deploiement.",
+    contribution: "Developed the controller-facing layer of a microgrid EMS validation platform and programmed IEC 61131-3 logic for BESS PCS, PV inverter, meter, and hybrid PV-BESS operating modes.",
+    contributionFr: "Developpement de la couche EMS orientee controleur et programmation IEC 61131-3 pour BESS PCS, onduleur PV, compteur et modes hybrides PV-BESS.",
+    methods: [
+      "Connected distribution time-series simulation, PLCnext/RTAC controller logic, telemetry/command maps, and Python orchestration",
+      "Programmed IEC 61131-3 Structured Text logic for FSM sequencing, P/Q setpoint handling, SoC and limit supervision, alarms, watchdogs, acknowledgement/readback logic, and communication-health monitoring",
+      "Verified EMS supervisory setpoints and secondary-control actions with emphasis on voltage limits, SoC constraints, communication health, and safe operating transitions",
+      "Structured the path from offline distribution time-series studies toward SIL studies and real-time CIL/CHIL preparation"
+    ],
+    methodsFr: [
+      "Connexion de la simulation temporelle de distribution, logique PLCnext/RTAC, cartes telemetrie/commandes et orchestration Python",
+      "Programmation IEC 61131-3 Structured Text pour sequences FSM, consignes P/Q, supervision SoC et limites, alarmes, watchdogs, acquittement/lecture et suivi sante communication",
+      "Verification des consignes EMS et actions de controle secondaire avec accent sur limites de tension, contraintes SoC, sante communication et transitions sures",
+      "Structuration du passage des etudes temporelles hors ligne vers les etudes SIL et la preparation CIL/CHIL temps reel"
+    ],
+    visualSlots: [
+      "Microgrid EMS and AXC F 3152 controller-interface architecture",
+      "Microgrid EMS, secondary-control, simulation, and controller module map",
+      "PLCnext telemetry, command maps, watchdogs, latency checks, and controller-test readiness"
+    ],
+    visualSlotsFr: [
+      "Architecture EMS microgrid et interface controleur AXC F 3152",
+      "Carte EMS microgrid, controle secondaire, simulation et modules controleur",
+      "Telemetrie PLCnext, cartes de commandes, watchdogs, latence et preparation aux tests controleur"
+    ],
+    tags: ["Microgrid EMS", "CIL Prep", "PLCnext", "RTAC", "IEC 61131-3 ST", "BESS PCS", "PV Inverter", "Meter", "Watchdogs", "Safe Transitions"]
+  },
+  {
+    id: "cloud-edge-vpp",
+    number: "3",
+    domain: "VPP Market-to-Grid Platform",
+    domainFr: "Plateforme VPP marche-reseau",
+    title: "Integrated VPP Market-to-Grid Platform (Cloud-to-Fog-to-Edge)",
+    titleFr: "Plateforme VPP marche-reseau integree (cloud-fog-edge)",
+    short: "An integrated VPP workflow connecting ISO/RTO market rules, forecasting, DER capability extraction, optimization, dispatch propagation, monitoring, and distribution time-series grid-feasibility studies.",
+    shortFr: "Un workflow VPP integre reliant regles marche ISO/RTO, prevision, extraction de capacite DER, optimisation, propagation du dispatch, monitoring et etudes temporelles de faisabilite reseau.",
+    problem: "A VPP must convert DER portfolio capability into market offers and dispatch schedules without violating DER limits or distribution-grid constraints, so market signals, forecasts, uncertainty, operating limits, and grid-security checks need to be handled in one workflow.",
+    problemFr: "Un VPP doit convertir la capacite du portefeuille DER en offres et calendriers de dispatch sans violer les limites DER ou contraintes reseau; signaux marche, previsions, incertitude, limites operationnelles et checks reseau doivent donc etre traites dans un meme workflow.",
+    contribution: "Integrated auto-trader, forecaster, capability extractor, optimizer, dispatch propagator, monitoring, and grid-validation logic into a market-to-dispatch workflow, with controller-facing validation paths for EMS and RTS interfaces.",
+    contributionFr: "Integration de l'auto-trader, previsionniste, extracteur de capacite, optimiseur, propagateur de dispatch, monitoring et validation reseau dans un workflow marche-vers-dispatch, avec chemins de validation orientee controleur pour EMS et interfaces RTS.",
+    methods: [
+      "Implemented market-participation logic for DER assets including BESS, PV, and controllable loads across ERCOT, MISO, NYISO, and ISO-NE-style structures",
+      "Used prices, reserve/regulation products, portfolio capability, uncertainty, and risk-aware constraints in bid/offer and dispatch logic",
+      "Developed forecasting and scenario-generation workflows from price, load, PV, weather, market, simulation, and diagnostic datasets",
+      "Enforced grid feasibility with distribution time-series studies using OpenDSS to check voltage profiles, feeder loading, DER response, inverter limits, and grid-support functions",
+      "Connected dispatch outputs to microgrid EMS and controller-validation workflows through DER flexibility envelopes, BESS SoC limits, PV availability, and abnormal operating scenarios"
+    ],
+    methodsFr: [
+      "Implementation de la logique de participation marche pour actifs DER incluant BESS, PV et charges controlables dans des structures de type ERCOT, MISO, NYISO et ISO-NE",
+      "Utilisation des prix, produits de reserve/regulation, capacite du portefeuille, incertitude et contraintes risque dans la logique d'offres et de dispatch",
+      "Developpement de workflows de prevision et generation de scenarios depuis donnees prix, charge, PV, meteo, marche, simulation et diagnostic",
+      "Validation de faisabilite reseau par etudes temporelles OpenDSS: profils de tension, chargement, reponse DER, limites onduleur et fonctions de soutien reseau",
+      "Connexion des sorties dispatch aux workflows EMS microgrid et validation controleur via enveloppes de flexibilite DER, limites SoC BESS, disponibilite PV et scenarios anormaux"
+    ],
+    visualSlots: [
+      "Market, forecast, capability, optimizer, and grid-validation workflow",
+      "Data to forecasts to VPP strategy evaluation to dispatch",
+      "Integrated VPP test environment for forecasting, optimization, grid studies, and dispatch validation"
+    ],
+    visualSlotsFr: [
+      "Workflow marche, prevision, capacite, optimisation et validation reseau",
+      "Donnees vers previsions, evaluation strategique VPP et dispatch",
+      "Environnement de test VPP pour prevision, optimisation, etudes reseau et validation dispatch"
+    ],
+    tags: ["VPP", "DER", "ISO/RTO", "ERCOT", "MISO", "NYISO", "ISO-NE", "OpenDSS", "QSTS", "Forecasting", "Optimization", "Grid Feasibility"]
   },
   {
     id: "gateway-microgrid-control",
-    number: "04",
-    domain: "Personal Project / Gateway Devices",
-    domainFr: "Projet personnel / passerelle équipements",
-    title: "Personal Project: Gateway Devices & Multi-Protocol Abstraction",
-    titleFr: "Projet personnel : passerelle équipements et abstraction multiprotocole",
+    number: "4",
+    domain: "Gateway Devices / Protocol Abstraction",
+    domainFr: "Passerelles equipements / abstraction protocolaire",
+    title: "Multi-Protocol Gateway and Device Abstraction",
+    titleFr: "Passerelle multiprotocole et abstraction equipement",
     short: "A gateway and device-abstraction layer built around a common point model, device profiles, register/point maps, scaling, data-quality flags, command priority, and protocol adapters.",
-    shortFr: "Une couche de passerelle et d'abstraction équipement bâtie sur un modèle de points commun, profils d'équipement, cartes registres/points, mise à l'échelle, flags de qualité, priorité des commandes et adaptateurs protocole.",
+    shortFr: "Une couche passerelle et abstraction equipement basee sur un modele commun de points, profils equipement, cartes registres/points, mise a l'echelle, flags qualite, priorite commande et adaptateurs protocole.",
     problem: "Heterogeneous controllers and simulators need one consistent interface instead of bespoke links for every device and protocol.",
-    problemFr: "Des contrôleurs et simulateurs hétérogènes ont besoin d'une interface cohérente plutôt que de liens spécifiques pour chaque équipement et protocole.",
-    contribution: "Built a common gateway/device-abstraction layer so heterogeneous controllers and simulators integrate through consistent point models and protocol adapters.",
-    contributionFr: "Développement d'une couche commune passerelle/abstraction équipement permettant à des contrôleurs et simulateurs hétérogènes de s'intégrer via des modèles de points et adaptateurs protocole cohérents.",
+    problemFr: "Des controleurs et simulateurs heterogenes ont besoin d'une interface coherente plutot que de liens specifiques pour chaque equipement et protocole.",
+    contribution: "Built a common gateway/device-abstraction layer so heterogeneous controllers and simulators integrate through consistent point models, protocol adapters, logging, and test automation hooks.",
+    contributionFr: "Developpement d'une couche commune passerelle/abstraction equipement pour integrer controleurs et simulateurs via modeles de points, adaptateurs protocolaires, journalisation et hooks d'automatisation.",
     methods: [
       "Defined a common point model with device profiles, register/point maps, scaling, data-quality flags, and command priority",
       "Implemented Modbus/TCP and TCP/WebSocket exchange layers and designed adapter-ready point models for IEC 61850, OPC UA, CAN/J1939, MQTT, DNP3, and IEC 60870-5-104",
       "Used embedded software and interfaces in C/C++, Python, and SQL on Raspberry Pi, embedded Linux, SoC, STM32, and Zynq/PYNQ",
-      "Supported test automation and logging around the interface layer"
+      "Supported test automation, logging, troubleshooting records, and traceability around the interface layer"
     ],
     methodsFr: [
-      "Définition d'un modèle de points commun avec profils d'équipement, cartes registres/points, mise à l'échelle, flags de qualité et priorité des commandes",
-      "Implémentation de couches d'échange Modbus/TCP et TCP/WebSocket et conception de modèles de points prêts pour adaptateurs IEC 61850, OPC UA, CAN/J1939, MQTT, DNP3 et IEC 60870-5-104",
-      "Utilisation de logiciels embarqués et ponts en C/C++, Python et SQL sur Raspberry Pi, Linux embarqué, SoC, STM32 et Zynq/PYNQ",
-      "Support de l'automatisation des tests et de la journalisation autour de la couche de pont"
+      "Definition d'un modele commun avec profils equipement, cartes registres/points, mise a l'echelle, flags qualite et priorite commande",
+      "Implementation de couches Modbus/TCP et TCP/WebSocket et conception de modeles prets pour adaptateurs IEC 61850, OPC UA, CAN/J1939, MQTT, DNP3 et IEC 60870-5-104",
+      "Utilisation de logiciels embarques et interfaces C/C++, Python et SQL sur Raspberry Pi, Linux embarque, SoC, STM32 et Zynq/PYNQ",
+      "Support de l'automatisation des tests, logs, dossiers de depannage et tracabilite autour de la couche interface"
     ],
     visualSlots: [
       "Gateway protocol interface across industrial interfaces",
@@ -144,10 +145,10 @@ export const projects: Project[] = [
       "Embedded interface, command priority, test automation, and logging"
     ],
     visualSlotsFr: [
-      "Pont protocolaire entre interfaces industrielles",
-      "Modèle de points commun, profils, cartes, mise à l'échelle et flags qualité",
-      "Pont embarqué, priorité de commande, automatisation des tests et journalisation"
+      "Interface passerelle entre protocoles industriels",
+      "Modele de points commun, profils, cartes, mise a l'echelle et flags qualite",
+      "Interface embarquee, priorite commande, automatisation des tests et journalisation"
     ],
-    tags: ["Gateway", "Modbus", "IEC 61850", "OPC UA", "CAN/J1939", "MQTT", "DNP3", "C/C++", "Python", "SQL"]
+    tags: ["Gateway", "Device Abstraction", "Modbus", "IEC 61850", "OPC UA", "CAN/J1939", "MQTT", "DNP3", "C/C++", "Python", "SQL"]
   }
 ];

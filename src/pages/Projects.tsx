@@ -10,17 +10,17 @@ import { t, type Language } from "../i18n";
 type ProjectsProps = { activeProject: Project; setActiveProjectId: (id: string) => void; language: Language };
 
 const tabLabels: Record<string, Record<Language, string>> = {
-  "cloud-edge-vpp": { en: "VPP Market-to-Grid", fr: "VPP marché-réseau" },
-  "ems-qsts-scada": { en: "Microgrid EMS", fr: "Microgrid EMS" },
-  "rts-io-cil": { en: "RTS Interfaces", fr: "Interfaces RTS" },
-  "gateway-microgrid-control": { en: "Protocol Gateway", fr: "Passerelle protocolaire" }
+  "cloud-edge-vpp": { en: "VPP Market-to-Grid", fr: "VPP marche-reseau" },
+  "rts-io-cil": { en: "Controls Validation", fr: "Validation controle" },
+  "ems-qsts-scada": { en: "EMS CIL Prep", fr: "Preparation EMS CIL" },
+  "gateway-microgrid-control": { en: "Protocol Gateway", fr: "Passerelle protocole" }
 };
 
 const tabIcons: Record<string, string> = {
-  "cloud-edge-vpp": "trendUp",
-  "ems-qsts-scada": "monitor",
   "rts-io-cil": "workflow",
-  "gateway-microgrid-control": "cog"
+  "ems-qsts-scada": "monitor",
+  "cloud-edge-vpp": "cloud",
+  "gateway-microgrid-control": "serverCog"
 };
 
 const copy: Record<Language, {
@@ -40,8 +40,8 @@ const copy: Record<Language, {
 }> = {
   en: {
     kicker: "Projects",
-    title: "Projects & Implementations",
-    body: "Summary of projects and implementations can be selected below for more details.",
+    title: "Controls, EMS & VPP Implementations",
+    body: "The primary thread is controller-facing validation for microgrid EMS and RTS interfaces. VPP/DER work remains visible as a supporting power-systems track for dispatch, optimization, forecasting, and grid-feasibility context.",
     nav: "Project areas",
     diagrams: "Architecture & data-flow diagrams",
     selector: "Diagram selector",
@@ -55,18 +55,18 @@ const copy: Record<Language, {
   },
   fr: {
     kicker: "Projets",
-    title: "Projets et Implémentations",
-    body: "Les projets 1-3 résument les travaux principaux en dispatch VPP, validation EMS microgrid et interfaces RTS/contrôleur. Le projet 4 est un projet personnel de passerelle équipements.",
+    title: "Implementations controle, EMS et VPP",
+    body: "Le fil principal est la validation orientee controleur pour EMS microgrid et interfaces RTS. Le travail VPP/DER reste visible comme axe reseaux en support pour dispatch, optimisation, prevision et faisabilite reseau.",
     nav: "Domaines de projet",
-    diagrams: "Schémas d'architecture et de flux de données",
-    selector: "Sélecteur de schéma",
-    showDiagram: "Afficher le schéma",
-    nextDiagram: "Afficher le schéma suivant",
+    diagrams: "Schemas d'architecture et de flux de donnees",
+    selector: "Selecteur de schema",
+    showDiagram: "Afficher le schema",
+    nextDiagram: "Afficher le schema suivant",
     next: "Suivant",
-    details: "Détails du projet",
-    problem: "Problème",
+    details: "Details du projet",
+    problem: "Probleme",
     approach: "Approche",
-    methods: "Méthodes"
+    methods: "Methodes"
   }
 };
 
@@ -120,36 +120,36 @@ export default function Projects({ activeProject, setActiveProjectId, language }
 
         {diagrams.length > 0 && activeDiagram && (
           <>
-          <h3 className="section-title-small">{c.diagrams}</h3>
-          <div className="project-diagram-carousel">
-            <DiagramPanel
-              key={activeDiagram.title}
-              title={t(language, activeDiagram.title, activeDiagram.titleFr)}
-              caption={visualSlots[activeDiagramIndex]}
-              data={activeDiagram.data}
-              language={language}
-            />
-            <aside className="diagram-carousel-controls" aria-label={c.selector}>
-              <div className="diagram-step-buttons">
-                {diagrams.map((diagram, index) => (
-                  <button
-                    key={diagram.title}
-                    type="button"
-                    className={activeDiagramIndex === index ? "active" : ""}
-                    aria-label={`${c.showDiagram} ${index + 1}: ${t(language, diagram.title, diagram.titleFr)}`}
-                    aria-current={activeDiagramIndex === index ? "true" : undefined}
-                    onClick={() => setActiveDiagramIndex(index)}
-                  >
-                    {index + 1}
-                  </button>
-                ))}
-              </div>
-              <button type="button" className="diagram-next-button" onClick={goToNextDiagram} aria-label={c.nextDiagram}>
-                <span>{c.next}</span>
-                <Icon name="arrowRight" />
-              </button>
-            </aside>
-          </div>
+            <h3 className="section-title-small">{c.diagrams}</h3>
+            <div className="project-diagram-carousel">
+              <DiagramPanel
+                key={activeDiagram.title}
+                title={t(language, activeDiagram.title, activeDiagram.titleFr)}
+                caption={visualSlots[activeDiagramIndex]}
+                data={activeDiagram.data}
+                language={language}
+              />
+              <aside className="diagram-carousel-controls" aria-label={c.selector}>
+                <div className="diagram-step-buttons">
+                  {diagrams.map((diagram, index) => (
+                    <button
+                      key={diagram.title}
+                      type="button"
+                      className={activeDiagramIndex === index ? "active" : ""}
+                      aria-label={`${c.showDiagram} ${index + 1}: ${t(language, diagram.title, diagram.titleFr)}`}
+                      aria-current={activeDiagramIndex === index ? "true" : undefined}
+                      onClick={() => setActiveDiagramIndex(index)}
+                    >
+                      {index + 1}
+                    </button>
+                  ))}
+                </div>
+                <button type="button" className="diagram-next-button" onClick={goToNextDiagram} aria-label={c.nextDiagram}>
+                  <span>{c.next}</span>
+                  <Icon name="arrowRight" />
+                </button>
+              </aside>
+            </div>
           </>
         )}
 

@@ -13,13 +13,11 @@ const copy: Record<Language, {
   contactTitle: string;
   contactText: string;
   email: string;
+  phone: string;
   alternateEmail: string;
   linkedin: string;
   orcid: string;
   scholar: string;
-  cvLabel: string;
-  cvTitle: string;
-  cvBody: string;
   downloadCv: string;
   spiritLabel: string;
   spiritTitle: string;
@@ -28,55 +26,51 @@ const copy: Record<Language, {
   en: {
     kicker: "Contact",
     title: "Contact and CV download",
-    body: "Use the links below to contact me directly or download the CV version that best matches the role.",
+    body: "Use the links below to contact me directly or download my CV.",
     contactLabel: "Direct contact",
-    contactTitle: "Open to power-systems, EMS, VPP, and controls roles.",
-    contactText: "I am interested in engineering teams working on DER coordination, microgrid EMS, real-time simulation, and controller-facing software.",
+    contactTitle: "Open to microgrid controls validation, CHIL/HIL preparation, and controller-interface roles.",
+    contactText: "I am interested in engineering teams working on microgrid EMS validation, test automation, real-time simulation, protocol interfaces, and controller-facing DER software.",
     email: "Email me",
-    alternateEmail: "Alternative email",
+    phone: "Phone",
+    alternateEmail: "Academic email",
     linkedin: "LinkedIn",
     orcid: "ORCID",
     scholar: "Google Scholar",
-    cvLabel: "CV",
-    cvTitle: "Download CV",
-    cvBody: "You can download my CV by answering one quick question, so I can show the version that best matches your interest.",
     downloadCv: "Download CV",
     spiritLabel: "Working style",
-    spiritTitle: "Fast learner, motivated, and useful in dynamic teams.",
+    spiritTitle: "Validation-minded, fast to ramp up, and useful in active engineering teams.",
     traits: [
-      { icon: "trendUp", title: "Fast ramp-up", text: "I learn new technical contexts quickly and convert them into practical implementation." },
-      { icon: "workflow", title: "Team momentum", text: "I work well in active engineering teams where priorities evolve and delivery matters." },
-      { icon: "target", title: "Problem ownership", text: "I prefer clear objectives, rigorous reasoning, and solutions that can be validated." },
-      { icon: "waypoints", title: "Proven perseverance", text: "I do not give up when the work gets difficult; I persist, test, and improve until there is a workable answer." },
-      { icon: "flask", title: "Creative problem solving", text: "I explore unconventional angles and connect ideas across disciplines to find practical solutions." },
-      { icon: "send", title: "Clear communication", text: "I communicate early, listen carefully, and help create a constructive, respectful team environment." }
+      { icon: "target", title: "Acceptance focus", text: "I turn controller behavior into measurable criteria, pass/fail checks, and evidence packages." },
+      { icon: "workflow", title: "Integration ownership", text: "I work across EMS logic, simulator I/O, PLC/RTAC behavior, and protocol maps until the loop is testable." },
+      { icon: "trendUp", title: "Fast ramp-up", text: "I learn new controller platforms and validation contexts quickly enough to contribute without long hand-holding." },
+      { icon: "waypoints", title: "Failure-mode thinking", text: "I actively test delay, data loss, stale values, timeouts, safe fallback, and command/readback mismatches." },
+      { icon: "flask", title: "Practical problem solving", text: "I connect power-system models, software traces, and controller diagnostics to isolate the real issue." },
+      { icon: "send", title: "Clear communication", text: "I document assumptions, signal contracts, expected behavior, and troubleshooting records so teams can reuse the work." }
     ]
   },
   fr: {
     kicker: "Contact",
     title: "Contact et telechargement du CV",
-    body: "Utilisez les liens ci-dessous pour me contacter directement ou telecharger la version du CV la plus adaptee au poste.",
+    body: "Utilisez les liens ci-dessous pour me contacter directement ou telecharger le CV controle/RTS ou VPP/EMS.",
     contactLabel: "Contact direct",
-    contactTitle: "Ouvert aux roles en reseaux electriques, EMS, VPP et controle.",
-    contactText: "Je suis interesse par les equipes d'ingenierie travaillant sur la coordination DER, l'EMS microgrid, la simulation temps reel et les logiciels orientes controleur.",
+    contactTitle: "Ouvert aux roles en validation controle microgrid, preparation CHIL/HIL et interfaces controleur.",
+    contactText: "Je suis interesse par les equipes d'ingenierie travaillant sur la validation EMS microgrid, l'automatisation des tests, la simulation temps reel, les interfaces protocolaires et les logiciels DER orientes controleur.",
     email: "M'ecrire",
+    phone: "Telephone",
     alternateEmail: "Autre courriel",
     linkedin: "LinkedIn",
     orcid: "ORCID",
     scholar: "Google Scholar",
-    cvLabel: "CV",
-    cvTitle: "Telecharger le CV",
-    cvBody: "Vous pouvez telecharger mon CV apres une courte question, afin d'afficher la version la plus adaptee a votre interet.",
     downloadCv: "Telecharger le CV",
-    spiritLabel: "Etat d'esprit",
-    spiritTitle: "Apprentissage rapide, forte motivation et contribution utile dans les equipes dynamiques.",
+    spiritLabel: "Methode de travail",
+    spiritTitle: "Oriente validation, apprentissage rapide et utile dans les equipes d'ingenierie actives.",
     traits: [
-      { icon: "trendUp", title: "Montee en competence rapide", text: "J'assimile vite les nouveaux contextes techniques et les transforme en implementations concretes." },
-      { icon: "workflow", title: "Dynamique d'equipe", text: "Je travaille bien dans les equipes actives ou les priorites evoluent et ou la livraison compte." },
-      { icon: "target", title: "Responsabilite technique", text: "Je privilegie des objectifs clairs, un raisonnement rigoureux et des solutions verifiables." },
-      { icon: "waypoints", title: "Perseverance demontree", text: "Je ne renonce pas lorsque le travail devient difficile; je teste, j'ameliore et je poursuis jusqu'a obtenir une solution praticable." },
-      { icon: "flask", title: "Resolution creative", text: "J'explore des angles inhabituels et relie des idees de disciplines differentes pour trouver des solutions pratiques." },
-      { icon: "send", title: "Communication claire", text: "Je communique tot, j'ecoute attentivement et je contribue a creer un environnement d'equipe constructif et respectueux." }
+      { icon: "target", title: "Criteres d'acceptation", text: "Je transforme le comportement controleur en mesures, verifications pass/fail et preuves de validation." },
+      { icon: "workflow", title: "Integration bout en bout", text: "Je travaille entre logique EMS, E/S simulateur, PLC/RTAC et mappings protocole jusqu'a obtenir une boucle testable." },
+      { icon: "trendUp", title: "Montee rapide", text: "J'apprends vite les nouvelles plateformes controleur et les contextes de validation." },
+      { icon: "waypoints", title: "Modes de defaillance", text: "Je teste delais, pertes de donnees, valeurs perimees, timeouts, etats de repli et ecarts commande/lecture." },
+      { icon: "flask", title: "Resolution pratique", text: "Je relie modeles reseau, traces logicielles et diagnostics controleur pour isoler le vrai probleme." },
+      { icon: "send", title: "Communication claire", text: "Je documente hypotheses, contrats de signaux, comportement attendu et depannage pour rendre le travail reutilisable." }
     ]
   }
 };
@@ -87,7 +81,18 @@ export default function Contact({ language }: { language: Language }) {
 
   return (
     <div className="sub-page-container fade-in contact-page">
-      <PageTitle kicker={c.kicker} title={c.title} body={c.body} />
+      <div className="contact-page-header">
+        <PageTitle kicker={c.kicker} title={c.title} body={c.body} />
+        <button
+          type="button"
+          className="button primary large contact-cv-open-button"
+          aria-haspopup="dialog"
+          aria-expanded={isCvModalOpen}
+          onClick={() => setIsCvModalOpen(true)}
+        >
+          {c.downloadCv}
+        </button>
+      </div>
 
       <div className="contact-layout">
         <section className="contact-page-card contact-intro-card">
@@ -105,9 +110,18 @@ export default function Contact({ language }: { language: Language }) {
                 {profile.email}
               </a>
             </div>
+            {profile.phone && (
+              <div className="contact-detail-row">
+                <span className="contact-email-icon"><Icon name="phone" /></span>
+                <a href={`tel:${profile.phone.replace(/[^+\d]/g, "")}`}>
+                  <b>{c.phone}</b>
+                  {profile.phone}
+                </a>
+              </div>
+            )}
             {profile.alternateEmail && (
               <div className="contact-detail-row">
-                <span className="contact-email-icon"><Icon name="mail" /></span>
+                <span className="contact-email-icon"><img src="/laval.png" alt="Universite Laval" className="laval-icon" /></span>
                 <a href={`mailto:${profile.alternateEmail}`}>
                   <b>{c.alternateEmail}</b>
                   {profile.alternateEmail}
@@ -133,26 +147,6 @@ export default function Contact({ language }: { language: Language }) {
                 {c.scholar}
               </a>
             )}
-          </div>
-        </section>
-
-        <section className="contact-page-card contact-cv-card">
-          <div className="contact-card-heading">
-            <span>{c.cvLabel}</span>
-            <h2>{c.cvTitle}</h2>
-            <p>{c.cvBody}</p>
-          </div>
-
-          <div className="contact-cv-picker-panel contact-cv-download-panel">
-            <button
-              type="button"
-              className="button primary large contact-cv-open-button"
-              aria-haspopup="dialog"
-              aria-expanded={isCvModalOpen}
-              onClick={() => setIsCvModalOpen(true)}
-            >
-              {c.downloadCv}
-            </button>
           </div>
         </section>
 

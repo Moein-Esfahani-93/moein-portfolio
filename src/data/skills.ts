@@ -2,93 +2,93 @@ import type { SkillBlock } from "../types";
 
 export const skills: SkillBlock[] = [
   {
-    title: "Power Systems & Grid Support",
-    titleFr: "Réseaux électriques et soutien réseau",
-    text: "I work on voltage regulation and reactive power support, primary/droop frequency response, operating reserves, active/reactive power dispatch, DER hosting-capacity and grid-impact studies, P-Q capability curves, interconnection limits, and IEEE 1547 grid-support functions.",
-    textFr: "Je travaille sur la régulation de tension et le soutien de puissance réactive, la réponse de fréquence primaire/droop, les réserves d'exploitation, le dispatch P/Q, les études de capacité d'accueil DER et d'impact réseau, les courbes de capacité P-Q, les limites d'interconnexion et les fonctions réseau IEEE 1547.",
-    keywords: ["voltage regulation", "frequency response", "operating reserves", "active/reactive power dispatch", "IEEE 1547"],
-    keywordsFr: ["régulation de tension", "réponse de fréquence", "réserves d'exploitation", "dispatch P/Q", "IEEE 1547"],
+    title: "Microgrid Validation, SIL, CHIL & HIL Preparation",
+    titleFr: "Validation microgrid, preparation SIL, CHIL et HIL",
+    text: "I build controller-in-the-loop and HIL-preparation workflows for EMS supervisory decisions, secondary-control interaction, normal and abnormal scenarios, communication loss, stale data, timeout behavior, equipment-limit violations, and safe-fallback states.",
+    textFr: "Je construis des workflows controller-in-the-loop et de preparation HIL pour decisions EMS, interaction de controle secondaire, scenarios normaux/anormaux, perte de communication, donnees perimees, timeouts, violations de limites equipement et etats de repli surs.",
+    keywords: ["controller-in-the-loop", "HIL-preparation", "EMS supervisory decisions", "communication loss", "safe-fallback states"],
+    keywordsFr: ["controller-in-the-loop", "preparation HIL", "decisions EMS", "perte de communication", "etats de repli"],
+    track: "automation"
+  },
+  {
+    title: "Simulation Frameworks & Test Automation",
+    titleFr: "Frameworks de simulation et automatisation des tests",
+    text: "I use Python orchestration, C/C++ bridge layers, custom time-domain simulation logic, OpenDSS QSTS/time-series studies, PSS/E, PSCAD EMT analysis, MATLAB/Simulink, automated logs, repeatable test execution, regression-ready scenario libraries, and pass/fail reporting.",
+    textFr: "J'utilise orchestration Python, couches de pont C/C++, logique de simulation temporelle, etudes OpenDSS QSTS/temporelles, PSS/E, analyse EMT PSCAD, MATLAB/Simulink, journaux automatises, execution de tests repetables, bibliotheques de scenarios pretes pour regression et rapports pass/fail.",
+    keywords: ["Python orchestration", "C/C++ bridge", "OpenDSS", "regression-ready scenario libraries", "pass/fail reporting"],
+    keywordsFr: ["orchestration Python", "pont C/C++", "OpenDSS", "bibliotheques de scenarios", "rapports pass/fail"],
+    track: "software"
+  },
+  {
+    title: "Performance Metrics & Acceptance Criteria",
+    titleFr: "Mesures de performance et criteres d'acceptation",
+    text: "I define objective validation metrics for controller response, round-trip latency, jitter, stale-data detection, command acknowledgement/readback, voltage-limit compliance, feeder loading, BESS SoC limits, P/Q setpoint tracking, frequency/voltage-support adequacy, and system-readiness criteria.",
+    textFr: "Je definis des mesures objectives pour reponse controleur, latence aller-retour, jitter, detection de donnees perimees, acquittement commande/lecture, respect des limites de tension, chargement de depart, limites SoC BESS, suivi de consignes P/Q, adequation soutien frequence/tension et criteres de readiness systeme.",
+    keywords: ["round-trip latency", "jitter", "command acknowledgement", "P/Q setpoint tracking", "system-readiness criteria"],
+    keywordsFr: ["latence aller-retour", "jitter", "acquittement commande", "suivi de consignes P/Q", "criteres de readiness"],
+    track: "automation"
+  },
+  {
+    title: "Requirements Traceability & Validation Assets",
+    titleFr: "Tracabilite des exigences et actifs de validation",
+    text: "I maintain signal contracts, device profiles, point/register maps, test cases, expected behavior definitions, result logs, JSON/SQL artifacts, Git-controlled repositories, technical documentation, troubleshooting records, and evidence packages.",
+    textFr: "Je maintiens contrats de signaux, profils d'equipements, cartes points/registres, cas de test, definitions de comportement attendu, journaux de resultats, artefacts JSON/SQL, depots Git, documentation technique, dossiers de depannage et preuves de validation.",
+    keywords: ["signal contracts", "device profiles", "point/register maps", "expected behavior", "evidence packages"],
+    keywordsFr: ["contrats de signaux", "profils d'equipements", "cartes points/registres", "comportement attendu", "preuves de validation"],
+    track: "software"
+  },
+  {
+    title: "Industrial Controls & IEC 61131-3 Programming",
+    titleFr: "Controle industriel et programmation IEC 61131-3",
+    text: "I program IEC 61131-3 Structured Text, Ladder, and Function Block logic with FSM sequencing, interlocks, watchdogs, cyclic-task and scan-cycle scheduling, command/readback validation, communication-health monitoring, alarms, diagnostic states, and safe-state behavior.",
+    textFr: "Je programme en IEC 61131-3 Structured Text, Ladder et Function Block avec sequences FSM, interlocks, watchdogs, taches cycliques, cycles de scan, validation commande/lecture, suivi sante communication, alarmes, etats diagnostics et comportement safe-state.",
+    keywords: ["IEC 61131-3", "Structured Text", "FSM sequencing", "watchdogs", "command/readback validation"],
+    keywordsFr: ["IEC 61131-3", "Structured Text", "sequences FSM", "watchdogs", "validation commande/lecture"],
+    track: "automation"
+  },
+  {
+    title: "Controller Hardware & Industrial Communication",
+    titleFr: "Materiel controleur et communication industrielle",
+    text: "I work across PLCnext AXC F 3152/2152, SEL RTAC 3350, Schneider Modicon M262/M580, DEIF AGC/ASC 150, ELUM Es+, ComAp InteliNeo 6000, Modbus TCP/RTU, IEC 61850 MMS/GOOSE, OPC UA, DNP3, IEC 60870-5-104, CAN/J1939, MQTT, WebSocket, TCP sockets, EtherCAT, PROFINET, and EtherNet/IP.",
+    textFr: "Je travaille avec PLCnext AXC F 3152/2152, SEL RTAC 3350, Schneider Modicon M262/M580, DEIF AGC/ASC 150, ELUM Es+, ComAp InteliNeo 6000, Modbus TCP/RTU, IEC 61850 MMS/GOOSE, OPC UA, DNP3, IEC 60870-5-104, CAN/J1939, MQTT, WebSocket, sockets TCP, EtherCAT, PROFINET et EtherNet/IP.",
+    keywords: ["PLCnext", "SEL RTAC", "Modbus TCP/RTU", "IEC 61850", "OPC UA"],
+    keywordsFr: ["PLCnext", "SEL RTAC", "Modbus TCP/RTU", "IEC 61850", "OPC UA"],
+    track: "automation"
+  },
+  {
+    title: "Grid Simulation & Power-System Studies",
+    titleFr: "Simulation reseau et etudes electriques",
+    text: "I perform OpenDSS QSTS/time-series studies, PSS/E planning and dynamic-analysis workflows, PSCAD EMT-oriented analysis, MATLAB/Simulink studies, voltage-limit checks, feeder loading analysis, DER response validation, grid-feasibility evaluation, and controller-test-case design.",
+    textFr: "Je realise etudes OpenDSS QSTS/temporelles, workflows PSS/E de planification et dynamique, analyse EMT PSCAD, etudes MATLAB/Simulink, verification de tension, analyse de chargement, validation de reponse DER, faisabilite reseau et conception de cas de test controleur.",
+    keywords: ["OpenDSS", "PSS/E", "PSCAD", "voltage-limit checks", "controller-test-case design"],
+    keywordsFr: ["OpenDSS", "PSS/E", "PSCAD", "verification de tension", "cas de test controleur"],
     track: "research"
   },
   {
+    title: "VPP Dispatch to Controller-Test Scenarios",
+    titleFr: "Dispatch VPP vers scenarios de test controleur",
+    text: "I convert VPP forecasting and optimization outputs into controller-test scenarios with DER flexibility envelopes, BESS SoC limits, PV availability, network voltage/loading constraints, uncertainty cases, abnormal operating conditions, and root-cause troubleshooting coverage.",
+    textFr: "Je convertis les sorties de prevision et optimisation VPP en scenarios de test controleur avec enveloppes de flexibilite DER, limites SoC BESS, disponibilite PV, contraintes tension/chargement, cas d'incertitude, conditions anormales et couverture pour diagnostic root-cause.",
+    keywords: ["VPP forecasting", "optimization outputs", "DER flexibility envelopes", "BESS SoC", "abnormal operating conditions"],
+    keywordsFr: ["prevision VPP", "sorties optimisation", "enveloppes de flexibilite DER", "SoC BESS", "conditions anormales"],
+    track: "market"
+  },
+  {
     title: "Optimization & Uncertainty Modelling",
-    titleFr: "Optimisation et modélisation de l'incertitude",
-    text: "I formulate DER dispatch problems with LP, MILP, NLP, and MISOCP models, using stochastic programming, robust optimization, Wasserstein DRO, ADMM, Nash and Stackelberg game theory, Pyomo, Gurobi, CPLEX, IPOPT, CVX, and MATLAB.",
-    textFr: "Je formule les problèmes de dispatch DER avec des modèles LP, MILP, NLP et MISOCP, en utilisant la programmation stochastique, l'optimisation robuste, la DRO de Wasserstein, ADMM, les jeux de Nash et Stackelberg, Pyomo, Gurobi, CPLEX, IPOPT, CVX et MATLAB.",
-    keywords: ["LP, MILP, NLP, and MISOCP", "stochastic programming", "robust optimization", "Wasserstein DRO", "ADMM"],
-    keywordsFr: ["LP, MILP, NLP et MISOCP", "programmation stochastique", "optimisation robuste", "DRO de Wasserstein", "ADMM"],
+    titleFr: "Optimisation et modelisation de l'incertitude",
+    text: "My Ph.D. work covers stochastic, robust, and distributionally robust optimization for VPP coordination under renewable, load, and market uncertainty, translating results into DER operating limits, flexibility envelopes, BESS SoC constraints, and network limits.",
+    textFr: "Mon Ph.D. couvre optimisation stochastique, robuste et distributionally robust pour coordination VPP sous incertitude renouvelable, charge et marche, avec traduction vers limites operationnelles DER, enveloppes de flexibilite, contraintes SoC BESS et limites reseau.",
+    keywords: ["stochastic", "robust", "distributionally robust optimization", "VPP coordination", "network limits"],
+    keywordsFr: ["stochastique", "robuste", "distributionally robust", "coordination VPP", "limites reseau"],
     track: "market"
   },
   {
-    title: "VPP & Microgrid EMS",
-    titleFr: "VPP et EMS microgrid",
-    text: "I develop DER aggregation, capability estimation, dispatch disaggregation, auto-trader logic, microgrid operating-mode management, setpoint and secondary-control coordination, BESS SoC and ramp-limit handling, inverter P-Q limit enforcement, and cloud-fog-edge VPP workflows.",
-    textFr: "Je développe l'agrégation DER, l'estimation de capacité, la désagrégation du dispatch, la logique d'auto-trader, la gestion des modes microgrid, la coordination des consignes et du contrôle secondaire, les limites SoC et rampes BESS, les limites P-Q des onduleurs et les workflows VPP cloud-fog-edge.",
-    keywords: ["DER aggregation", "capability estimation", "dispatch disaggregation", "auto-trader logic", "BESS SoC"],
-    keywordsFr: ["agrégation DER", "estimation de capacité", "désagrégation du dispatch", "logique d'auto-trader", "SoC BESS"],
-    track: "market"
-  },
-  {
-    title: "ISO/RTO Market Participation",
-    titleFr: "Participation aux marchés ISO/RTO",
-    text: "I study and apply ERCOT, MISO, NYISO, and ISO-NE market and interconnection rules, translating energy, reserve, and frequency-regulation structures into forecast-driven bid/offer logic, dispatch schedules, KPI models, and grid-feasibility validation requirements.",
-    textFr: "J'étudie et j'applique les règles de marché et d'interconnexion ERCOT, MISO, NYISO et ISO-NE, en traduisant les structures d'énergie, de réserve et de régulation de fréquence en logique d'offres, calendriers de dispatch, modèles KPI et exigences de validation réseau.",
-    keywords: ["ERCOT", "MISO", "NYISO", "ISO-NE", "bid/offer logic"],
-    keywordsFr: ["ERCOT", "MISO", "NYISO", "ISO-NE", "logique d'offres"],
-    track: "market"
-  },
-  {
-    title: "Power-System Simulation & Validation",
-    titleFr: "Simulation et validation de réseaux électriques",
-    text: "I perform steady-state power-flow and quasi-static time-series studies using tools such as OpenDSS and MATLAB; use PSS/E for planning and dynamic-analysis workflows; use PSCAD for EMT-oriented studies; and prepare SIL/controller-in-the-loop validation cases for voltage limits, feeder loading, DER response, and grid-feasibility constraints.",
-    textFr: "Je réalise des études de flux de puissance et des études quasi-statiques temporelles avec des outils tels qu'OpenDSS et MATLAB; j'utilise PSS/E pour les workflows de planification et d'analyse dynamique; PSCAD pour les études orientées EMT; et je prépare des cas SIL/controller-in-the-loop pour les limites de tension, le chargement, la réponse DER et les contraintes de faisabilité réseau.",
-    keywords: ["steady-state power-flow", "quasi-static time-series studies", "software-in-the-loop", "controller-in-the-loop", "OpenDSS", "PSCAD"],
-    keywordsFr: ["flux de puissance", "études quasi-statiques temporelles", "software-in-the-loop", "controller-in-the-loop", "OpenDSS", "PSCAD"],
-    track: "software"
-  },
-  {
-    title: "Forecasting & Analytics",
-    titleFr: "Prévision et analytique",
-    text: "I build day-ahead and intraday forecasting workflows for price, load, and PV generation, using weather and market data, scenario generation, sensitivity analysis, LSTM, GRU, CNN, random forest, and XGBoost.",
-    textFr: "Je construis des workflows de prévision day-ahead et intraday pour les prix, la charge et la production PV, avec données météo et marché, génération de scénarios, analyse de sensibilité, LSTM, GRU, CNN, random forest et XGBoost.",
-    keywords: ["day-ahead and intraday forecasting", "price, load, and PV", "scenario generation", "LSTM", "XGBoost"],
-    keywordsFr: ["prévision day-ahead et intraday", "prix, charge et PV", "génération de scénarios", "LSTM", "XGBoost"],
-    track: "software"
-  },
-  {
-    title: "Engineering Software & Data Interfaces",
-    titleFr: "Logiciels d'ingénierie et interfaces de données",
-    text: "I build EMS orchestration services, time-indexed simulation interfaces, streaming data pipelines, RESTful APIs, live-updating dashboards, and controller data interfaces with Python, Java, C/C++, FastAPI, MATLAB, Kafka, MQTT, WebSocket, and Redis.",
-    textFr: "Je construis des services d'orchestration EMS et des interfaces de simulation indexées dans le temps, des pipelines de données streaming, des API REST, des tableaux de bord à mise à jour live et des interfaces contrôleur avec Python, Java, C/C++, FastAPI, MATLAB, Kafka, MQTT, WebSocket et Redis.",
-    keywords: ["EMS orchestration services", "simulation orchestration interfaces", "RESTful APIs", "Kafka, MQTT, WebSocket", "Redis"],
-    keywordsFr: ["services d'orchestration EMS", "interfaces d'orchestration de simulation", "API REST", "Kafka, MQTT, WebSocket", "Redis"],
-    track: "software"
-  },
-  {
-    title: "Controllers & IEC 61131-3 Programming",
-    titleFr: "Contrôleurs et programmation IEC 61131-3",
-    text: "I program IEC 61131-3 Structured Text, Ladder Diagram, and Function Block logic with scan-cycle scheduling, FSM sequencing, interlocks, watchdogs, command/readback validation, CODESYS, TwinCAT, PLCnext AXC F 3152/2152, SEL RTAC, Schneider Modicon M262/M580, DEIF AGC/ASC 150, Elum ePowerControl ES+, and ComAp InteliNeo 6000.",
-    textFr: "Je programme en IEC 61131-3 Structured Text, Ladder Diagram et Function Block avec cycles de scan, séquencement FSM, interlocks, watchdogs, validation commande/lecture, CODESYS, TwinCAT, PLCnext AXC F 3152/2152, SEL RTAC, Schneider Modicon M262/M580, DEIF AGC/ASC 150, Elum ePowerControl ES+ et ComAp InteliNeo 6000.",
-    keywords: ["Structured Text", "Ladder", "Function Block", "watchdogs", "PLCnext AXC F 3152/2152"],
-    keywordsFr: ["Structured Text", "Ladder", "Function Block", "watchdogs", "PLCnext AXC F 3152/2152"],
-    track: "automation"
-  },
-  {
-    title: "Industrial Communication & Gateway Interfaces",
-    titleFr: "Communications industrielles et passerelles",
-    text: "I implement Modbus TCP/RTU and TCP/WebSocket exchange layers, define simulator-to-protocol point maps, scaling, status flags, device profiles, and gateway logic, with exposure to IEC 61850 concepts, OPC UA, DNP3, IEC 60870-5-104, CAN/J1939, MQTT, EtherCAT, PROFINET, and EtherNet/IP.",
-    textFr: "J'implémente des couches d'échange Modbus TCP/RTU et TCP/WebSocket, je définis les mappings points simulateur-protocole, la mise à l'échelle, les statuts, profils d'équipement et logiques de passerelle, avec exposition à IEC 61850 concepts, OPC UA, DNP3, IEC 60870-5-104, CAN/J1939, MQTT, EtherCAT, PROFINET et EtherNet/IP.",
-    keywords: ["Modbus TCP/RTU", "IEC 61850 concepts", "OPC UA", "DNP3", "CAN/J1939"],
-    keywordsFr: ["Modbus TCP/RTU", "IEC 61850 concepts", "OPC UA", "DNP3", "CAN/J1939"],
-    track: "automation"
-  },
-  {
-    title: "Real-Time Simulation, I/O & Timing",
-    titleFr: "Simulation temps réel, E/S et timing",
-    text: "I design real-time simulator interfaces and time-domain solver logic with timestamp alignment, simulator/controller update-cycle coordination, sampling and update-rate plans, execution budgets, latency/jitter diagnostics, stale-data detection, timeout handling, and offline SIL plus real-time CIL/CHIL preparation workflows. I also work with real-time and HIL environments such as OPAL-RT and RTDS, PREEMPT_RT Linux, FreeRTOS, and embedded RTOS concepts.",
-    textFr: "Je conçois des interfaces de simulateur temps réel et de la logique de solveur temporel avec alignement des horodatages, coordination des cycles simulateur/contrôleur, plans d'échantillonnage, budgets d'exécution, diagnostics de latence/jitter, détection de données périmées, gestion des timeouts, études SIL hors ligne et préparation CIL/CHIL en temps réel. Je travaille aussi avec des environnements temps réel et HIL comme OPAL-RT et RTDS, PREEMPT_RT Linux, FreeRTOS et des concepts RTOS embarqués.",
-    keywords: ["real-time simulator interfaces", "time-domain simulation solver", "latency and jitter", "stale-data and timeout", "OPAL-RT"],
-    keywordsFr: ["interfaces de simulateur temps réel", "solveur temporel", "latence et jitter", "données périmées et timeouts", "OPAL-RT"],
-    track: "automation"
+    title: "Grid, Standards & Market Context",
+    titleFr: "Contexte reseau, normes et marche",
+    text: "I connect microgrid EMS, DER coordination, BESS/PV/PCS/meter interfaces, IEEE 1547/1547.1, IEEE 2030.7/2030.8, UL 1741, IEEE 519, IEC 62443 awareness, IEC 61508 awareness, VPP market-rule analysis, grid-feasibility checks, ISO/RTO concepts, and developing ERCOT familiarity.",
+    textFr: "Je relie EMS microgrid, coordination DER, interfaces BESS/PV/PCS/compteur, IEEE 1547/1547.1, IEEE 2030.7/2030.8, UL 1741, IEEE 519, sensibilisation IEC 62443, sensibilisation IEC 61508, analyse des regles marche VPP, faisabilite reseau, concepts ISO/RTO et familiarite ERCOT en developpement.",
+    keywords: ["IEEE 1547", "IEEE 2030.7", "UL 1741", "IEC 62443", "ERCOT"],
+    keywordsFr: ["IEEE 1547", "IEEE 2030.7", "UL 1741", "IEC 62443", "ERCOT"],
+    track: "research"
   }
 ];

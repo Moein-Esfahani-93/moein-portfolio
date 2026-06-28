@@ -7,107 +7,118 @@ import type { PageId } from "../types";
 
 const copy = {
   en: {
-    profileTitle: "PERSONAL PROFILE",
-    profile:
-      "Power systems engineer with a completed Ph.D. in DER coordination and VPP optimization, working across market, grid, and controller-validation layers. On the VPP side, I build market-participation workflows that translate ISO/RTO rules, forecasts, DER portfolio capability, and grid-security constraints into bid/offer and dispatch decisions. In parallel, I develop microgrid EMS workflows for operating-mode logic, supervisory setpoints, secondary-control interaction, and controller-facing validation. On the controls side, I build IEC 61131-3 logic, real-time simulator I/O, and industrial protocol interfaces that make those decisions executable and testable with PLCs, RTACs, and vendor microgrid controllers.",
+    profileTitle: "Summary of What I do",
+    profile:"Power systems control and validation engineer focused on testing EMS and microgrid controllers before field deployment. I build realistic simulation-based validation workflows that connect EMS/VPP dispatch logic, DER operating constraints, real-time simulator interfaces, PLC/RTAC controller logic, and industrial communication protocols. My work includes controller-facing test scenarios, real-time I/O mapping, communication-delay and failure-mode testing, command/readback verification, timing and latency diagnostics, validation logs, and acceptance evidence for SIL, CHIL, and HIL preparation. I also bring VPP/DER optimization experience, including forecasting, DER capability estimation, market rules, grid-feasibility studies, and uncertainty-aware dispatch outputs, which helps me create realistic EMS and controller-validation cases.",
     selectedProjectsTitle: "PROJECTS & IMPLEMENTATIONS",
     capabilityTitle: "CAPABILITY BACKBONE",
     contactTitle: "CONTACT",
-    technicalTitle: "TECHNICAL CENTER",
+    technicalTitle: "ENGINEERING TOOLKIT",
     educationTitle: "EDUCATION & RESEARCH",
-    power: "Power systems",
-    optimization: "Optimization",
-    software: "Programming Languages",
-    degree: "Ph.D. - Electrical Engineering",
-    completed: "Université Laval - completed Ph.D.",
-    focus: "Technical focus",
+    controls: "Controls",
+    simulation: "Simulation",
+    vpp: "VPP/DER",
+    supervisor: "Ph.D. Supervisor",
+    advisor: "Advisor",
+    supervisorName: "Prof. Innocent Kamwa",
+    advisorName: "Prof. Nima Amjady",
     viewProjects: "View Projects",
     seeMore: "See more",
-    chips: ["VPP Dispatch", "Microgrid EMS", "Grid Studies", "RTS Interfaces", "Optimization"]
+    chips: ["CHIL/HIL Prep", "RTS Interfaces", "Microgrid EMS", "Test Automation", "VPP/DER Context", "Optimization"],
+    education: [
+      { degree: "Ph.D., Electrical Engineering", detail: "Universite Laval, Quebec City, QC | 2020 - 2024" }
+    ],
   },
   fr: {
-    profileTitle: "PROFIL",
+    profileTitle: "PROFIL VALIDATION CONTROLE",
     profile:
-      "Ingénieur en réseaux électriques avec un Ph.D. complété en coordination DER et optimisation VPP, travaillant entre les couches marché, réseau et validation contrôleur. Côté VPP, je développe des workflows de participation marché qui traduisent règles ISO/RTO, prévisions, capacité de portefeuille DER et contraintes réseau en décisions d'offre et de dispatch. En parallèle, je développe des workflows EMS microgrid pour les modes d'exploitation, consignes de supervision, interaction avec le contrôle secondaire et validation orientée contrôleur. Côté contrôle, je développe la logique IEC 61131-3, les E/S de simulateur temps réel et les interfaces protocolaires qui rendent ces décisions exécutables et testables avec des PLC, RTAC et contrôleurs microgrid fournisseurs.",
-    selectedProjectsTitle: "RÉSUMÉ DES PROJETS 1-3",
+      "Ingenieur en validation controle microgrid axe sur la validation EMS, la simulation orientee controleur, la preparation CHIL/HIL, les interfaces RTS et l'automatisation des tests. Je travaille entre logique PLC/RTAC, E/S simulateur temps reel, mappings protocolaires, scenarios de defaillance, diagnostics timing, verification commande/lecture, journaux de validation et preuves d'acceptation. Le dispatch VPP/DER et l'optimisation restent un axe de support important: j'utilise prevision, capacite DER, regles marche, etudes de faisabilite reseau et sorties de dispatch sous incertitude pour creer des cas realistes de validation EMS et controleur.",
+    selectedProjectsTitle: "PROJETS ET IMPLEMENTATIONS",
     capabilityTitle: "AXES TECHNIQUES",
     contactTitle: "CONTACT",
-    technicalTitle: "CENTRE TECHNIQUE",
+    technicalTitle: "OUTILS D'INGENIERIE",
     educationTitle: "FORMATION & RECHERCHE",
-    power: "Réseaux",
-    optimization: "Optimisation",
-    software: "Logiciel",
-    degree: "Ph.D. - Génie électrique",
-    completed: "Université Laval - complété",
-    focus: "Axe technique",
+    controls: "Controle",
+    simulation: "Simulation",
+    vpp: "VPP/DER",
+   supervisor: "Directeur de Ph.D.",
+    advisor: "Conseiller",
+    supervisorName: "Prof. Innocent Kamwa",
+    advisorName: "Prof. Nima Amjady",
     viewProjects: "Voir les projets",
     seeMore: "Voir plus",
-    chips: ["Dispatch VPP", "EMS microgrid", "Études réseau", "Interfaces RTS", "Optimisation"]
+    chips: ["Preparation CHIL/HIL", "Interfaces RTS", "EMS microgrid", "Automatisation tests", "Contexte VPP/DER", "Optimisation"],
+    education: [
+      { degree: "Ph.D., Genie electrique", detail: "Universite Laval, Quebec City, QC | 2020 - 2024" }
+    ],
   }
 };
 
 const capabilityCards = [
   {
-    title: "VPP market dispatch",
-    titleFr: "Dispatch marché VPP",
-    icon: "target",
+    title: "Controls validation and real-time interfaces",
+    titleFr: "Validation controle et interfaces temps reel",
+    icon: "workflow",
     bullets: [
-      "Auto-trader, forecaster, capability extractor, optimizer, dispatch propagator",
-      "ISO/RTO rules - ERCOT, MISO, NYISO, ISO-NE",
-      "Energy, reserve, and frequency-regulation products; voltage-support objectives",
-      "Distribution time-series studies and EMT-oriented validation"
+      "SIL/CHIL/HIL preparation, controller-in-the-loop workflows, validation scenarios, logs, and evidence packages",
+      "IEC 61131-3 Structured Text, Ladder, Function Block, FSM sequencing, interlocks, watchdogs, and safe fallback",
+      "PLCnext AXC F 3152/2152, SEL RTAC 3350, Schneider M262/M580, DEIF, ELUM, and ComAp controllers",
+      "Modbus TCP/RTU, IEC 61850 MMS/GOOSE, OPC UA, DNP3, IEC 60870-5-104, CAN/J1939, MQTT, WebSocket"
     ],
     bulletsFr: [
-      "Auto-trader, prévision, extracteur de capacité, optimiseur, propagateur de dispatch",
-      "Règles ISO/RTO - ERCOT, MISO, NYISO, ISO-NE",
-      "Produits énergie, réserve et régulation de fréquence; objectifs de soutien de tension",
-      "Études temporelles de distribution et validation orientée EMT"
+      "Preparation SIL/CHIL/HIL, workflows controller-in-the-loop, scenarios de validation, journaux et preuves",
+      "IEC 61131-3 Structured Text, Ladder, Function Block, sequences FSM, interlocks, watchdogs et repli sur",
+      "Controleurs PLCnext AXC F 3152/2152, SEL RTAC 3350, Schneider M262/M580, DEIF, ELUM et ComAp",
+      "Modbus TCP/RTU, IEC 61850 MMS/GOOSE, OPC UA, DNP3, IEC 60870-5-104, CAN/J1939, MQTT, WebSocket"
     ]
   },
   {
-    title: "Software and solvers",
-    titleFr: "Logiciels et solveurs",
-    icon: "code",
+    title: "Simulation, EMS and grid feasibility",
+    titleFr: "Simulation, EMS et faisabilite reseau",
+    icon: "monitor",
     bullets: [
-      "PSS/E, OpenDSS, PSCAD, MATLAB",
-      "FastAPI services, Kafka, MQTT, WebSocket, Redis",
-      "Price, load, and PV forecasting with LSTM, GRU, CNN, random forest, XGBoost",
-      "Python, C/C++, SQL, Java, TypeScript; live dashboards, telemetry, and dispatch data streams"
+      "OpenDSS QSTS/time-series studies, PSS/E planning and dynamic workflows, PSCAD EMT analysis, MATLAB/Simulink",
+      "Microgrid EMS supervisory decisions, secondary-control interaction, voltage limits, feeder loading, and DER response",
+      "Scenario generation from price, load, PV, weather, market, simulation, and diagnostic datasets",
+      "Python, C/C++, SQL, FastAPI, Kafka, MQTT, WebSocket, Redis, Git, validation logs, and JSON/SQL artifacts"
     ],
     bulletsFr: [
-      "PSS/E, OpenDSS, PSCAD, MATLAB",
-      "Services FastAPI, Kafka, MQTT, WebSocket, Redis",
-      "Prévision prix, charge et PV avec LSTM, GRU, CNN, random forest, XGBoost",
-      "Python, C/C++, SQL, Java, TypeScript;Tableaux de bord live, télémétrie et flux de données de dispatch"
+      "Etudes OpenDSS QSTS/temporelles, workflows PSS/E planification/dynamique, analyse EMT PSCAD, MATLAB/Simulink",
+      "Decisions EMS microgrid, interaction controle secondaire, limites de tension, chargement et reponse DER",
+      "Generation de scenarios depuis donnees prix, charge, PV, meteo, marche, simulation et diagnostic",
+      "Python, C/C++, SQL, FastAPI, Kafka, MQTT, WebSocket, Redis, Git, journaux de validation et artefacts JSON/SQL"
     ]
   },
   {
-    title: "Automation and controllers",
-    titleFr: "Automatisation et contrôleurs",
-    icon: "bot",
+    title: "VPP/DER dispatch and optimization context",
+    titleFr: "Contexte dispatch VPP/DER et optimisation",
+    icon: "cloud",
     bullets: [
-      "IEC 61131-3 Structured Text, Ladder, and Function Block",
-      "Real-time simulator I/O and controller-in-the-loop preparation",
-      "Modbus TCP/RTU, IEC 61850 and OPC UA concepts, DNP3, CAN/J1939",
-      "Latency, jitter, stale-data, timeout, acknowledgement, and readback diagnostics"
+      "Auto-trader, forecaster, capability extractor, optimizer, dispatch propagator, and monitoring workflows",
+      "ISO/RTO market structures including ERCOT, MISO, NYISO, and ISO-NE concepts",
+      "Energy, reserve, frequency-regulation, voltage-support, and grid-feasibility objectives",
+      "DER aggregation, flexibility envelopes, BESS SoC, PV availability, risk-aware constraints, and dispatch disaggregation"
     ],
     bulletsFr: [
-      "IEC 61131-3 Structured Text, Ladder et Function Block",
-      "E/S de simulateur temps réel et préparation controller-in-the-loop",
-      "Modbus TCP/RTU, IEC 61850 and OPC UA concepts, DNP3, CAN/J1939",
-      "Diagnostics de latence, jitter, données périmées, timeout, acquittement et lecture"
+      "Workflows auto-trader, prevision, extracteur de capacite, optimiseur, propagateur de dispatch et monitoring",
+      "Structures marche ISO/RTO incluant concepts ERCOT, MISO, NYISO et ISO-NE",
+      "Objectifs energie, reserve, regulation de frequence, soutien de tension et faisabilite reseau",
+      "Aggregation DER, enveloppes de flexibilite, SoC BESS, disponibilite PV, contraintes risque et desagregation dispatch"
     ]
   }
 ];
 
 const projectIcons: Record<string, string> = {
-  "cloud-edge-vpp": "trendUp",
+  "rts-io-cil": "workflow",
   "ems-qsts-scada": "monitor",
-  "rts-io-cil": "workflow"
+  "cloud-edge-vpp": "cloud",
+  "gateway-microgrid-control": "serverCog"
 };
-
+const phdPeople = {
+  supervisor: "https://innocent-kamwa.fsg.ulaval.ca/en",
+  advisor: "https://www.federation.edu.au/research/find-an-expert/Nima-Amjady"
+};
 export default function Home({ language, goToPage, setActiveProjectId }: { language: Language; goToPage: (page: PageId) => void; setActiveProjectId: (id: string) => void }) {
-  const t = copy[language];
+  const c = copy[language];
 
   function openProject(projectId: string) {
     setActiveProjectId(projectId);
@@ -117,14 +128,14 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
   return (
     <div className="home-flow fade-in">
       <section className="home-row">
-        <h2 className="section-title hero-title">{t.profileTitle}</h2>
+        <h2 className="section-title hero-title">{c.profileTitle}</h2>
         <div className="card home-profile-card">
           <div className="profile-card-body">
-            <p className="profile-lede">{t.profile}</p>
+            <p className="profile-lede">{c.profile}</p>
             <div className="home-chip-row">
-              {t.chips.map((chip) => <span key={chip}>{chip}</span>)}
+              {c.chips.map((chip) => <span key={chip}>{chip}</span>)}
               <button type="button" className="home-view-projects" onClick={() => goToPage("projects")}>
-                {t.viewProjects} →
+                {c.viewProjects} -&gt;
               </button>
             </div>
           </div>
@@ -132,7 +143,7 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
       </section>
 
       <section className="home-row">
-        <h2 className="section-title section-title-compact">{t.selectedProjectsTitle}</h2>
+        <h2 className="section-title section-title-compact">{c.selectedProjectsTitle}</h2>
         <div className="home-projects-grid">
           {projects.slice(0, 3).map((project) => (
             <div
@@ -162,7 +173,7 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
                     openProject(project.id);
                   }}
                 >
-                  {t.seeMore}
+                  {c.seeMore}
                 </button>
               </div>
             </div>
@@ -171,7 +182,7 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
       </section>
 
       <section className="home-row">
-        <h2 className="section-title section-title-compact">{t.capabilityTitle}</h2>
+        <h2 className="section-title section-title-compact">{c.capabilityTitle}</h2>
         <div className="achievement-grid capability-grid-home">
           {capabilityCards.map((card) => (
             <div className="card achievement-card capability-card-home" key={card.title}>
@@ -191,33 +202,44 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
 
       <div className="home-row home-bottom-layout">
         <div className="card bottom-card contact-card">
-          <h2 className="section-title-small">{t.contactTitle}</h2>
+          <h2 className="section-title-small">{c.contactTitle}</h2>
           <div className="info-line"><Icon name="mail" className="small" /><span>{profile.email}</span></div>
+          {profile.phone && <div className="info-line"><Icon name="phone" className="small" /><span>{profile.phone}</span></div>}
+              {profile.alternateEmail && (
+            <a className="info-line contact-link" href={`mailto:${profile.alternateEmail}`}>
+              <img src="/laval.png" alt="Universite Laval" className="laval-icon" /><span>{profile.alternateEmail}</span>
+            </a>
+          )}
           <a className="info-line contact-link" href={profile.linkedin} target="_blank" rel="noreferrer">
             <span className="linkedin-box">in</span><span>linkedin.com/in/moeinesfahani1993</span>
           </a>
         </div>
 
         <div className="card bottom-card skills-card">
-          <h2 className="section-title-small">{t.technicalTitle}</h2>
+          <h2 className="section-title-small">{c.technicalTitle}</h2>
           <div className="technical-matrix">
-            <div><b>{t.power}</b><span>PSS/E</span><span>OpenDSS</span><span>PSCAD</span><span>MATLAB</span></div>
-            <div><b>{t.optimization}</b><span>Robust</span><span>Stochastic</span><span>Probabilistic</span></div>
-            <div><b>{t.software}</b><span>Python</span><span>C/C++</span><span>SQL</span><span>TypeScript</span></div>
+            <div><b>{c.controls}</b><span>IEC 61131-3</span><span>Modbus</span><span>RTAC</span><span>CHIL/HIL</span></div>
+            <div><b>{c.simulation}</b><span>OpenDSS</span><span>PSS/E</span><span>PSCAD</span><span>MATLAB</span></div>
+            <div><b>{c.vpp}</b><span>MILP</span><span>DRO</span><span>ERCOT</span><span>MISO</span></div>
           </div>
         </div>
 
         <div className="card bottom-card education-card">
-          <h2 className="section-title-small">{t.educationTitle}</h2>
+          <h2 className="section-title-small">{c.educationTitle}</h2>
           <div className="education-list">
-            <div className="education-row divider">
-              <div className="education-icon"><Icon name="cap" className="small" /></div>
-              <div><b>{t.degree}</b><p>{t.completed}</p></div>
-            </div>
-            <div className="education-row">
-              <div className="education-icon"><Icon name="flask" className="small" /></div>
-              <div><b>{t.focus}</b><p>{language === "fr" ? "Coordination DER orientée réseau, dispatch VPP sous incertitude, validation EMS microgrid, soutien tension/fréquence et simulation orientée contrôleur" : "Grid-aware DER coordination, VPP dispatch under uncertainty, microgrid EMS validation, voltage/frequency support, and controller-facing simulation"}</p></div>
-            </div>
+            {c.education.map((item) => (
+              <div className="education-row" key={item.degree}>
+                <div className="education-icon"><img src="/laval.png" alt="Universite Laval" className="laval-icon" /></div>
+                <div>
+                  <b>{item.degree}</b>
+                  <p>{item.detail}</p>
+                  <div className="education-people">
+                    <span>{c.supervisor}: <a className="person-link" href={phdPeople.supervisor} target="_blank" rel="noreferrer">{c.supervisorName}</a></span>
+                    <span>{c.advisor}: <a className="person-link" href={phdPeople.advisor} target="_blank" rel="noreferrer">{c.advisorName}</a></span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

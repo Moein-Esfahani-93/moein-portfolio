@@ -42,33 +42,33 @@ function getSkillPreview(text: string) {
 const copy: Record<Language, { kicker: string; title: string; body: string }> = {
   en: {
     kicker: "Technical fit",
-    title: "Core skills and specialties",
-    body: ""
+    title: "Controls validation, simulation, and controller-interface skills.",
+    body: " "
   },
   fr: {
     kicker: "Profil technique",
-    title: "Competences cles en optimisation, plateformes et automatisation.",
-    body: "Vue compacte des principaux axes techniques. Utilisez Plus pour afficher la suite."
+    title: "Competences en validation controle, simulation et interfaces controleur.",
+    body: "Vue compacte des capacites derriere les CV controle/RTS et VPP/EMS."
   }
 };
 
 const trackMeta: Record<SkillBlock["track"], { label: string; labelFr: string; icon: string }> = {
-  research: { label: "Grid research", labelFr: "Recherche reseau", icon: "network" },
-  market: { label: "Market logic", labelFr: "Logique marche", icon: "trendUp" },
-  software: { label: "Software stack", labelFr: "Pile logicielle", icon: "serverCog" },
-  automation: { label: "Control layer", labelFr: "Couche controle", icon: "workflow" }
+  research: { label: "Grid context", labelFr: "Contexte reseau", icon: "network" },
+  market: { label: "Dispatch cases", labelFr: "Cas dispatch", icon: "cloud" },
+  software: { label: "Automation/data", labelFr: "Automatisation/donnees", icon: "serverCog" },
+  automation: { label: "Controls/I/O", labelFr: "Controle/E/S", icon: "workflow" }
 };
 
 const skillIcons = [
-  "network",
-  "target",
   "workflow",
-  "bid",
   "monitor",
-  "chart",
-  "serverCog",
+  "target",
+  "file",
   "code",
   "circuit",
+  "network",
+  "cloud",
+  "chart",
   "flask"
 ];
 
@@ -119,7 +119,6 @@ export default function Skills({ language }: { language: Language }) {
                 <div className="skill-card-meta">
                   <span className="skill-card-number">{String(index + 1).padStart(2, "0")}</span>
                   <span className="skill-track-pill">
-                    <Icon name={trackMeta[item.track].icon} />
                     {t(language, trackMeta[item.track].label, trackMeta[item.track].labelFr)}
                   </span>
                 </div>
