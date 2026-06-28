@@ -1,0 +1,4 @@
+Contact: mailto:moien.esfahani1993@gmail.com
+Expires: 2027-06-28T23:59:00.000Z
+Preferred-Languages: en, fr
+Canonical: https://moeinesfahani.com/.well-known/security.txt
