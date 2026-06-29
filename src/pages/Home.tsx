@@ -8,7 +8,10 @@ import type { PageId } from "../types";
 const copy = {
   en: {
     profileTitle: "Summary of What I do",
-    profile:"Power systems control and validation engineer focused on testing EMS and microgrid controllers before field deployment. I build realistic simulation-based validation workflows that connect EMS/VPP dispatch logic, DER operating constraints, real-time simulator interfaces, PLC/RTAC controller logic, and industrial communication protocols. My work includes controller-facing test scenarios, real-time I/O mapping, communication-delay and failure-mode testing, command/readback verification, timing and latency diagnostics, validation logs, and acceptance evidence for SIL, CHIL, and HIL preparation. I also bring VPP/DER optimization experience, including forecasting, DER capability estimation, market rules, grid-feasibility studies, and uncertainty-aware dispatch outputs, which helps me create realistic EMS and controller-validation cases.",
+    profile: [
+      "I work on power-system control validation for microgrids, energy management systems, and controller-based automation. My main direction is simulation-based validation: connecting grid models, DER operating limits, EMS/VPP dispatch decisions, real-time simulator interfaces, PLC/RTAC controller logic, and industrial communication protocols so controller behavior can be tested before field deployment.",
+      "The software layer supports that validation work through Python/C++ automation, FastAPI and REST services, SQL-backed datasets, Redis caching, Kafka/MQTT/WebSocket data exchange, OpenDSS QSTS orchestration, validation logs, and repeatable study execution. PLC/RTS and controller-facing validation remain the center of the portfolio, while VPP/DER forecasting, capability estimation, optimization, and market/grid analysis create realistic EMS dispatch cases for controller tests."
+    ],
     selectedProjectsTitle: "PROJECTS & IMPLEMENTATIONS",
     capabilityTitle: "CAPABILITY BACKBONE",
     contactTitle: "CONTACT",
@@ -23,15 +26,17 @@ const copy = {
     advisorName: "Prof. Nima Amjady",
     viewProjects: "View Projects",
     seeMore: "See more",
-    chips: ["CHIL/HIL Prep", "RTS Interfaces", "Microgrid EMS", "Test Automation", "VPP/DER Context", "Optimization"],
+    chips: ["CHIL/HIL Prep", "RTS Interfaces", "Microgrid EMS", "Python/FastAPI", "VPP/DER Context", "Grid Software"],
     education: [
       { degree: "Ph.D., Electrical Engineering", detail: "Universite Laval, Quebec City, QC | 2020 - 2024" }
     ],
   },
   fr: {
     profileTitle: "PROFIL VALIDATION CONTROLE",
-    profile:
-      "Ingenieur en validation controle microgrid axe sur la validation EMS, la simulation orientee controleur, la preparation CHIL/HIL, les interfaces RTS et l'automatisation des tests. Je travaille entre logique PLC/RTAC, E/S simulateur temps reel, mappings protocolaires, scenarios de defaillance, diagnostics timing, verification commande/lecture, journaux de validation et preuves d'acceptation. Le dispatch VPP/DER et l'optimisation restent un axe de support important: j'utilise prevision, capacite DER, regles marche, etudes de faisabilite reseau et sorties de dispatch sous incertitude pour creer des cas realistes de validation EMS et controleur.",
+    profile: [
+      "Je travaille sur la validation du controle des reseaux electriques, des microgrids, des systemes de gestion d'energie et de l'automatisation orientee controleur. Mon axe principal est la validation par simulation: relier modeles reseau, limites operationnelles DER, decisions de dispatch EMS/VPP, interfaces simulateur temps reel, logique PLC/RTAC et protocoles industriels pour tester le comportement controleur avant deploiement terrain.",
+      "La couche logicielle soutient ce travail avec automatisation Python/C++, services FastAPI et REST, donnees SQL, cache Redis, echanges Kafka/MQTT/WebSocket, orchestration OpenDSS QSTS, journaux de validation et execution d'etudes repetables. La validation PLC/RTS orientee controleur reste le centre du portfolio, tandis que la prevision VPP/DER, l'estimation de capacite, l'optimisation et l'analyse marche/reseau creent des cas de dispatch EMS realistes pour les tests controleur."
+    ],
     selectedProjectsTitle: "PROJETS ET IMPLEMENTATIONS",
     capabilityTitle: "AXES TECHNIQUES",
     contactTitle: "CONTACT",
@@ -46,7 +51,7 @@ const copy = {
     advisorName: "Prof. Nima Amjady",
     viewProjects: "Voir les projets",
     seeMore: "Voir plus",
-    chips: ["Preparation CHIL/HIL", "Interfaces RTS", "EMS microgrid", "Automatisation tests", "Contexte VPP/DER", "Optimisation"],
+    chips: ["Preparation CHIL/HIL", "Interfaces RTS", "EMS microgrid", "Python/FastAPI", "Contexte VPP/DER", "Logiciel reseau"],
     education: [
       { degree: "Ph.D., Genie electrique", detail: "Universite Laval, Quebec City, QC | 2020 - 2024" }
     ],
@@ -78,14 +83,14 @@ const capabilityCards = [
     bullets: [
       "OpenDSS QSTS/time-series studies, PSS/E planning and dynamic workflows, PSCAD EMT analysis, MATLAB/Simulink",
       "Microgrid EMS supervisory decisions, secondary-control interaction, voltage limits, feeder loading, and DER response",
-      "Scenario generation from price, load, PV, weather, market, simulation, and diagnostic datasets",
-      "Python, C/C++, SQL, FastAPI, Kafka, MQTT, WebSocket, Redis, Git, validation logs, and JSON/SQL artifacts"
+      "Scenario generation from price, load, PV, weather, market, simulation, and diagnostic datasets including 50+ GB historical archives",
+      "Python/C++ automation, FastAPI and REST services, SQL data layers, Redis caching, Kafka/MQTT/WebSocket exchange, Git, and validation logs"
     ],
     bulletsFr: [
       "Etudes OpenDSS QSTS/temporelles, workflows PSS/E planification/dynamique, analyse EMT PSCAD, MATLAB/Simulink",
       "Decisions EMS microgrid, interaction controle secondaire, limites de tension, chargement et reponse DER",
-      "Generation de scenarios depuis donnees prix, charge, PV, meteo, marche, simulation et diagnostic",
-      "Python, C/C++, SQL, FastAPI, Kafka, MQTT, WebSocket, Redis, Git, journaux de validation et artefacts JSON/SQL"
+      "Generation de scenarios depuis donnees prix, charge, PV, meteo, marche, simulation et diagnostic, incluant archives historiques de plus de 50 Go",
+      "Automatisation Python/C++, services FastAPI et REST, couches SQL, cache Redis, echanges Kafka/MQTT/WebSocket, Git et journaux de validation"
     ]
   },
   {
@@ -93,16 +98,16 @@ const capabilityCards = [
     titleFr: "Contexte dispatch VPP/DER et optimisation",
     icon: "cloud",
     bullets: [
-      "Auto-trader, forecaster, capability extractor, optimizer, dispatch propagator, and monitoring workflows",
-      "ISO/RTO market structures including ERCOT, MISO, NYISO, and ISO-NE concepts",
-      "Energy, reserve, frequency-regulation, voltage-support, and grid-feasibility objectives",
-      "DER aggregation, flexibility envelopes, BESS SoC, PV availability, risk-aware constraints, and dispatch disaggregation"
+      "Integrated VPP/EMS workflow: auto-trader, forecaster, capability extractor, optimizer, dispatch propagator, monitoring, and KPI logic",
+      "ISO/RTO rule analysis, reserve/regulation products, dispatch schedules, and market-to-grid validation assumptions",
+      "OpenDSS/QSTS grid validation for voltage profiles, feeder loading, DER response, inverter limits, and grid-support modes",
+      "DER aggregation, flexibility envelopes, BESS SoC and ramp constraints, PV availability, risk-aware constraints, and dispatch disaggregation"
     ],
     bulletsFr: [
-      "Workflows auto-trader, prevision, extracteur de capacite, optimiseur, propagateur de dispatch et monitoring",
-      "Structures marche ISO/RTO incluant concepts ERCOT, MISO, NYISO et ISO-NE",
-      "Objectifs energie, reserve, regulation de frequence, soutien de tension et faisabilite reseau",
-      "Aggregation DER, enveloppes de flexibilite, SoC BESS, disponibilite PV, contraintes risque et desagregation dispatch"
+      "Workflow VPP/EMS integre: auto-trader, prevision, extraction de capacite, optimisation, propagation dispatch, monitoring et logique KPI",
+      "Analyse des regles ISO/RTO, produits reserve/regulation, calendriers dispatch et hypotheses de validation marche-vers-reseau",
+      "Validation reseau OpenDSS/QSTS: profils de tension, chargement, reponse DER, limites onduleur et modes de soutien reseau",
+      "Aggregation DER, enveloppes de flexibilite, contraintes SoC et rampes BESS, disponibilite PV, contraintes risque et desagregation dispatch"
     ]
   }
 ];
@@ -131,7 +136,11 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
         <h2 className="section-title hero-title">{c.profileTitle}</h2>
         <div className="card home-profile-card">
           <div className="profile-card-body">
-            <p className="profile-lede">{c.profile}</p>
+            <div className="profile-lede-stack">
+              {c.profile.map((paragraph) => (
+                <p className="profile-lede" key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
             <div className="home-chip-row">
               {c.chips.map((chip) => <span key={chip}>{chip}</span>)}
               <button type="button" className="home-view-projects" onClick={() => goToPage("projects")}>
@@ -219,8 +228,8 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
           <h2 className="section-title-small">{c.technicalTitle}</h2>
           <div className="technical-matrix">
             <div><b>{c.controls}</b><span>IEC 61131-3</span><span>Modbus</span><span>RTAC</span><span>CHIL/HIL</span></div>
-            <div><b>{c.simulation}</b><span>OpenDSS</span><span>PSS/E</span><span>PSCAD</span><span>MATLAB</span></div>
-            <div><b>{c.vpp}</b><span>MILP</span><span>DRO</span><span>ERCOT</span><span>MISO</span></div>
+            <div><b>{c.simulation}</b><span>OpenDSS</span><span>FastAPI</span><span>SQL</span><span>Kafka</span></div>
+            <div><b>{c.vpp}</b><span>MILP</span><span>DRO</span><span>QSTS</span><span>ISO/RTO</span></div>
           </div>
         </div>
 

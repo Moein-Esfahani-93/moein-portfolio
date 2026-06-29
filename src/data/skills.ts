@@ -11,12 +11,21 @@ export const skills: SkillBlock[] = [
     track: "automation"
   },
   {
-    title: "Simulation Frameworks & Test Automation",
-    titleFr: "Frameworks de simulation et automatisation des tests",
-    text: "I use Python orchestration, C/C++ bridge layers, custom time-domain simulation logic, OpenDSS QSTS/time-series studies, PSS/E, PSCAD EMT analysis, MATLAB/Simulink, automated logs, repeatable test execution, regression-ready scenario libraries, and pass/fail reporting.",
-    textFr: "J'utilise orchestration Python, couches de pont C/C++, logique de simulation temporelle, etudes OpenDSS QSTS/temporelles, PSS/E, analyse EMT PSCAD, MATLAB/Simulink, journaux automatises, execution de tests repetables, bibliotheques de scenarios pretes pour regression et rapports pass/fail.",
-    keywords: ["Python orchestration", "C/C++ bridge", "OpenDSS", "regression-ready scenario libraries", "pass/fail reporting"],
-    keywordsFr: ["orchestration Python", "pont C/C++", "OpenDSS", "bibliotheques de scenarios", "rapports pass/fail"],
+    title: "Power-System Software, Simulation & Test Automation",
+    titleFr: "Logiciel reseau, simulation et automatisation des tests",
+    text: "I build Python/C++ automation around OpenDSS QSTS/time-series studies, PSS/E, PSCAD EMT analysis, MATLAB/Simulink, custom time-domain simulation logic, automated study execution, repeatable scenario libraries, validation logs, regression-style runs, and pass/fail reporting.",
+    textFr: "Je construis l'automatisation Python/C++ autour des etudes OpenDSS QSTS/temporelles, PSS/E, analyse EMT PSCAD, MATLAB/Simulink, logique de simulation temporelle, execution automatique d'etudes, bibliotheques de scenarios repetables, journaux de validation, executions type regression et rapports pass/fail.",
+    keywords: ["Python/C++ automation", "OpenDSS QSTS", "automated study execution", "regression-style runs", "pass/fail reporting"],
+    keywordsFr: ["automatisation Python/C++", "OpenDSS QSTS", "execution automatique", "executions type regression", "rapports pass/fail"],
+    track: "software"
+  },
+  {
+    title: "Engineering Software, APIs & Data Pipelines",
+    titleFr: "Logiciel d'ingenierie, API et pipelines donnees",
+    text: "I develop modular engineering software with FastAPI services, REST interfaces, SQL-backed data layers, Redis caching, Kafka/MQTT/WebSocket data exchange, Git-based development, dashboard/data-interface support, and logging around market, weather, load, PV, simulation, and diagnostic datasets.",
+    textFr: "Je developpe des logiciels d'ingenierie modulaires avec services FastAPI, interfaces REST, couches de donnees SQL, cache Redis, echanges Kafka/MQTT/WebSocket, developpement Git, support dashboard/interfaces donnees et journalisation autour des donnees marche, meteo, charge, PV, simulation et diagnostic.",
+    keywords: ["FastAPI", "REST", "SQL", "Redis", "Kafka", "MQTT", "WebSocket", "Git"],
+    keywordsFr: ["FastAPI", "REST", "SQL", "Redis", "Kafka", "MQTT", "WebSocket", "Git"],
     track: "software"
   },
   {
@@ -67,10 +76,10 @@ export const skills: SkillBlock[] = [
   {
     title: "VPP Dispatch to Controller-Test Scenarios",
     titleFr: "Dispatch VPP vers scenarios de test controleur",
-    text: "I convert VPP forecasting and optimization outputs into controller-test scenarios with DER flexibility envelopes, BESS SoC limits, PV availability, network voltage/loading constraints, uncertainty cases, abnormal operating conditions, and root-cause troubleshooting coverage.",
-    textFr: "Je convertis les sorties de prevision et optimisation VPP en scenarios de test controleur avec enveloppes de flexibilite DER, limites SoC BESS, disponibilite PV, contraintes tension/chargement, cas d'incertitude, conditions anormales et couverture pour diagnostic root-cause.",
-    keywords: ["VPP forecasting", "optimization outputs", "DER flexibility envelopes", "BESS SoC", "abnormal operating conditions"],
-    keywordsFr: ["prevision VPP", "sorties optimisation", "enveloppes de flexibilite DER", "SoC BESS", "conditions anormales"],
+    text: "I convert VPP forecasting, DER capability estimation, optimizer outputs, and dispatch propagation results into controller-test scenarios with DER flexibility envelopes, BESS SoC and ramp limits, PV availability, inverter P-Q limits, network voltage/loading constraints, uncertainty cases, and abnormal operating conditions.",
+    textFr: "Je convertis prevision VPP, estimation de capacite DER, sorties optimiseur et propagation dispatch en scenarios de test controleur avec enveloppes de flexibilite DER, limites SoC et rampes BESS, disponibilite PV, limites P-Q onduleur, contraintes tension/chargement, cas d'incertitude et conditions anormales.",
+    keywords: ["VPP forecasting", "DER capability", "dispatch propagation", "BESS SoC", "inverter P-Q limits"],
+    keywordsFr: ["prevision VPP", "capacite DER", "propagation dispatch", "SoC BESS", "limites P-Q onduleur"],
     track: "market"
   },
   {
@@ -85,10 +94,10 @@ export const skills: SkillBlock[] = [
   {
     title: "Grid, Standards & Market Context",
     titleFr: "Contexte reseau, normes et marche",
-    text: "I connect microgrid EMS, DER coordination, BESS/PV/PCS/meter interfaces, IEEE 1547/1547.1, IEEE 2030.7/2030.8, UL 1741, IEEE 519, IEC 62443 awareness, IEC 61508 awareness, VPP market-rule analysis, grid-feasibility checks, ISO/RTO concepts, and developing ERCOT familiarity.",
-    textFr: "Je relie EMS microgrid, coordination DER, interfaces BESS/PV/PCS/compteur, IEEE 1547/1547.1, IEEE 2030.7/2030.8, UL 1741, IEEE 519, sensibilisation IEC 62443, sensibilisation IEC 61508, analyse des regles marche VPP, faisabilite reseau, concepts ISO/RTO et familiarite ERCOT en developpement.",
-    keywords: ["IEEE 1547", "IEEE 2030.7", "UL 1741", "IEC 62443", "ERCOT"],
-    keywordsFr: ["IEEE 1547", "IEEE 2030.7", "UL 1741", "IEC 62443", "ERCOT"],
+    text: "I connect microgrid EMS, DER coordination, BESS/PV/PCS/meter interfaces, IEEE 1547/1547.1, IEEE 2030.7/2030.8, UL 1741, IEEE 519, IEC 62443 awareness, IEC 61508 awareness, ISO/RTO market-rule analysis, reserve/regulation products, dispatch schedules, grid-feasibility checks, and ERCOT/MISO/NYISO/ISO-NE concepts.",
+    textFr: "Je relie EMS microgrid, coordination DER, interfaces BESS/PV/PCS/compteur, IEEE 1547/1547.1, IEEE 2030.7/2030.8, UL 1741, IEEE 519, sensibilisation IEC 62443, sensibilisation IEC 61508, analyse des regles ISO/RTO, produits reserve/regulation, calendriers dispatch, faisabilite reseau et concepts ERCOT/MISO/NYISO/ISO-NE.",
+    keywords: ["IEEE 1547", "ISO/RTO", "reserve/regulation", "grid-feasibility", "ERCOT"],
+    keywordsFr: ["IEEE 1547", "ISO/RTO", "reserve/regulation", "faisabilite reseau", "ERCOT"],
     track: "research"
   }
 ];

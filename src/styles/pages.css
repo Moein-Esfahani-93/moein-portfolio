@@ -405,6 +405,7 @@
   .profile-avatar::before { animation: profile-avatar-ring-spin 20s linear infinite; }
 }
 .profile-card-body { flex: 1; min-width: 0; }
+.profile-lede-stack { display: grid; gap: 8px; }
 .profile-lede { font-size: 14.5px; line-height: 1.45; font-weight: 650; color: var(--text); }
 .home-chip-row { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 14px; }
 .home-chip-row span { padding: 7px 11px; border-radius: 999px; background: rgba(var(--cyan-rgb), 0.09); color: var(--ink); border: 1px solid rgba(var(--cyan-rgb), 0.16); font-size: 12px; font-weight: 850; }

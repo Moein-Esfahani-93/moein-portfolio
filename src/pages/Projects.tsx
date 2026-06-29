@@ -41,7 +41,7 @@ const copy: Record<Language, {
   en: {
     kicker: "Projects",
     title: "Controls, EMS & VPP Implementations",
-    body: "The primary thread is controller-facing validation for microgrid EMS and RTS interfaces. VPP/DER work remains visible as a supporting power-systems track for dispatch, optimization, forecasting, and grid-feasibility context.",
+    body: "The primary thread is controller-facing validation for microgrid EMS, PLC/RTAC logic, and RTS interfaces. VPP/DER software work remains visible as a supporting power-systems track for forecasting, DER capability, optimization, dispatch propagation, data pipelines, and OpenDSS/QSTS grid-feasibility validation.",
     nav: "Project areas",
     diagrams: "Architecture & data-flow diagrams",
     selector: "Diagram selector",
@@ -56,7 +56,7 @@ const copy: Record<Language, {
   fr: {
     kicker: "Projets",
     title: "Implementations controle, EMS et VPP",
-    body: "Le fil principal est la validation orientee controleur pour EMS microgrid et interfaces RTS. Le travail VPP/DER reste visible comme axe reseaux en support pour dispatch, optimisation, prevision et faisabilite reseau.",
+    body: "Le fil principal est la validation orientee controleur pour EMS microgrid, logique PLC/RTAC et interfaces RTS. Le travail logiciel VPP/DER reste visible comme axe reseaux en support pour prevision, capacite DER, optimisation, propagation dispatch, pipelines donnees et validation OpenDSS/QSTS de faisabilite reseau.",
     nav: "Domaines de projet",
     diagrams: "Schemas d'architecture et de flux de donnees",
     selector: "Selecteur de schema",

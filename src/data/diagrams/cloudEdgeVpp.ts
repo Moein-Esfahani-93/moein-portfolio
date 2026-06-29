@@ -13,12 +13,12 @@ export const cloudEdgeVpp: ProjectDiagram[] = [
         { label: "Edge / Site Layer", labelFr: "Couche edge / site", x: 70, y: 344, w: 610, h: 110, variant: "edge" }
       ],
       nodes: [
-        { id: "grid", label: "Market, Weather & Grid Data", labelFr: "Données marché, météo et réseau", sublabel: "price / load / PV / weather / market signals", sublabelFr: "prix / charge / PV / météo / signaux marché", x: 455, y: 35, w: 160, h: 32, variant: "highlight" },
-        { id: "user", label: "EMS Orchestration / Services", labelFr: "Orchestration EMS / services", sublabel: "REST APIs / live dashboard / KPI models", sublabelFr: "API REST / tableau de bord live / modèles KPI", x: 220, y: 80, w: 126, h: 36, variant: "muted" },
+        { id: "grid", label: "Market, Weather & Grid Data", labelFr: "Données marché, météo et réseau", sublabel: "50+ GB price / load / PV / weather / market signals", sublabelFr: "50+ Go prix / charge / PV / météo / signaux marché", x: 455, y: 35, w: 160, h: 32, variant: "highlight" },
+        { id: "user", label: "EMS Orchestration / FastAPI Services", labelFr: "Orchestration EMS / services FastAPI", sublabel: "REST APIs / live dashboard / KPI models", sublabelFr: "API REST / tableau de bord live / modèles KPI", x: 220, y: 80, w: 126, h: 36, variant: "muted" },
         { id: "digital", label: "VPP Capability Model", labelFr: "Modèle de capacité VPP", sublabel: "capability / flexibility / constraints", sublabelFr: "capacité / flexibilité / contraintes", x: 220, y: 150, w: 126, h: 36, variant: "accent" },
         { id: "autotrader", label: "Auto-Trader", sublabel: "forecasting / strategy evaluation", sublabelFr: "prévision / évaluation stratégie", x: 410, y: 150, w: 126, h: 36, variant: "primary" },
         { id: "optipagator", label: "Dispatch Optimizer", sublabel: "active + reserve power allocation", sublabelFr: "allocation puissance active + réserve", x: 610, y: 150, w: 126, h: 36, variant: "accent" },
-        { id: "data", label: "Data Platform", labelFr: "Plateforme données", sublabel: "streaming / messaging / telemetry backbone", sublabelFr: "streaming / messagerie / télémétrie", x: 330, y: 285, w: 158, h: 36, variant: "primary" },
+        { id: "data", label: "Streaming + SQL Data Layer", labelFr: "Couche streaming + SQL", sublabel: "Kafka / MQTT / WebSocket / Redis / SQL", sublabelFr: "Kafka / MQTT / WebSocket / Redis / SQL", x: 330, y: 285, w: 158, h: 36, variant: "primary" },
         { id: "monitor", label: "Monitoring", labelFr: "Monitoring", sublabel: "KPI models / telemetry / dispatch status", sublabelFr: "modèles KPI / télémétrie / statut dispatch", x: 565, y: 285, w: 132, h: 36, variant: "accent" },
         { id: "gateway", label: "Edge Gateway", labelFr: "Passerelle edge", sublabel: "telemetry & command of CB", sublabelFr: "relais télémétrie et commandes", x: 430, y: 365, w: 200, h: 32, variant: "accent" },
         { id: "derfleet", label: "DER Fleet and Site Assets", labelFr: "Flotte DER et actifs site", sublabel: "PV | BESS | controllable loads | meters", sublabelFr: "PV | BESS | charges contrôlables | compteurs", x: 430, y: 430, w: 285, h: 30, variant: "highlight" }
@@ -44,11 +44,11 @@ export const cloudEdgeVpp: ProjectDiagram[] = [
     data: {
       viewBox: "0 0 640 360",
       nodes: [
-        { id: "weather", label: "Market, Weather & Grid Data", labelFr: "Données marché, météo et réseau", sublabel: "weather, price, load, PV and market-signal data", sublabelFr: "météo, prix, charge, PV et signaux marché", x: 300, y: 35, w: 420, h: 50, variant: "muted" },
+        { id: "weather", label: "Market, Weather & Grid Data", labelFr: "Données marché, météo et réseau", sublabel: "50+ GB weather, price, load, PV and market-signal data", sublabelFr: "50+ Go météo, prix, charge, PV et signaux marché", x: 300, y: 35, w: 420, h: 50, variant: "muted" },
         { id: "forecast", label: "Forecasting Modules", labelFr: "Modules de prévision", sublabel: "renewable generation, load, prices, capacity and flexibility", sublabelFr: "production renouvelable, charge, prix, capacité et flexibilité", x: 300, y: 105, w: 380, h: 50, variant: "accent" },
         { id: "optimizer", label: "Capability-Based Strategy Evaluation", labelFr: "Évaluation stratégie basée capacité", sublabel: "market participation tested before dispatch", sublabelFr: "participation marché testée avant dispatch", x: 300, y: 178, w: 420, h: 56, variant: "primary" },
         { id: "bid", label: "Auto-Trader + Optimizer", labelFr: "Auto-trader + optimiseur", sublabel: "active and reserve dispatch allocation", sublabelFr: "allocation dispatch active et réserve", x: 300, y: 251, w: 380, h: 50, variant: "accent" },
-        { id: "settle", label: "Grid Studies + KPI Models", labelFr: "Études réseau + modèles KPI", sublabel: "distribution time-series feasibility checks and KPI evaluation", sublabelFr: "vérifications de faisabilité en séries temporelles et évaluation des KPI", x: 300, y: 321, w: 380, h: 50, variant: "muted" }
+        { id: "settle", label: "OpenDSS/QSTS API + KPI Models", labelFr: "API OpenDSS/QSTS + modèles KPI", sublabel: "distribution time-series feasibility checks and KPI evaluation", sublabelFr: "vérifications de faisabilité en séries temporelles et évaluation des KPI", x: 300, y: 321, w: 380, h: 50, variant: "muted" }
       ],
       edges: [
         { from: "weather", to: "forecast", label: "training + live inputs", labelFr: "entrées entraînement + direct" },

@@ -78,29 +78,31 @@ export const projects: Project[] = [
   {
     id: "cloud-edge-vpp",
     number: "3",
-    domain: "VPP Market-to-Grid Platform",
-    domainFr: "Plateforme VPP marche-reseau",
-    title: "Integrated VPP Market-to-Grid Platform (Cloud-to-Fog-to-Edge)",
-    titleFr: "Plateforme VPP marche-reseau integree (cloud-fog-edge)",
-    short: "An integrated VPP workflow connecting ISO/RTO market rules, forecasting, DER capability extraction, optimization, dispatch propagation, monitoring, and distribution time-series grid-feasibility studies.",
-    shortFr: "Un workflow VPP integre reliant regles marche ISO/RTO, prevision, extraction de capacite DER, optimisation, propagation du dispatch, monitoring et etudes temporelles de faisabilite reseau.",
+    domain: "VPP / Power-System Software Platform",
+    domainFr: "VPP / plateforme logicielle reseau",
+    title: "Grid-Analysis Software & VPP Market-to-Grid Platform",
+    titleFr: "Logiciel d'analyse reseau et plateforme VPP marche-reseau",
+    short: "A running engineering-software workflow connecting ISO/RTO market rules, forecasting, DER capability extraction, optimization, dispatch propagation, monitoring, and OpenDSS/QSTS grid-feasibility validation.",
+    shortFr: "Un workflow logiciel d'ingenierie reliant regles marche ISO/RTO, prevision, extraction de capacite DER, optimisation, propagation dispatch, monitoring et validation OpenDSS/QSTS de faisabilite reseau.",
     problem: "A VPP must convert DER portfolio capability into market offers and dispatch schedules without violating DER limits or distribution-grid constraints, so market signals, forecasts, uncertainty, operating limits, and grid-security checks need to be handled in one workflow.",
     problemFr: "Un VPP doit convertir la capacite du portefeuille DER en offres et calendriers de dispatch sans violer les limites DER ou contraintes reseau; signaux marche, previsions, incertitude, limites operationnelles et checks reseau doivent donc etre traites dans un meme workflow.",
-    contribution: "Integrated auto-trader, forecaster, capability extractor, optimizer, dispatch propagator, monitoring, and grid-validation logic into a market-to-dispatch workflow, with controller-facing validation paths for EMS and RTS interfaces.",
-    contributionFr: "Integration de l'auto-trader, previsionniste, extracteur de capacite, optimiseur, propagateur de dispatch, monitoring et validation reseau dans un workflow marche-vers-dispatch, avec chemins de validation orientee controleur pour EMS et interfaces RTS.",
+    contribution: "Integrated auto-trader, forecasting, capability estimation, optimization, dispatch propagation, monitoring, KPI logic, and OpenDSS/QSTS validation into a repeatable market-to-grid software workflow, with controller-facing validation paths for EMS and RTS interfaces.",
+    contributionFr: "Integration auto-trader, prevision, estimation de capacite, optimisation, propagation dispatch, monitoring, logique KPI et validation OpenDSS/QSTS dans un workflow logiciel marche-vers-reseau repetable, avec chemins de validation orientee controleur pour EMS et interfaces RTS.",
     methods: [
       "Implemented market-participation logic for DER assets including BESS, PV, and controllable loads across ERCOT, MISO, NYISO, and ISO-NE-style structures",
       "Used prices, reserve/regulation products, portfolio capability, uncertainty, and risk-aware constraints in bid/offer and dispatch logic",
-      "Developed forecasting and scenario-generation workflows from price, load, PV, weather, market, simulation, and diagnostic datasets",
+      "Developed forecasting and scenario-generation workflows from a 50+ GB archive of price, load, PV, weather, market, simulation, and diagnostic datasets",
+      "Built the software workflow around an EMS daemon, time-synchronized QSTS co-simulation API, FastAPI/REST services, SQL-backed datasets, Redis caching, and Kafka/MQTT/WebSocket data exchange",
       "Enforced grid feasibility with distribution time-series studies using OpenDSS to check voltage profiles, feeder loading, DER response, inverter limits, and grid-support functions",
-      "Connected dispatch outputs to microgrid EMS and controller-validation workflows through DER flexibility envelopes, BESS SoC limits, PV availability, and abnormal operating scenarios"
+      "Connected dispatch outputs to microgrid EMS and controller-validation workflows through DER flexibility envelopes, BESS SoC and ramp limits, PV availability, inverter P-Q limits, and abnormal operating scenarios"
     ],
     methodsFr: [
       "Implementation de la logique de participation marche pour actifs DER incluant BESS, PV et charges controlables dans des structures de type ERCOT, MISO, NYISO et ISO-NE",
       "Utilisation des prix, produits de reserve/regulation, capacite du portefeuille, incertitude et contraintes risque dans la logique d'offres et de dispatch",
-      "Developpement de workflows de prevision et generation de scenarios depuis donnees prix, charge, PV, meteo, marche, simulation et diagnostic",
+      "Developpement de workflows de prevision et generation de scenarios depuis une archive de plus de 50 Go: prix, charge, PV, meteo, marche, simulation et diagnostic",
+      "Construction du workflow logiciel autour d'un daemon EMS, d'une API de co-simulation QSTS synchronisee, de services FastAPI/REST, datasets SQL, cache Redis et echanges Kafka/MQTT/WebSocket",
       "Validation de faisabilite reseau par etudes temporelles OpenDSS: profils de tension, chargement, reponse DER, limites onduleur et fonctions de soutien reseau",
-      "Connexion des sorties dispatch aux workflows EMS microgrid et validation controleur via enveloppes de flexibilite DER, limites SoC BESS, disponibilite PV et scenarios anormaux"
+      "Connexion des sorties dispatch aux workflows EMS microgrid et validation controleur via enveloppes de flexibilite DER, limites SoC et rampes BESS, disponibilite PV, limites P-Q onduleur et scenarios anormaux"
     ],
     visualSlots: [
       "Market, forecast, capability, optimizer, and grid-validation workflow",
@@ -112,7 +114,7 @@ export const projects: Project[] = [
       "Donnees vers previsions, evaluation strategique VPP et dispatch",
       "Environnement de test VPP pour prevision, optimisation, etudes reseau et validation dispatch"
     ],
-    tags: ["VPP", "DER", "ISO/RTO", "ERCOT", "MISO", "NYISO", "ISO-NE", "OpenDSS", "QSTS", "Forecasting", "Optimization", "Grid Feasibility"]
+    tags: ["VPP", "DER", "Power-System Software", "FastAPI", "SQL", "Redis", "Kafka", "MQTT", "WebSocket", "OpenDSS", "QSTS", "Forecasting", "Optimization", "Grid Feasibility"]
   },
   {
     id: "gateway-microgrid-control",

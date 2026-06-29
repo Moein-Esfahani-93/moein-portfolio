@@ -48,28 +48,32 @@ const capabilityGroups: CapabilityGroup[] = [
     ]
   },
   {
-    title: "Grid Simulation, Forecasting & EMS",
-    titleFr: "Simulation reseau, prevision et EMS",
-    caption: "Bridge from analysis to validation",
-    captionFr: "Pont analyse-validation",
+    title: "Power-System Software, Forecasting & EMS",
+    titleFr: "Logiciel reseau, prevision et EMS",
+    caption: "Software bridge from analysis to validation",
+    captionFr: "Pont logiciel analyse-validation",
     icon: "monitor",
     variant: "software",
     emphasis: 4,
     axes: [
       { label: "Grid feasibility", labelFr: "Faisabilite reseau", level: 4 },
-      { label: "Forecasting", labelFr: "Prevision", level: 3 },
-      { label: "Scenario data", labelFr: "Donnees scenarios", level: 4 },
-      { label: "EMS workflows", labelFr: "Workflows EMS", level: 4 }
+      { label: "Study automation", labelFr: "Automatisation etudes", level: 4 },
+      { label: "Data pipelines", labelFr: "Pipelines donnees", level: 4 },
+      { label: "EMS services", labelFr: "Services EMS", level: 4 }
     ],
     tools: [
+      { name: "Python" },
+      { name: "C/C++" },
+      { name: "FastAPI" },
+      { name: "REST" },
+      { name: "SQL" },
+      { name: "Redis" },
+      { name: "Kafka" },
+      { name: "MQTT" },
+      { name: "WebSocket" },
       { name: "OpenDSS" },
       { name: "PSS/E" },
-      { name: "PSCAD" },
-      { name: "MATLAB" },
-      { name: "Python" },
-      { name: "FastAPI" },
-      { name: "Kafka" },
-      { name: "MQTT" }
+      { name: "PSCAD" }
     ]
   },
   {
@@ -81,16 +85,18 @@ const capabilityGroups: CapabilityGroup[] = [
     variant: "market",
     emphasis: 3,
     axes: [
-      { label: "DER coordination", labelFr: "Coordination DER", level: 4 },
-      { label: "Dispatch logic", labelFr: "Logique dispatch", level: 4 },
+      { label: "DER capability", labelFr: "Capacite DER", level: 4 },
+      { label: "Dispatch propagation", labelFr: "Propagation dispatch", level: 4 },
       { label: "Optimization", labelFr: "Optimisation", level: 4 },
-      { label: "Market rules", labelFr: "Regles marche", level: 3 }
+      { label: "Market/grid rules", labelFr: "Regles marche/reseau", level: 3 }
     ],
     tools: [
       { name: "Pyomo" },
       { name: "Gurobi" },
       { name: "CPLEX" },
       { name: "DRO/MILP" },
+      { name: "ADMM" },
+      { name: "OpenDSS/QSTS" },
       { name: "ERCOT" },
       { name: "MISO" },
       { name: "NYISO" },

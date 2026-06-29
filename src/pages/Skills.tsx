@@ -42,12 +42,12 @@ function getSkillPreview(text: string) {
 const copy: Record<Language, { kicker: string; title: string; body: string }> = {
   en: {
     kicker: "Technical fit",
-    title: "Controls validation, simulation, and controller-interface skills.",
+    title: "Controls validation, power-system software, and controller-interface skills.",
     body: " "
   },
   fr: {
     kicker: "Profil technique",
-    title: "Competences en validation controle, simulation et interfaces controleur.",
+    title: "Competences en validation controle, logiciel reseau et interfaces controleur.",
     body: "Vue compacte des capacites derriere les CV controle/RTS et VPP/EMS."
   }
 };
@@ -62,6 +62,7 @@ const trackMeta: Record<SkillBlock["track"], { label: string; labelFr: string; i
 const skillIcons = [
   "workflow",
   "monitor",
+  "serverCog",
   "target",
   "file",
   "code",
@@ -69,7 +70,8 @@ const skillIcons = [
   "network",
   "cloud",
   "chart",
-  "flask"
+  "flask",
+  "network"
 ];
 
 export default function Skills({ language }: { language: Language }) {
