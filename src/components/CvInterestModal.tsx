@@ -70,7 +70,7 @@ const copy: Record<Language, {
         trackId: "controls",
         icon: "monitor",
         title: "2. Microgrid EMS",
-        text: "EMS and CIL preparation"
+        text: "EMS and CHIL preparation"
       },
       {
         id: "vpp",
@@ -114,7 +114,7 @@ const copy: Record<Language, {
         trackId: "controls",
         icon: "monitor",
         title: "2. EMS microgrid",
-        text: "EMS et preparation CIL"
+        text: "EMS et preparation CHIL"
       },
       {
         id: "vpp",

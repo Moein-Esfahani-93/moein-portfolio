@@ -89,8 +89,8 @@ export const emsQstsScada: ProjectDiagram[] = [
     }
   },
   {
-    title: "PLCnext Telemetry, Command Maps & CIL Readiness",
-    titleFr: "Télémétrie PLCnext, cartes de commandes et préparation CIL",
+    title: "PLCnext Telemetry, Command Maps & CHIL Readiness",
+    titleFr: "Télémétrie PLCnext, cartes de commandes et préparation CHIL",
     data: {
       viewBox: "0 0 640 360",
       nodes: [
@@ -98,7 +98,7 @@ export const emsQstsScada: ProjectDiagram[] = [
         { id: "protocols", label: "Modbus TCP Point Maps", labelFr: "Cartes de points Modbus TCP", sublabel: "P/Q setpoints, SoC and state commands", sublabelFr: "consignes P/Q, SoC et commandes d'état", x: 320, y: 105, w: 380, h: 50, variant: "accent" },
         { id: "ems", label: "EMS Command and Feedback Loop", labelFr: "Boucle commande-retour EMS", sublabel: "supervisory setpoints and device response", sublabelFr: "consignes de supervision et réponse des équipements", x: 320, y: 178, w: 380, h: 56, variant: "primary" },
         { id: "scada", label: "Watchdog & Latency Diagnostics", labelFr: "Diagnostics watchdog et latence", sublabel: "acknowledgement/readback and comm-health checks", sublabelFr: "vérifications d'acquittement/lecture et état des communications", x: 320, y: 251, w: 380, h: 50, variant: "highlight" },
-        { id: "compare", label: "Controller-Test Readiness Checks", labelFr: "Vérifications de préparation aux tests contrôleur", sublabel: "path from distribution time-series studies toward SIL/CIL tests", sublabelFr: "chemin des études temporelles de distribution vers les tests SIL/CIL", x: 320, y: 321, w: 380, h: 50, variant: "muted" }
+        { id: "compare", label: "Controller-Test Readiness Checks", labelFr: "Vérifications de préparation aux tests contrôleur", sublabel: "path from distribution time-series studies toward SIL/CHIL tests", sublabelFr: "chemin des études temporelles de distribution vers les tests SIL/CHIL", x: 320, y: 321, w: 380, h: 50, variant: "muted" }
       ],
       edges: [
         { from: "devices", to: "protocols", label: "telemetry", labelFr: "télémétrie" },

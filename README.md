@@ -32,7 +32,7 @@ npm run preview
 The site has structured areas for project visuals:
 
 - RTS controller-interface architecture
-- EMS/CIL preparation workflow
+- EMS/CHIL preparation workflow
 - VPP architecture
 - forecast / dispatch plot
 - platform dashboard view

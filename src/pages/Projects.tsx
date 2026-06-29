@@ -12,7 +12,7 @@ type ProjectsProps = { activeProject: Project; setActiveProjectId: (id: string) 
 const tabLabels: Record<string, Record<Language, string>> = {
   "cloud-edge-vpp": { en: "VPP Market-to-Grid", fr: "VPP marche-reseau" },
   "rts-io-cil": { en: "Controls Validation", fr: "Validation controle" },
-  "ems-qsts-scada": { en: "EMS CIL Prep", fr: "Preparation EMS CIL" },
+  "ems-qsts-scada": { en: "EMS CHIL Prep", fr: "Preparation EMS CHIL" },
   "gateway-microgrid-control": { en: "Protocol Gateway", fr: "Passerelle protocole" }
 };
 

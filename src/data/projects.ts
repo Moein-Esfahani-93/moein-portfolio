@@ -41,8 +41,8 @@ export const projects: Project[] = [
   {
     id: "ems-qsts-scada",
     number: "2",
-    domain: "Microgrid EMS / CIL Preparation",
-    domainFr: "EMS microgrid / preparation CIL",
+    domain: "Microgrid EMS / CHIL Preparation",
+    domainFr: "EMS microgrid / preparation CHIL",
     title: "Microgrid EMS & Controller-in-the-Loop Preparation",
     titleFr: "EMS microgrid et preparation controller-in-the-loop",
     short: "A controller-facing EMS validation platform connecting distribution time-series simulation, PLCnext/RTAC logic, telemetry/command maps, and Python orchestration.",
@@ -55,13 +55,13 @@ export const projects: Project[] = [
       "Connected distribution time-series simulation, PLCnext/RTAC controller logic, telemetry/command maps, and Python orchestration",
       "Programmed IEC 61131-3 Structured Text logic for FSM sequencing, P/Q setpoint handling, SoC and limit supervision, alarms, watchdogs, acknowledgement/readback logic, and communication-health monitoring",
       "Verified EMS supervisory setpoints and secondary-control actions with emphasis on voltage limits, SoC constraints, communication health, and safe operating transitions",
-      "Structured the path from offline distribution time-series studies toward SIL studies and real-time CIL/CHIL preparation"
+      "Structured the path from offline distribution time-series studies toward SIL studies and real-time CHIL/CHIL preparation"
     ],
     methodsFr: [
       "Connexion de la simulation temporelle de distribution, logique PLCnext/RTAC, cartes telemetrie/commandes et orchestration Python",
       "Programmation IEC 61131-3 Structured Text pour sequences FSM, consignes P/Q, supervision SoC et limites, alarmes, watchdogs, acquittement/lecture et suivi sante communication",
       "Verification des consignes EMS et actions de controle secondaire avec accent sur limites de tension, contraintes SoC, sante communication et transitions sures",
-      "Structuration du passage des etudes temporelles hors ligne vers les etudes SIL et la preparation CIL/CHIL temps reel"
+      "Structuration du passage des etudes temporelles hors ligne vers les etudes SIL et la preparation CHIL/CHIL temps reel"
     ],
     visualSlots: [
       "Microgrid EMS and AXC F 3152 controller-interface architecture",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "Carte EMS microgrid, controle secondaire, simulation et modules controleur",
       "Telemetrie PLCnext, cartes de commandes, watchdogs, latence et preparation aux tests controleur"
     ],
-    tags: ["Microgrid EMS", "CIL Prep", "PLCnext", "RTAC", "IEC 61131-3 ST", "BESS PCS", "PV Inverter", "Meter", "Watchdogs", "Safe Transitions"]
+    tags: ["Microgrid EMS", "CHIL Prep", "PLCnext", "RTAC", "IEC 61131-3 ST", "BESS PCS", "PV Inverter", "Meter", "Watchdogs", "Safe Transitions"]
   },
   {
     id: "cloud-edge-vpp",
