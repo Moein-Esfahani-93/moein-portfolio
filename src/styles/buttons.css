@@ -8,11 +8,11 @@ button:active { transform: none; }
 .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .button-row.center { justify-content: center; }
 
-.language-switch { position: relative; flex: none; width: 168px; height: 50px; display: flex; overflow: hidden; background: linear-gradient(180deg, #26466f 0%, var(--navy) 58%, #07101d 100%); border: 1px solid rgba(7,16,29,0.48); border-radius: 999px; padding: 4px; z-index: 20; box-shadow: inset 0 1px 0 rgba(255,255,255,0.24), inset 0 -5px 10px rgba(0,0,0,0.2), 0 8px 16px rgba(7,16,29,0.14); }
+.language-switch { position: relative; flex: none; width: 168px; height: 50px; display: flex; overflow: hidden; background: linear-gradient(180deg, #17324d 0%, #0b1c2b 60%, #07131f 100%); border: 1px solid rgba(7,16,29,0.48); border-radius: 999px; padding: 4px; z-index: 20; box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), inset 0 -5px 10px rgba(0,0,0,0.2), 0 8px 16px rgba(7,16,29,0.14); }
 .language-switch::before { content: ""; position: absolute; inset: 1px 8px auto; height: 15px; border-radius: 999px; background: linear-gradient(180deg, rgba(255,255,255,0.2), transparent); pointer-events: none; }
 .language-switch button { position: relative; z-index: 1; display: inline-flex; align-items: center; justify-content: center; gap: 5px; flex: 1; border-radius: 999px; color: rgba(255,255,255,0.78); font-family: var(--font-display); font-size: 15px; font-weight: 800; }
 .language-flag { width: 19px; height: 14px; object-fit: cover; border: 1px solid rgba(7,16,29,0.16); border-radius: 2px; }
-.language-switch button.active { color: #ffffff; background: linear-gradient(180deg, #315d91, #17375e); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 0 0 1px rgba(var(--blue-rgb), 0.44), 0 5px 11px rgba(0,0,0,0.22); }
+.language-switch button.active { color: #ffffff; background: linear-gradient(180deg, #3f7f89, #17324d); box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 0 0 1px rgba(var(--ui-aqua-rgb), 0.34), 0 5px 11px rgba(0,0,0,0.22); }
 
 .button { font-size: var(--fs-small); }
 .language-switch button { font-size: var(--fs-card-title); }

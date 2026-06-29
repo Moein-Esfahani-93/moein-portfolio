@@ -40,7 +40,7 @@ const copy = {
     controls: "Controle",
     simulation: "Simulation",
     vpp: "VPP/DER",
-   supervisor: "Directeur de Ph.D.",
+    supervisor: "Directeur de Ph.D.",
     advisor: "Conseiller",
     supervisorName: "Prof. Innocent Kamwa",
     advisorName: "Prof. Nima Amjady",
@@ -205,7 +205,7 @@ export default function Home({ language, goToPage, setActiveProjectId }: { langu
           <h2 className="section-title-small">{c.contactTitle}</h2>
           <div className="info-line"><Icon name="mail" className="small" /><span>{profile.email}</span></div>
           {profile.phone && <div className="info-line"><Icon name="phone" className="small" /><span>{profile.phone}</span></div>}
-              {profile.alternateEmail && (
+          {profile.alternateEmail && (
             <a className="info-line contact-link" href={`mailto:${profile.alternateEmail}`}>
               <img src="/laval.png" alt="Universite Laval" className="laval-icon" /><span>{profile.alternateEmail}</span>
             </a>
